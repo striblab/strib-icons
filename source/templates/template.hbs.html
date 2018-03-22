@@ -20,6 +20,10 @@
         color: #8dc63f;
       }
 
+      .example-icon {
+        margin-bottom: 2em;
+      }
+
       .example-large {
         font-size: 3em;
       }
@@ -48,11 +52,9 @@
 
       <p>&nbsp;</p>
 
-
-
       <div class="row">
         {{#each names}}
-          <div class="col-sm">
+          <div class="col-6 col-md-3 example-icon">
             <div>
               <span class="example-large strib-icon {{../classPrefix}}{{this}}"></span>
               <span class="example-small strib-icon {{../classPrefix}}{{this}}"></span>
