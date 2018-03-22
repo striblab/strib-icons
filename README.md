@@ -19,6 +19,8 @@ Icons used in projects as different formats.
 * Make sure NodeJS is installed and run: `npm install`
 * To compile the fonts one time, run: `npm run build`
 * To watch for changes and run a local server to see the example page: `run npm develop`
+* To optimize with `svgo`, run `npm run optimize`
+  * TODO: Put this in the build process. The issue is that we are watching the icons to build, and svgo is optimizing the images in place, making an infinite loop for the watch process.
 
 ### Templates
 
