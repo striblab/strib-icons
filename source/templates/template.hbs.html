@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{fontName}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- TODO: Switch to Strib Styles -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./strib-icons.css">
+
+    <style>
+      .strib-icon {
+        transition: color 0.5s ease-out;
+      }
+
+      .strib-icon:hover {
+        color: #8dc63f;
+      }
+
+      .example-large {
+        font-size: 3em;
+      }
+
+      .example-small {
+        font-size: 1.25em;
+      }
+
+      .example-icon-name {
+        padding-top: 0.5em;
+        font-size: 0.85em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="display-1">Star Tribune icons</h1>
+
+      <p><strong>strib-icons</strong> is a font-icon set to manage icons used in Star Tribune projects.</p>
+
+      <p>To use, include the library, then use the base class and the icon class, for instance:</p>
+<code><pre>
+&lt;i class="strib-icon social-facebook-circle"&gt;&lt;/i&gt;
+</pre></code>
+
+      <p>&nbsp;</p>
+
+
+
+      <div class="row">
+        {{#each names}}
+          <div class="col-sm">
+            <div>
+              <span class="example-large strib-icon {{../classPrefix}}{{this}}"></span>
+              <span class="example-small strib-icon {{../classPrefix}}{{this}}"></span>
+            </div>
+
+            <div class="example-icon-name">
+              {{this}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </body>
+</html>

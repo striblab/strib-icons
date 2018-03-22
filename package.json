@@ -1,0 +1,35 @@
+{
+  "name": "strib-icons",
+  "version": "0.0.1",
+  "description": "Icons used in projects as different formats.",
+  "main": "build.js",
+  "watch": {
+    "build": {
+      "patterns": ["build.js", "source/**/*.*"]
+    }
+  },
+  "scripts": {
+    "build": "node build.js",
+    "server": "browser-sync start --ss build -f build",
+    "develop": "concurrently \"npm-watch\" \"npm run server\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/striblab/strib-icons.git"
+  },
+  "author": "Alan Palazzolo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/striblab/strib-icons/issues"
+  },
+  "homepage": "https://github.com/striblab/strib-icons#readme",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "concurrently": "^3.5.1",
+    "glob": "^7.1.2",
+    "npm-watch": "^0.3.0",
+    "webfont": "^8.0.0",
+    "webfonts-generator": "^0.4.0"
+  }
+}
