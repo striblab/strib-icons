@@ -1,0 +1,33 @@
+/**
+ * Strar Tribune icons (strib-icons)
+ * Version: {{ pkg.version }}
+ * Copyright Star Tribune
+ */
+
+// Default variables
+$strib-fonts-location: "./" !default;
+$strib-fonts-font-name: "{{ options.fontName }}" !default;
+$strib-fonts-base-selector: "{{ options.templateOptions.baseSelector }}" !default;
+$strib-fonts-class-prefix: "{{ options.templateOptions.classPrefix }}" !default;
+
+@font-face {
+	font-family: "#{$strib-fonts-font-name}";
+	src: {{{ scssSrc }}};
+}
+
+#{$strib-fonts-base-selector} {
+	line-height: 1;
+}
+
+#{$strib-fonts-base-selector}:before {
+	font-family: "#{$strib-fonts-font-name}" !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+{{#each classes}}
+.#{$strib-fonts-class-prefix}{{ this }}:before {
+	content: "\\{{this}}";
+}
+{{/each}}
