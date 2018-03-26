@@ -7,6 +7,9 @@ arrow-value-down:
 arrow-value-up:
   title: "Value arrow down"
   description: "Arrow pointed down for data values"
+camera:
+  title: "Camera"
+  description: "Simple box and circle camera icon"
 close:
   title: "Close"
   description: "The X symbol used to close popups"
@@ -25,6 +28,9 @@ hamburger:
 home:
   title: "House"
   description: "Simple house outline"
+like:
+  title: "Like"
+  description: "Thumb-up hand"
 map-pin:
   title: "Map pin"
   description: "Simple pointed map pin"
@@ -46,9 +52,12 @@ nav-forward:
 person:
   title: "Person"
   description: "Outline of head and shoulders of a person"
-phone:
-  title: "Phone"
+phone-landline:
+  title: "Phone landline"
   description: "A simple land-line phone reciever"
+phone-app:
+  title: "Phone smart"
+  description: "A modern, smart phone"
 print:
   title: "Print"
   description: "A simple outline of a home printer"
