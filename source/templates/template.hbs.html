@@ -44,64 +44,112 @@
         padding-top: 0.5em;
         font-size: 0.85em;
       }
+
+      pre {
+        padding: 1em;
+        background-color: #DEDEDE;
+      }
+
+      header[role='banner'] {
+        margin-bottom: 3em;
+      }
+
+      footer[role='contentinfo'] {
+        font-size: 0.85em;
+        padding: 2em;
+        background-color: #DEDEDE;
+      }
+
+      main > section {
+        margin-bottom: 3em;
+      }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <h1 class="display-1">Star Tribune icons</h1>
+      <header role="banner">
+        <h1 class="display-1">Star Tribune icons</h1>
 
-      <p><strong>strib-icons</strong> is a font-icon set to manage icons used in Star Tribune projects.</p>
+        <p>The Star Tribune icons is a font-icon and SVG set to manage icons used in Star Tribune projects.</p>
+      </header>
 
-      <p>To use, include the library, then use the base class and the icon class, for instance:</p>
-<code><pre>
-&lt;i class="strib-icon social-facebook-circle"&gt;&lt;/i&gt;
-</pre></code>
+      <main role="main">
+        <section>
+          <h1>Webfont</h1>
 
-      <p>&nbsp;</p>
+          <p>These icons can be used as a webfont; the main benefits is a bit more easier, though limited, to style with CSS, as any styles that apply to text can be applied as well.</p>
 
-      <div class="row">
-        {{#each names}}
-          <div class="col-6 col-md-3 example-icon">
-            <div>
-              <span class="example-large strib-icon {{../classPrefix}}{{this}}"></span>
-              <span class="example-small strib-icon {{../classPrefix}}{{this}}"></span>
-            </div>
+          <p>To use the Star Tribune icons as a webfont, include the CSS or SASS.</p>
 
-            <div class="example-icon-name">
-              {{this}}
-            </div>
+<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/{{ pkg.version }}/strib-icons.css"&gt;</code></pre>
+
+          <p>Then use the base class, <code>strib-icon</code> and then the icon class which is always prefixed with <code>strib-</code>, for instance:</p>
+
+<pre><code>&lt;i class="strib-icon strib-home"&gt;&lt;/i&gt;</code></pre>
+
+          <p>&nbsp;</p>
+
+          <div class="row">
+            {{#each names}}
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon {{../classPrefix}}{{this}}"></span>
+                  <span class="example-small strib-icon {{../classPrefix}}{{this}}"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  {{this}}
+                </div>
+              </div>
+            {{/each}}
           </div>
-        {{/each}}
-      </div>
+        </section>
 
-      <h2>SVG icons</h2>
+        <section>
+          <h2>SVG icons</h2>
 
+          <p>Using the Star Tribune icons as SVG icons has many benefits including fuller, though still limited, styling as any styles that apply to SVG can apply.  Browser support is not as good as a webfont.</p>
 
+          <p>To use, simply include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, for example:</p>
 
-      <div class="row">
-        {{#each names}}
-          <div class="col-6 col-md-3 example-icon">
-            <div>
-              <span class="example-large">
-                <svg class="strib-icon-svg">
-                  <use xlink:href="strib-icons.sprite.svg#{{this}}"></use>
-                </svg>
-              </span>
+<pre><code>&lt;svg class="strib-icon-svg"&gt;
+  &lt;use xlink:href="//static.startribune.com/assets/libs/strib-icons/{{ pkg.version }}/strib-icons.sprite.svg#home"&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
 
-              <span class="example-small">
-                <svg class="strib-icon-svg">
-                  <use xlink:href="strib-icons.sprite.svg#{{this}}"></use>
-                </svg>
-              </span>
-            </div>
+          <p>Note that the library can be put somewhere locally if you don't want to use such a long URL.</p>
 
-            <div class="example-icon-name">
-              {{this}}
-            </div>
+          <p>&nbsp;</p>
+
+          <div class="row">
+            {{#each names}}
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#{{this}}"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#{{this}}"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  {{this}}
+                </div>
+              </div>
+            {{/each}}
           </div>
-        {{/each}}
-      </div>
+        </section>
+      </main>
+
+      <footer role="contentinfo">
+        &copy; Star Tribune
+      </footer>
     </div>
   </body>
 </html>
