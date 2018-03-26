@@ -32,7 +32,7 @@ Publishing is managed with [static-libs](https://github.com/striblab/static-libs
 
 ### Example
 
-Example page is hosted with Github.  Run (todo) to easily push up.
+Example page is hosted with Github.  Run `npm run publish` to easily push up.
 
 ## License
 
