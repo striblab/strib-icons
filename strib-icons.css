@@ -6,11 +6,11 @@
 
 @font-face {
 	font-family: "strib-icons";
-	src: url("strib-icons.eot?148ff3a06ebd57ffb972587766fbceee?#iefix") format("embedded-opentype"),
-url("strib-icons.woff2?148ff3a06ebd57ffb972587766fbceee") format("woff2"),
-url("strib-icons.woff?148ff3a06ebd57ffb972587766fbceee") format("woff"),
-url("strib-icons.ttf?148ff3a06ebd57ffb972587766fbceee") format("truetype"),
-url("strib-icons.svg?148ff3a06ebd57ffb972587766fbceee#strib-icons") format("svg");
+	src: url("strib-icons.eot?6f891754d05c978ec4b942fdf75ac947?#iefix") format("embedded-opentype"),
+url("strib-icons.woff2?6f891754d05c978ec4b942fdf75ac947") format("woff2"),
+url("strib-icons.woff?6f891754d05c978ec4b942fdf75ac947") format("woff"),
+url("strib-icons.ttf?6f891754d05c978ec4b942fdf75ac947") format("truetype"),
+url("strib-icons.svg?6f891754d05c978ec4b942fdf75ac947#strib-icons") format("svg");
 }
 
 .strib-icon {
