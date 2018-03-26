@@ -19,6 +19,9 @@ comment-bubble-long:
 comment-bubble:
   title: "Comment bubble"
   description: "Comment or talk symbol"
+data-drop:
+  title: "Data Drop series"
+  description: "Star Tribune Data Drop series symbol, a set of waves simlar to a chart"
 email:
   title: "Email"
   description: "Small letter to symbolize email"
