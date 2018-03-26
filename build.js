@@ -8,6 +8,7 @@ const fs = require('fs');
 const glob = require('glob');
 const handlebars = require('handlebars');
 const webfontsGenerator = require('webfonts-generator');
+const SVGSprite = require('svg-sprite');
 const pkg = require('./package.json');
 
 // Get list of files
@@ -17,8 +18,8 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
     console.error('\nThere was an error finding icons.');
   }
 
-  // Generator options
-  let options = {
+  // Webfont generator options
+  let fontOptions = {
     files: files,
     dest: 'build/',
     fontName: 'strib-icons',
@@ -35,6 +36,43 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
       pkg: pkg
     }
   };
+
+  // Sprite options
+  let spriteOptions = {
+    mode: {
+      symbol: true
+    }
+  };
+
+  // SVG sprite
+  let spriter = new SVGSprite(spriteOptions);
+  files.forEach(f => {
+    spriter.add(f, null, fs.readFileSync(f, 'utf-8'));
+  });
+  spriter.compile((error, result) => {
+    if (error) {
+      console.error(error);
+      console.error('\nThere was an error building SVG sprite.');
+    }
+
+    // Write files.  This doesn't really account for all the different options
+    // of svg-sprite that well.
+    for (let mode in result) {
+      for (let resource in result[mode]) {
+        fs.writeFileSync(
+          path.join(
+            fontOptions.dest,
+            `${fontOptions.fontName}.${
+              mode === 'symbol' ? '' : mode + '-'
+            }sprite.svg`
+          ),
+          result[mode][resource].contents
+        );
+      }
+    }
+
+    console.error('Done building SVG sprites!');
+  });
 
   // Get some templates
   let jsonTemplate = handlebars.compile(
@@ -63,31 +101,30 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
   //
 
   // Generate
-  webfontsGenerator(options, error => {
+  webfontsGenerator(fontOptions, error => {
     if (error) {
       console.error(error);
       console.error('\nThere was an error building fonts.');
     }
-    else {
-      console.error('Done building fonts!');
-    }
 
     // Manually create JSON and SASS files
     fs.writeFileSync(
-      path.join(options.dest, `${options.fontName}.json`),
+      path.join(fontOptions.dest, `${fontOptions.fontName}.json`),
       jsonTemplate({
-        options: options,
+        options: fontOptions,
         classes: classes
       })
     );
     fs.writeFileSync(
-      path.join(options.dest, `${options.fontName}.scss`),
+      path.join(fontOptions.dest, `${fontOptions.fontName}.scss`),
       scssTemplate({
-        options: options,
+        options: fontOptions,
         classes: classes,
-        scssSrc: scssFontSource(options)
+        scssSrc: scssFontSource(fontOptions)
       })
     );
+
+    console.error('Done building fonts!');
   });
 });
 

@@ -25,3 +25,10 @@
 	content: "\\{{this}}";
 }
 {{/each}}
+
+/* SVG includes */
+{{baseSelector}}-svg {
+	display: inline-block;
+  width: 1em;
+	height: 1em;
+}

@@ -20,6 +20,14 @@
         color: #8dc63f;
       }
 
+      .strib-icon-svg {
+        transition: fill 0.5s ease-out;
+      }
+
+      .strib-icon-svg:hover {
+        fill: #8dc63f;
+      }
+
       .example-icon {
         margin-bottom: 2em;
       }
@@ -58,6 +66,34 @@
             <div>
               <span class="example-large strib-icon {{../classPrefix}}{{this}}"></span>
               <span class="example-small strib-icon {{../classPrefix}}{{this}}"></span>
+            </div>
+
+            <div class="example-icon-name">
+              {{this}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+      <h2>SVG icons</h2>
+
+
+
+      <div class="row">
+        {{#each names}}
+          <div class="col-6 col-md-3 example-icon">
+            <div>
+              <span class="example-large">
+                <svg class="strib-icon-svg">
+                  <use xlink:href="strib-icons.sprite.svg#{{this}}"></use>
+                </svg>
+              </span>
+
+              <span class="example-small">
+                <svg class="strib-icon-svg">
+                  <use xlink:href="strib-icons.sprite.svg#{{this}}"></use>
+                </svg>
+              </span>
             </div>
 
             <div class="example-icon-name">
