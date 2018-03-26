@@ -39,8 +39,11 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
 
   // Sprite options
   let spriteOptions = {
+    shape: {
+      meta: path.join(__dirname, 'source/icons.yml')
+    },
     mode: {
-      symbol: true
+      symbol: true,
     }
   };
 
