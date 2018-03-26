@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>strib-icons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- TODO: Switch to Strib Styles -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./strib-icons.css">
+
+    <style>
+      .strib-icon {
+        transition: color 0.5s ease-out;
+      }
+
+      .strib-icon:hover {
+        color: #8dc63f;
+      }
+
+      .strib-icon-svg {
+        transition: fill 0.5s ease-out;
+      }
+
+      .strib-icon-svg:hover {
+        fill: #8dc63f;
+      }
+
+      .example-icon {
+        margin-bottom: 2em;
+      }
+
+      .example-large {
+        font-size: 3em;
+      }
+
+      .example-small {
+        font-size: 1.25em;
+      }
+
+      .example-icon-name {
+        padding-top: 0.5em;
+        font-size: 0.85em;
+      }
+
+      pre {
+        padding: 1em;
+        background-color: #DEDEDE;
+      }
+
+      header[role='banner'] {
+        margin-bottom: 3em;
+      }
+
+      footer[role='contentinfo'] {
+        font-size: 0.85em;
+        padding: 2em;
+        background-color: #DEDEDE;
+      }
+
+      main > section {
+        margin-bottom: 3em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header role="banner">
+        <h1 class="display-1">Star Tribune icons</h1>
+
+        <p>The Star Tribune icons is a font-icon and SVG set to manage icons used in Star Tribune projects.</p>
+      </header>
+
+      <main role="main">
+        <section>
+          <h1>Webfont</h1>
+
+          <p>These icons can be used as a webfont; the main benefits is a bit more easier, though limited, to style with CSS, as any styles that apply to text can be applied as well.</p>
+
+          <p>To use the Star Tribune icons as a webfont, include the CSS or SASS.</p>
+
+<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.1/strib-icons.css"&gt;</code></pre>
+
+          <p>Then use the base class, <code>strib-icon</code> and then the icon class which is always prefixed with <code>strib-</code>, for instance:</p>
+
+<pre><code>&lt;i class="strib-icon strib-home"&gt;&lt;/i&gt;</code></pre>
+
+          <p>&nbsp;</p>
+
+          <div class="row">
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-arrow-right"></span>
+                  <span class="example-small strib-icon strib-arrow-right"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  arrow-right
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-arrow-value-down"></span>
+                  <span class="example-small strib-icon strib-arrow-value-down"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  arrow-value-down
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-arrow-value-up"></span>
+                  <span class="example-small strib-icon strib-arrow-value-up"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  arrow-value-up
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-close"></span>
+                  <span class="example-small strib-icon strib-close"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  close
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-comment-bubble-long"></span>
+                  <span class="example-small strib-icon strib-comment-bubble-long"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  comment-bubble-long
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-comment-bubble"></span>
+                  <span class="example-small strib-icon strib-comment-bubble"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  comment-bubble
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-email"></span>
+                  <span class="example-small strib-icon strib-email"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  email
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-hamburger"></span>
+                  <span class="example-small strib-icon strib-hamburger"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  hamburger
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-home"></span>
+                  <span class="example-small strib-icon strib-home"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  home
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-map-pin"></span>
+                  <span class="example-small strib-icon strib-map-pin"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  map-pin
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-media-play"></span>
+                  <span class="example-small strib-icon strib-media-play"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  media-play
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-media-video"></span>
+                  <span class="example-small strib-icon strib-media-video"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  media-video
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-modal"></span>
+                  <span class="example-small strib-icon strib-modal"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  modal
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-nav-back"></span>
+                  <span class="example-small strib-icon strib-nav-back"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  nav-back
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-nav-forward"></span>
+                  <span class="example-small strib-icon strib-nav-forward"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  nav-forward
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-person"></span>
+                  <span class="example-small strib-icon strib-person"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  person
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-phone"></span>
+                  <span class="example-small strib-icon strib-phone"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  phone
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-print"></span>
+                  <span class="example-small strib-icon strib-print"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  print
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-reprint"></span>
+                  <span class="example-small strib-icon strib-reprint"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  reprint
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-search"></span>
+                  <span class="example-small strib-icon strib-search"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  search
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-social-facebook-circle"></span>
+                  <span class="example-small strib-icon strib-social-facebook-circle"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-facebook-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-social-facebook"></span>
+                  <span class="example-small strib-icon strib-social-facebook"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-facebook
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-social-google-circle"></span>
+                  <span class="example-small strib-icon strib-social-google-circle"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-google-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-social-instagram-circle"></span>
+                  <span class="example-small strib-icon strib-social-instagram-circle"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-instagram-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-social-linkedin-social"></span>
+                  <span class="example-small strib-icon strib-social-linkedin-social"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-linkedin-social
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-social-pinterest-circle"></span>
+                  <span class="example-small strib-icon strib-social-pinterest-circle"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-pinterest-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-social-tumblr-circle"></span>
+                  <span class="example-small strib-icon strib-social-tumblr-circle"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-tumblr-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-social-twitter-circle"></span>
+                  <span class="example-small strib-icon strib-social-twitter-circle"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-twitter-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-social-twitter"></span>
+                  <span class="example-small strib-icon strib-social-twitter"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-twitter
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-strib-star"></span>
+                  <span class="example-small strib-icon strib-strib-star"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  strib-star
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-text-size"></span>
+                  <span class="example-small strib-icon strib-text-size"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  text-size
+                </div>
+              </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>SVG icons</h2>
+
+          <p>Using the Star Tribune icons as SVG icons has many benefits including fuller, though still limited, styling as any styles that apply to SVG can apply.  Browser support is not as good as a webfont.</p>
+
+          <p>To use, simply include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, for example:</p>
+
+<pre><code>&lt;svg class="strib-icon-svg"&gt;
+  &lt;use xlink:href="//static.startribune.com/assets/libs/strib-icons/0.0.1/strib-icons.sprite.svg#home"&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+
+          <p>Note that the library can be put somewhere locally if you don't want to use such a long URL.</p>
+
+          <p>&nbsp;</p>
+
+          <div class="row">
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#arrow-right"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#arrow-right"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  arrow-right
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#arrow-value-down"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#arrow-value-down"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  arrow-value-down
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#arrow-value-up"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#arrow-value-up"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  arrow-value-up
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#close"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#close"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  close
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#comment-bubble-long"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#comment-bubble-long"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  comment-bubble-long
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#comment-bubble"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#comment-bubble"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  comment-bubble
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#email"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#email"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  email
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#hamburger"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#hamburger"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  hamburger
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#home"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#home"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  home
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#map-pin"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#map-pin"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  map-pin
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#media-play"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#media-play"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  media-play
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#media-video"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#media-video"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  media-video
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#modal"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#modal"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  modal
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#nav-back"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#nav-back"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  nav-back
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#nav-forward"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#nav-forward"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  nav-forward
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#person"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#person"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  person
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#phone"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#phone"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  phone
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#print"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#print"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  print
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#reprint"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#reprint"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  reprint
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#search"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#search"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  search
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-facebook-circle"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-facebook-circle"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-facebook-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-facebook"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-facebook"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-facebook
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-google-circle"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-google-circle"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-google-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-instagram-circle"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-instagram-circle"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-instagram-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-linkedin-social"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-linkedin-social"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-linkedin-social
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-pinterest-circle"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-pinterest-circle"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-pinterest-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-tumblr-circle"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-tumblr-circle"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-tumblr-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-twitter-circle"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-twitter-circle"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-twitter-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-twitter"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#social-twitter"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-twitter
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-star"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-star"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  strib-star
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#text-size"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#text-size"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  text-size
+                </div>
+              </div>
+          </div>
+        </section>
+      </main>
+
+      <footer role="contentinfo">
+        &copy; Star Tribune
+      </footer>
+    </div>
+  </body>
+</html>

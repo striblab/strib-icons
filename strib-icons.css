@@ -1,0 +1,126 @@
+/**
+ * Strar Tribune icons (strib-icons)
+ * Version: 0.0.1
+ * Copyright Star Tribune
+ */
+
+@font-face {
+	font-family: "strib-icons";
+	src: url("strib-icons.eot?148ff3a06ebd57ffb972587766fbceee?#iefix") format("embedded-opentype"),
+url("strib-icons.woff2?148ff3a06ebd57ffb972587766fbceee") format("woff2"),
+url("strib-icons.woff?148ff3a06ebd57ffb972587766fbceee") format("woff"),
+url("strib-icons.ttf?148ff3a06ebd57ffb972587766fbceee") format("truetype"),
+url("strib-icons.svg?148ff3a06ebd57ffb972587766fbceee#strib-icons") format("svg");
+}
+
+.strib-icon {
+	line-height: 1;
+}
+
+.strib-icon:before {
+	font-family: strib-icons !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+.strib-arrow-right:before {
+	content: "\f101";
+}
+.strib-arrow-value-down:before {
+	content: "\f102";
+}
+.strib-arrow-value-up:before {
+	content: "\f103";
+}
+.strib-close:before {
+	content: "\f104";
+}
+.strib-comment-bubble-long:before {
+	content: "\f105";
+}
+.strib-comment-bubble:before {
+	content: "\f106";
+}
+.strib-email:before {
+	content: "\f107";
+}
+.strib-hamburger:before {
+	content: "\f108";
+}
+.strib-home:before {
+	content: "\f109";
+}
+.strib-map-pin:before {
+	content: "\f10a";
+}
+.strib-media-play:before {
+	content: "\f10b";
+}
+.strib-media-video:before {
+	content: "\f10c";
+}
+.strib-modal:before {
+	content: "\f10d";
+}
+.strib-nav-back:before {
+	content: "\f10e";
+}
+.strib-nav-forward:before {
+	content: "\f10f";
+}
+.strib-person:before {
+	content: "\f110";
+}
+.strib-phone:before {
+	content: "\f111";
+}
+.strib-print:before {
+	content: "\f112";
+}
+.strib-reprint:before {
+	content: "\f113";
+}
+.strib-search:before {
+	content: "\f114";
+}
+.strib-social-facebook-circle:before {
+	content: "\f115";
+}
+.strib-social-facebook:before {
+	content: "\f116";
+}
+.strib-social-google-circle:before {
+	content: "\f117";
+}
+.strib-social-instagram-circle:before {
+	content: "\f118";
+}
+.strib-social-linkedin-social:before {
+	content: "\f119";
+}
+.strib-social-pinterest-circle:before {
+	content: "\f11a";
+}
+.strib-social-tumblr-circle:before {
+	content: "\f11b";
+}
+.strib-social-twitter-circle:before {
+	content: "\f11c";
+}
+.strib-social-twitter:before {
+	content: "\f11d";
+}
+.strib-strib-star:before {
+	content: "\f11e";
+}
+.strib-text-size:before {
+	content: "\f11f";
+}
+
+/* SVG includes */
+.strib-icon-svg {
+	display: inline-block;
+  width: 1em;
+	height: 1em;
+}
