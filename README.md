@@ -10,7 +10,7 @@ Icons used in projects as different formats.
 
 ### Icons
 
-* Icons should be in SVG format. The canvas/artboard should be square and the icon should take up as much space as possible with a slight pit of padding (i.e. not flush to the canvas).
+* Icons should be in SVG format. The canvas/artboard should be tight around the icon with a slight bit of padding (i.e. not flush to the canvas).
 * Put icons in `source/icons/`
   * The file name of the icon will become the class name of the icon in CSS, so be consistent and reasonable, use only lowercase and dashes, i.e. `category-name-modifier.svg`
 
