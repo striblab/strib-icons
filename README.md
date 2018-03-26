@@ -14,6 +14,7 @@ Icons used in projects as different formats.
 * Do not set a fill color unless the color is very important, such as with the Star Tribune star logo.  You may have to manually edit the fill out.
 * Put icons in `source/icons/`
   * The file name of the icon will become the class name of the icon in CSS, so be consistent and reasonable, use only lowercase and dashes, i.e. `category-name-modifier.svg`
+* Add an entry in `sources/icons.yml`.  This is used for the SVG version of the icons for accessibility.
 
 ### Developing and building
 
