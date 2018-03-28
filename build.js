@@ -9,6 +9,7 @@ const glob = require('glob');
 const handlebars = require('handlebars');
 const webfontsGenerator = require('webfonts-generator');
 const SVGSprite = require('svg-sprite');
+const yaml = require('js-yaml');
 const pkg = require('./package.json');
 
 // Get list of files
@@ -17,6 +18,9 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
     console.error(error);
     console.error('\nThere was an error finding icons.');
   }
+
+  // Read YAML data
+  let metaData = yaml.safeLoad(fs.readFileSync(path.join(__dirname, 'source/icons.yml'), 'utf8'));
 
   // Webfont generator options
   let fontOptions = {
@@ -33,7 +37,8 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
     templateOptions: {
       classPrefix: 'strib-',
       baseSelector: '.strib-icon',
-      pkg: pkg
+      pkg: pkg,
+      meta: metaData
     }
   };
 

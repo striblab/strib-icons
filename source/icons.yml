@@ -22,6 +22,12 @@ comment-bubble:
 data-drop:
   title: "Data Drop series"
   description: "Star Tribune Data Drop series symbol, a set of waves simlar to a chart"
+  variables:
+    - strib-data-drop-bg
+    - strib-data-drop-right
+    - strib-data-drop-left
+    - strib-data-drop-middle
+    - strib-data-drop-bottom
 email:
   title: "Email"
   description: "Small letter to symbolize email"
@@ -100,6 +106,9 @@ social-twitter:
 strib-star:
   title: "Star Tribune star"
   description: "Two-tone Star Tribune star logo"
+  variables:
+    - strib-strib-star-top
+    - strib-strib-star-bottom
 text-size:
   title: "Text size"
   description: "Two capital letters to show difference in text size"
