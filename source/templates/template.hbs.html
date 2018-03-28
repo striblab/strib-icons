@@ -78,7 +78,7 @@
         <section>
           <h1>Webfont</h1>
 
-          <p>These icons can be used as a webfont; the main benefits is a bit more easier, though limited, to style with CSS, as any styles that apply to text can be applied as well.</p>
+          <p>These icons can be used as a webfont; the main benefits is a bit easier, though limited, to style with CSS, as any styles that apply to text can be applied as well.</p>
 
           <p>To use the Star Tribune icons as a webfont, include the CSS or SASS.</p>
 
@@ -87,6 +87,8 @@
           <p>Then use the base class, <code>strib-icon</code> and then the icon class which is always prefixed with <code>strib-</code>, for instance:</p>
 
 <pre><code>&lt;i class="strib-icon strib-home"&gt;&lt;/i&gt;</code></pre>
+
+          <p>To change it's color, simply use the CSS <code>color</code> property; you can change it's size with the <code>font-size</code> property.</p>
 
           <p>&nbsp;</p>
 
@@ -109,13 +111,15 @@
         <section>
           <h2>SVG icons</h2>
 
-          <p>Using the Star Tribune icons as SVG icons has many benefits including fuller, though still limited, styling as any styles that apply to SVG can apply.  Browser support is not as good as a webfont.</p>
+          <p>Using the Star Tribune icons as SVG icons has many benefits including fuller, though still limited, styling as any styles that apply to SVG can apply, and multi-color icons can be used.  Note that browser support is not as good as a webfont.</p>
 
           <p>To use, simply include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, for example:</p>
 
 <pre><code>&lt;svg class="strib-icon-svg"&gt;
   &lt;use xlink:href="//static.startribune.com/assets/libs/strib-icons/{{ pkg.version }}/strib-icons.sprite.svg#home"&gt;&lt;/use&gt;
 &lt;/svg&gt;</code></pre>
+
+          <p>You can style the icons with CSS with some limitations.  You can only add styles to the root of the icon, not to a specific part.</p>
 
           <p>Note that the library can be put somewhere locally if you don't want to use such a long URL.</p>
 
