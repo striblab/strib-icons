@@ -104,7 +104,7 @@
 
 <pre><code>&lt;i class="strib-icon strib-home"&gt;&lt;/i&gt;</code></pre>
 
-          <p>To change it's color, simply use the CSS <code>color</code> property; you can change it's size with the <code>font-size</code> property.</p>
+          <p>Treat the icon like text.  To change it's color, simply use the CSS <code>color</code> property; you can change it's size with the <code>font-size</code> property.</p>
 
           <p>&nbsp;</p>
 
@@ -135,9 +135,7 @@
   &lt;use xlink:href="//static.startribune.com/assets/libs/strib-icons/{{ pkg.version }}/strib-icons.sprite.svg#home"&gt;&lt;/use&gt;
 &lt;/svg&gt;</code></pre>
 
-          <p>You can style the icons with CSS with some limitations.  You can only add styles to the root of the icon, not to a specific part.</p>
-
-          <p>Note that the library can be put somewhere locally if you don't want to use such a long URL.</p>
+          <p>You can style the icons with CSS with some limitations.  You can only add styles to the root of the icon, not to a specific part.  Treat the icon like an image and an SVG.  To change it's color, use the SVG CSS <code>fill</code> property; you can change it's size with the <code>height</code> or <code>width</code> property.</p>
 
           <p>For icons that have default colors, you can change the colors with CSS variables.  For instance, adding a different color to the Star Tribune logo, you could do:</p>
 
@@ -145,6 +143,8 @@
   --strib-strib-star-top: red;
   --strib-strib-star-bottom: pink;
 }</code></pre>
+
+          <p>There are some icons that require a specific white fill, though these should be drawn.  If you need to update that fill use the <code>--strib-icon-background</code> variable.</p>
 
           <p>&nbsp;</p>
 
