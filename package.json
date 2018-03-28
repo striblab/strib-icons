@@ -1,6 +1,6 @@
 {
   "name": "strib-icons",
-  "version": "0.0.1",
+  "version": "0.0.2-dev",
   "description": "Icons used in projects as different formats.",
   "main": "build.js",
   "watch": {
