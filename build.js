@@ -5,6 +5,7 @@
 // Depdencies
 const path = require('path');
 const fs = require('fs');
+const _ = require('underscore');
 const glob = require('glob');
 const handlebars = require('handlebars');
 const webfontsGenerator = require('webfonts-generator');
@@ -124,6 +125,9 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
       console.error('\nThere was an error building fonts.');
     }
 
+    // Ugh
+    let codepoints = generateCodePoints(fontOptions);
+
     // Manually create JSON and SASS files
     fs.writeFileSync(
       path.join(fontOptions.dest, `${fontOptions.fontName}.json`),
@@ -137,7 +141,8 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
       scssTemplate({
         options: fontOptions,
         classes: classes,
-        scssSrc: scssFontSource(fontOptions)
+        scssSrc: scssFontSource(fontOptions),
+        codepoints: codepoints
       })
     );
     fs.writeFileSync(
@@ -176,4 +181,38 @@ function scssFontSource(options) {
   });
 
   return output;
+}
+
+// Webfonts-generator is not helpful in giving back useful data
+// about what was created for our templates, so we have to manually
+// create it.  Also note that it doesn't look the project is
+// well maintainer to where a pull request would get in quickly.
+function generateCodePoints(options) {
+  options.startCodepoint = options.startCodepoint || 0xF101;
+  options.codepoints = options.codepoints || {};
+  options.names = options.names || _.map(options.files, (file) => {
+    return path.basename(file, path.extname(file));
+  });
+
+  // Generates codepoints starting from `options.startCodepoint`,
+  // skipping codepoints explicitly specified in `options.codepoints`
+  let currentCodepoint = options.startCodepoint;
+  let codepointsValues = _.values(options.codepoints);
+
+  function getNextCodepoint() {
+    while (_.contains(codepointsValues, currentCodepoint)) {
+      currentCodepoint++;
+    }
+    let res = currentCodepoint;
+    currentCodepoint++;
+    return res;
+  }
+
+  _.each(options.names, function(name) {
+    if (!options.codepoints[name]) {
+      options.codepoints[name] = getNextCodepoint();
+    }
+  });
+
+  return options.codepoints;
 }
