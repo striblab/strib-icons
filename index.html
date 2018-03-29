@@ -18,6 +18,7 @@
 
       .strib-icon:hover {
         color: #8dc63f;
+        cursor: help;
       }
 
       .strib-icon-svg {
@@ -26,6 +27,12 @@
 
       .strib-icon-svg:hover {
         fill: #8dc63f;
+        cursor: help;
+      }
+
+      .strib-icon-svg:hover {
+        --strib-strib-star-top: red;
+        --strib-strib-star-bottom: pink;
       }
 
       .example-icon {
@@ -43,6 +50,15 @@
       .example-icon-name {
         padding-top: 0.5em;
         font-size: 0.85em;
+      }
+
+      .example-variables {
+        padding-top: 0.5em;
+        font-size: 0.5em;
+      }
+
+      .example-variables span {
+        font-weight: bold;
       }
 
       pre {
@@ -78,15 +94,17 @@
         <section>
           <h1>Webfont</h1>
 
-          <p>These icons can be used as a webfont; the main benefits is a bit more easier, though limited, to style with CSS, as any styles that apply to text can be applied as well.</p>
+          <p>These icons can be used as a webfont; the main benefits is a bit easier, though limited, to style with CSS, as any styles that apply to text can be applied as well.</p>
 
           <p>To use the Star Tribune icons as a webfont, include the CSS or SASS.</p>
 
-<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.1/strib-icons.css"&gt;</code></pre>
+<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.2/strib-icons.css"&gt;</code></pre>
 
           <p>Then use the base class, <code>strib-icon</code> and then the icon class which is always prefixed with <code>strib-</code>, for instance:</p>
 
 <pre><code>&lt;i class="strib-icon strib-home"&gt;&lt;/i&gt;</code></pre>
+
+          <p>Treat the icon like text.  To change it's color, simply use the CSS <code>color</code> property; you can change it's size with the <code>font-size</code> property.</p>
 
           <p>&nbsp;</p>
 
@@ -123,6 +141,16 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
+                  <span class="example-large strib-icon strib-camera"></span>
+                  <span class="example-small strib-icon strib-camera"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  camera
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
                   <span class="example-large strib-icon strib-close"></span>
                   <span class="example-small strib-icon strib-close"></span>
                 </div>
@@ -153,6 +181,16 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
+                  <span class="example-large strib-icon strib-data-drop"></span>
+                  <span class="example-small strib-icon strib-data-drop"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  data-drop
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
                   <span class="example-large strib-icon strib-email"></span>
                   <span class="example-small strib-icon strib-email"></span>
                 </div>
@@ -179,6 +217,16 @@
 
                 <div class="example-icon-name">
                   home
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-like"></span>
+                  <span class="example-small strib-icon strib-like"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  like
                 </div>
               </div>
               <div class="col-6 col-md-3 example-icon">
@@ -253,12 +301,22 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-phone"></span>
-                  <span class="example-small strib-icon strib-phone"></span>
+                  <span class="example-large strib-icon strib-phone-app"></span>
+                  <span class="example-small strib-icon strib-phone-app"></span>
                 </div>
 
                 <div class="example-icon-name">
-                  phone
+                  phone-app
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-phone-landline"></span>
+                  <span class="example-small strib-icon strib-phone-landline"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  phone-landline
                 </div>
               </div>
               <div class="col-6 col-md-3 example-icon">
@@ -269,6 +327,16 @@
 
                 <div class="example-icon-name">
                   print
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-reply"></span>
+                  <span class="example-small strib-icon strib-reply"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  reply
                 </div>
               </div>
               <div class="col-6 col-md-3 example-icon">
@@ -407,15 +475,24 @@
         <section>
           <h2>SVG icons</h2>
 
-          <p>Using the Star Tribune icons as SVG icons has many benefits including fuller, though still limited, styling as any styles that apply to SVG can apply.  Browser support is not as good as a webfont.</p>
+          <p>Using the Star Tribune icons as SVG icons has many benefits including fuller, though still limited, styling as any styles that apply to SVG can apply, and multi-color icons can be used.  Note that browser support is not as good as a webfont.</p>
 
           <p>To use, simply include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, for example:</p>
 
 <pre><code>&lt;svg class="strib-icon-svg"&gt;
-  &lt;use xlink:href="//static.startribune.com/assets/libs/strib-icons/0.0.1/strib-icons.sprite.svg#home"&gt;&lt;/use&gt;
+  &lt;use xlink:href="//static.startribune.com/assets/libs/strib-icons/0.0.2/strib-icons.sprite.svg#home"&gt;&lt;/use&gt;
 &lt;/svg&gt;</code></pre>
 
-          <p>Note that the library can be put somewhere locally if you don't want to use such a long URL.</p>
+          <p>You can style the icons with CSS with some limitations.  You can only add styles to the root of the icon, not to a specific part.  Treat the icon like an image and an SVG.  To change it's color, use the SVG CSS <code>fill</code> property; you can change it's size with the <code>height</code> or <code>width</code> property.</p>
+
+          <p>For icons that have default colors, you can change the colors with CSS variables.  For instance, adding a different color to the Star Tribune logo, you could do:</p>
+
+<pre><code>.strib-icon-svg:hover {
+  --strib-strib-star-top: red;
+  --strib-strib-star-bottom: pink;
+}</code></pre>
+
+          <p>There are some icons that require a specific white fill, though these should be drawn.  If you need to update that fill use the <code>--strib-icon-background</code> variable.</p>
 
           <p>&nbsp;</p>
 
@@ -438,6 +515,7 @@
                 <div class="example-icon-name">
                   arrow-right
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -457,6 +535,7 @@
                 <div class="example-icon-name">
                   arrow-value-down
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -476,6 +555,27 @@
                 <div class="example-icon-name">
                   arrow-value-up
                 </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#camera"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#camera"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  camera
+                </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -495,6 +595,7 @@
                 <div class="example-icon-name">
                   close
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -514,6 +615,7 @@
                 <div class="example-icon-name">
                   comment-bubble-long
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -533,6 +635,35 @@
                 <div class="example-icon-name">
                   comment-bubble
                 </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#data-drop"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#data-drop"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  data-drop
+                </div>
+
+                    <div class="example-variables">
+                      <span>Variables:</span>
+                        <code>--strib-data-drop-bg</code>,
+                        <code>--strib-data-drop-right</code>,
+                        <code>--strib-data-drop-left</code>,
+                        <code>--strib-data-drop-middle</code>,
+                        <code>--strib-data-drop-bottom</code>
+                    </div>
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -552,6 +683,7 @@
                 <div class="example-icon-name">
                   email
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -571,6 +703,7 @@
                 <div class="example-icon-name">
                   hamburger
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -590,6 +723,27 @@
                 <div class="example-icon-name">
                   home
                 </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#like"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#like"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  like
+                </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -609,6 +763,7 @@
                 <div class="example-icon-name">
                   map-pin
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -628,6 +783,7 @@
                 <div class="example-icon-name">
                   media-play
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -647,6 +803,7 @@
                 <div class="example-icon-name">
                   media-video
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -666,6 +823,7 @@
                 <div class="example-icon-name">
                   modal
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -685,6 +843,7 @@
                 <div class="example-icon-name">
                   nav-back
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -704,6 +863,7 @@
                 <div class="example-icon-name">
                   nav-forward
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -723,25 +883,47 @@
                 <div class="example-icon-name">
                   person
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#phone"></use>
+                      <use xlink:href="strib-icons.sprite.svg#phone-app"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#phone"></use>
+                      <use xlink:href="strib-icons.sprite.svg#phone-app"></use>
                     </svg>
                   </span>
                 </div>
 
                 <div class="example-icon-name">
-                  phone
+                  phone-app
                 </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#phone-landline"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#phone-landline"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  phone-landline
+                </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -761,6 +943,27 @@
                 <div class="example-icon-name">
                   print
                 </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#reply"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#reply"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  reply
+                </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -780,6 +983,7 @@
                 <div class="example-icon-name">
                   reprint
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -799,6 +1003,7 @@
                 <div class="example-icon-name">
                   search
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -818,6 +1023,7 @@
                 <div class="example-icon-name">
                   social-facebook-circle
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -837,6 +1043,7 @@
                 <div class="example-icon-name">
                   social-facebook
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -856,6 +1063,7 @@
                 <div class="example-icon-name">
                   social-google-circle
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -875,6 +1083,7 @@
                 <div class="example-icon-name">
                   social-instagram-circle
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -894,6 +1103,7 @@
                 <div class="example-icon-name">
                   social-linkedin-social
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -913,6 +1123,7 @@
                 <div class="example-icon-name">
                   social-pinterest-circle
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -932,6 +1143,7 @@
                 <div class="example-icon-name">
                   social-tumblr-circle
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -951,6 +1163,7 @@
                 <div class="example-icon-name">
                   social-twitter-circle
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -970,6 +1183,7 @@
                 <div class="example-icon-name">
                   social-twitter
                 </div>
+
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -989,6 +1203,12 @@
                 <div class="example-icon-name">
                   strib-star
                 </div>
+
+                    <div class="example-variables">
+                      <span>Variables:</span>
+                        <code>--strib-strib-star-top</code>,
+                        <code>--strib-strib-star-bottom</code>
+                    </div>
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
@@ -1008,6 +1228,7 @@
                 <div class="example-icon-name">
                   text-size
                 </div>
+
               </div>
           </div>
         </section>

@@ -12,11 +12,11 @@ $strib-fonts-class-prefix: "strib-" !default;
 
 @font-face {
 	font-family: "#{$strib-fonts-font-name}";
-	src: url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1522093808552#strib-icons") format("embedded-opentype"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1522093808552") format("truetype"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1522093808552") format("woff"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1522093808552") format("woff2"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522093808552#iefix") format("embedded-opentype");
+	src: url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1522334086744#strib-icons") format("embedded-opentype"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1522334086744") format("truetype"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1522334086744") format("woff"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1522334086744") format("woff2"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522334086744#iefix") format("embedded-opentype");
 }
 
 #{$strib-fonts-base-selector} {
@@ -39,6 +39,9 @@ url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522093808552#iefix")
 .#{$strib-fonts-class-prefix}arrow-value-up:before {
 	content: "\arrow-value-up";
 }
+.#{$strib-fonts-class-prefix}camera:before {
+	content: "\camera";
+}
 .#{$strib-fonts-class-prefix}close:before {
 	content: "\close";
 }
@@ -48,6 +51,9 @@ url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522093808552#iefix")
 .#{$strib-fonts-class-prefix}comment-bubble:before {
 	content: "\comment-bubble";
 }
+.#{$strib-fonts-class-prefix}data-drop:before {
+	content: "\data-drop";
+}
 .#{$strib-fonts-class-prefix}email:before {
 	content: "\email";
 }
@@ -56,6 +62,9 @@ url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522093808552#iefix")
 }
 .#{$strib-fonts-class-prefix}home:before {
 	content: "\home";
+}
+.#{$strib-fonts-class-prefix}like:before {
+	content: "\like";
 }
 .#{$strib-fonts-class-prefix}map-pin:before {
 	content: "\map-pin";
@@ -78,11 +87,17 @@ url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522093808552#iefix")
 .#{$strib-fonts-class-prefix}person:before {
 	content: "\person";
 }
-.#{$strib-fonts-class-prefix}phone:before {
-	content: "\phone";
+.#{$strib-fonts-class-prefix}phone-app:before {
+	content: "\phone-app";
+}
+.#{$strib-fonts-class-prefix}phone-landline:before {
+	content: "\phone-landline";
 }
 .#{$strib-fonts-class-prefix}print:before {
 	content: "\print";
+}
+.#{$strib-fonts-class-prefix}reply:before {
+	content: "\reply";
 }
 .#{$strib-fonts-class-prefix}reprint:before {
 	content: "\reprint";
@@ -122,4 +137,11 @@ url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522093808552#iefix")
 }
 .#{$strib-fonts-class-prefix}text-size:before {
 	content: "\text-size";
+}
+
+// SVG includes
+#{$strib-fonts-base-selector}-svg {
+	display: inline-block;
+  width: 1em;
+	height: 1em;
 }
