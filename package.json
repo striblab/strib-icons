@@ -17,7 +17,7 @@
     "server": "browser-sync start --ss build -f build",
     "develop": "concurrently \"npm-watch\" \"npm run server\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "gh-pages -d build",
+    "gh-publish": "gh-pages -d build",
     "npm-publish": "npm publish --access public"
   },
   "repository": {
