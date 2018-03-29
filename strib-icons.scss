@@ -12,11 +12,11 @@ $strib-fonts-class-prefix: "strib-" !default;
 
 @font-face {
 	font-family: "#{$strib-fonts-font-name}";
-	src: url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1522334086744#strib-icons") format("embedded-opentype"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1522334086744") format("truetype"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1522334086744") format("woff"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1522334086744") format("woff2"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522334086744#iefix") format("embedded-opentype");
+	src: url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1522344338087#strib-icons") format("embedded-opentype"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1522344338087") format("truetype"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1522344338087") format("woff"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1522344338087") format("woff2"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522344338087#iefix") format("embedded-opentype");
 }
 
 #{$strib-fonts-base-selector} {
