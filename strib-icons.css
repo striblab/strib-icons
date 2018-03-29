@@ -1,16 +1,16 @@
 /**
- * Strar Tribune icons (strib-icons)
- * Version: 0.0.5
+ * Star Tribune icons (strib-icons)
+ * Version: 0.0.6
  * Copyright Star Tribune
  */
 
 @font-face {
 	font-family: "strib-icons";
-	src: url("strib-icons.eot?4fd3e4e9c17adad84304c0db5724d286?#iefix") format("embedded-opentype"),
-url("strib-icons.woff2?4fd3e4e9c17adad84304c0db5724d286") format("woff2"),
-url("strib-icons.woff?4fd3e4e9c17adad84304c0db5724d286") format("woff"),
-url("strib-icons.ttf?4fd3e4e9c17adad84304c0db5724d286") format("truetype"),
-url("strib-icons.svg?4fd3e4e9c17adad84304c0db5724d286#strib-icons") format("svg");
+	src: url("strib-icons.eot?8f0c9d6697753a2afe62e0ef10c15355?#iefix") format("embedded-opentype"),
+url("strib-icons.woff2?8f0c9d6697753a2afe62e0ef10c15355") format("woff2"),
+url("strib-icons.woff?8f0c9d6697753a2afe62e0ef10c15355") format("woff"),
+url("strib-icons.ttf?8f0c9d6697753a2afe62e0ef10c15355") format("truetype"),
+url("strib-icons.svg?8f0c9d6697753a2afe62e0ef10c15355#strib-icons") format("svg");
 }
 
 .strib-icon {

@@ -1,5 +1,5 @@
 /**
- * Strar Tribune icons (strib-icons)
+ * Star Tribune icons (strib-icons)
  * Version: 
  * Copyright Star Tribune
  */
@@ -12,11 +12,11 @@ $strib-fonts-class-prefix: "strib-" !default;
 
 @font-face {
 	font-family: "#{$strib-fonts-font-name}";
-	src: url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1522345288302#strib-icons") format("embedded-opentype"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1522345288302") format("truetype"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1522345288302") format("woff"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1522345288302") format("woff2"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522345288302#iefix") format("embedded-opentype");
+	src: url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1522350591646#strib-icons") format("embedded-opentype"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1522350591646") format("truetype"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1522350591646") format("woff"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1522350591646") format("woff2"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522350591646#iefix") format("embedded-opentype");
 }
 
 #{$strib-fonts-base-selector} {
@@ -30,114 +30,6 @@ url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522345288302#iefix")
 	vertical-align: top;
 }
 
-.#{$strib-fonts-class-prefix}arrow-right:before {
-	content: "\arrow-right";
-}
-.#{$strib-fonts-class-prefix}arrow-value-down:before {
-	content: "\arrow-value-down";
-}
-.#{$strib-fonts-class-prefix}arrow-value-up:before {
-	content: "\arrow-value-up";
-}
-.#{$strib-fonts-class-prefix}camera:before {
-	content: "\camera";
-}
-.#{$strib-fonts-class-prefix}close:before {
-	content: "\close";
-}
-.#{$strib-fonts-class-prefix}comment-bubble-long:before {
-	content: "\comment-bubble-long";
-}
-.#{$strib-fonts-class-prefix}comment-bubble:before {
-	content: "\comment-bubble";
-}
-.#{$strib-fonts-class-prefix}data-drop:before {
-	content: "\data-drop";
-}
-.#{$strib-fonts-class-prefix}email:before {
-	content: "\email";
-}
-.#{$strib-fonts-class-prefix}hamburger:before {
-	content: "\hamburger";
-}
-.#{$strib-fonts-class-prefix}home:before {
-	content: "\home";
-}
-.#{$strib-fonts-class-prefix}like:before {
-	content: "\like";
-}
-.#{$strib-fonts-class-prefix}map-pin:before {
-	content: "\map-pin";
-}
-.#{$strib-fonts-class-prefix}media-play:before {
-	content: "\media-play";
-}
-.#{$strib-fonts-class-prefix}media-video:before {
-	content: "\media-video";
-}
-.#{$strib-fonts-class-prefix}modal:before {
-	content: "\modal";
-}
-.#{$strib-fonts-class-prefix}nav-back:before {
-	content: "\nav-back";
-}
-.#{$strib-fonts-class-prefix}nav-forward:before {
-	content: "\nav-forward";
-}
-.#{$strib-fonts-class-prefix}person:before {
-	content: "\person";
-}
-.#{$strib-fonts-class-prefix}phone-app:before {
-	content: "\phone-app";
-}
-.#{$strib-fonts-class-prefix}phone-landline:before {
-	content: "\phone-landline";
-}
-.#{$strib-fonts-class-prefix}print:before {
-	content: "\print";
-}
-.#{$strib-fonts-class-prefix}reply:before {
-	content: "\reply";
-}
-.#{$strib-fonts-class-prefix}reprint:before {
-	content: "\reprint";
-}
-.#{$strib-fonts-class-prefix}search:before {
-	content: "\search";
-}
-.#{$strib-fonts-class-prefix}social-facebook-circle:before {
-	content: "\social-facebook-circle";
-}
-.#{$strib-fonts-class-prefix}social-facebook:before {
-	content: "\social-facebook";
-}
-.#{$strib-fonts-class-prefix}social-google-circle:before {
-	content: "\social-google-circle";
-}
-.#{$strib-fonts-class-prefix}social-instagram-circle:before {
-	content: "\social-instagram-circle";
-}
-.#{$strib-fonts-class-prefix}social-linkedin-social:before {
-	content: "\social-linkedin-social";
-}
-.#{$strib-fonts-class-prefix}social-pinterest-circle:before {
-	content: "\social-pinterest-circle";
-}
-.#{$strib-fonts-class-prefix}social-tumblr-circle:before {
-	content: "\social-tumblr-circle";
-}
-.#{$strib-fonts-class-prefix}social-twitter-circle:before {
-	content: "\social-twitter-circle";
-}
-.#{$strib-fonts-class-prefix}social-twitter:before {
-	content: "\social-twitter";
-}
-.#{$strib-fonts-class-prefix}strib-star:before {
-	content: "\strib-star";
-}
-.#{$strib-fonts-class-prefix}text-size:before {
-	content: "\text-size";
-}
 
 // SVG includes
 #{$strib-fonts-base-selector}-svg {

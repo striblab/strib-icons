@@ -1,6 +1,6 @@
 {
   "name": "strib-icons",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "baseSelector": ".strib-icon",
   "classPrefix": "strib-",
   "classes": [

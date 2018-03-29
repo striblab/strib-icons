@@ -98,7 +98,7 @@
 
           <p>To use the Star Tribune icons as a webfont, include the CSS or SASS.</p>
 
-<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.5/strib-icons.css"&gt;</code></pre>
+<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.6/strib-icons.css"&gt;</code></pre>
 
           <p>Then use the base class, <code>strib-icon</code> and then the icon class which is always prefixed with <code>strib-</code>, for instance:</p>
 
@@ -477,15 +477,17 @@
 
           <p>Using the Star Tribune icons as SVG icons has many benefits including fuller, though still limited, styling as any styles that apply to SVG can apply, and multi-color icons can be used.  Note that browser support is not as good as a webfont.</p>
 
-          <p>To use, simply include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, for example:</p>
+          <p>To use, include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, which is the name with the <code>strib-</code>, as well as the JS so that the SVG can be loaded across domains easily, for example:</p>
 
-<pre><code>&lt;svg class="strib-icon-svg"&gt;
-  &lt;use xlink:href="//static.startribune.com/assets/libs/strib-icons/0.0.5/strib-icons.sprite.svg#home"&gt;&lt;/use&gt;
+<pre><code>&lt;script src="//static.startribune.com/assets/libs/strib-icons/0.0.6/strib-icons.js"&gt;&lt;/script&gt;
+
+&lt;svg class="strib-icon-svg"&gt;
+  &lt;use xlink:href="#strib-home"&gt;&lt;/use&gt;
 &lt;/svg&gt;</code></pre>
 
           <p>You can style the icons with CSS with some limitations.  You can only add styles to the root of the icon, not to a specific part.  Treat the icon like an image and an SVG.  To change it's color, use the SVG CSS <code>fill</code> property; you can change it's size with the <code>height</code> or <code>width</code> property.</p>
 
-          <p>For icons that have default colors, you can change the colors with CSS variables.  For instance, adding a different color to the Star Tribune logo, you could do:</p>
+          <p>For icons that have default colors, you can change the colors with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank" rel="noopener">CSS variables</a>.  For instance, adding a different color to the Star Tribune logo, you could do:</p>
 
 <pre><code>.strib-icon-svg:hover {
   --strib-strib-star-top: red;
@@ -501,13 +503,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#arrow-right"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-arrow-right"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#arrow-right"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-arrow-right"></use>
                     </svg>
                   </span>
                 </div>
@@ -521,13 +523,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#arrow-value-down"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-arrow-value-down"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#arrow-value-down"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-arrow-value-down"></use>
                     </svg>
                   </span>
                 </div>
@@ -541,13 +543,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#arrow-value-up"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-arrow-value-up"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#arrow-value-up"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-arrow-value-up"></use>
                     </svg>
                   </span>
                 </div>
@@ -561,13 +563,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#camera"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-camera"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#camera"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-camera"></use>
                     </svg>
                   </span>
                 </div>
@@ -581,13 +583,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#close"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-close"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#close"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-close"></use>
                     </svg>
                   </span>
                 </div>
@@ -601,13 +603,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#comment-bubble-long"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-comment-bubble-long"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#comment-bubble-long"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-comment-bubble-long"></use>
                     </svg>
                   </span>
                 </div>
@@ -621,13 +623,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#comment-bubble"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-comment-bubble"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#comment-bubble"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-comment-bubble"></use>
                     </svg>
                   </span>
                 </div>
@@ -641,13 +643,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#data-drop"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-data-drop"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#data-drop"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-data-drop"></use>
                     </svg>
                   </span>
                 </div>
@@ -669,13 +671,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#email"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-email"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#email"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-email"></use>
                     </svg>
                   </span>
                 </div>
@@ -689,13 +691,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#hamburger"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-hamburger"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#hamburger"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-hamburger"></use>
                     </svg>
                   </span>
                 </div>
@@ -709,13 +711,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#home"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-home"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#home"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-home"></use>
                     </svg>
                   </span>
                 </div>
@@ -729,13 +731,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#like"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-like"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#like"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-like"></use>
                     </svg>
                   </span>
                 </div>
@@ -749,13 +751,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#map-pin"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-map-pin"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#map-pin"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-map-pin"></use>
                     </svg>
                   </span>
                 </div>
@@ -769,13 +771,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#media-play"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-media-play"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#media-play"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-media-play"></use>
                     </svg>
                   </span>
                 </div>
@@ -789,13 +791,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#media-video"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-media-video"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#media-video"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-media-video"></use>
                     </svg>
                   </span>
                 </div>
@@ -809,13 +811,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#modal"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-modal"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#modal"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-modal"></use>
                     </svg>
                   </span>
                 </div>
@@ -829,13 +831,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#nav-back"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-nav-back"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#nav-back"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-nav-back"></use>
                     </svg>
                   </span>
                 </div>
@@ -849,13 +851,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#nav-forward"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-nav-forward"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#nav-forward"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-nav-forward"></use>
                     </svg>
                   </span>
                 </div>
@@ -869,13 +871,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#person"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-person"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#person"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-person"></use>
                     </svg>
                   </span>
                 </div>
@@ -889,13 +891,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#phone-app"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-phone-app"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#phone-app"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-phone-app"></use>
                     </svg>
                   </span>
                 </div>
@@ -909,13 +911,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#phone-landline"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-phone-landline"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#phone-landline"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-phone-landline"></use>
                     </svg>
                   </span>
                 </div>
@@ -929,13 +931,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#print"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-print"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#print"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-print"></use>
                     </svg>
                   </span>
                 </div>
@@ -949,13 +951,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#reply"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-reply"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#reply"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-reply"></use>
                     </svg>
                   </span>
                 </div>
@@ -969,13 +971,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#reprint"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-reprint"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#reprint"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-reprint"></use>
                     </svg>
                   </span>
                 </div>
@@ -989,13 +991,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#search"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-search"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#search"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-search"></use>
                     </svg>
                   </span>
                 </div>
@@ -1009,13 +1011,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-facebook-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-facebook-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-facebook-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-facebook-circle"></use>
                     </svg>
                   </span>
                 </div>
@@ -1029,13 +1031,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-facebook"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-facebook"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-facebook"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-facebook"></use>
                     </svg>
                   </span>
                 </div>
@@ -1049,13 +1051,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-google-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-google-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-google-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-google-circle"></use>
                     </svg>
                   </span>
                 </div>
@@ -1069,13 +1071,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-instagram-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-instagram-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-instagram-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-instagram-circle"></use>
                     </svg>
                   </span>
                 </div>
@@ -1089,13 +1091,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-linkedin-social"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-linkedin-social"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-linkedin-social"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-linkedin-social"></use>
                     </svg>
                   </span>
                 </div>
@@ -1109,13 +1111,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-pinterest-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-pinterest-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-pinterest-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-pinterest-circle"></use>
                     </svg>
                   </span>
                 </div>
@@ -1129,13 +1131,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-tumblr-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-tumblr-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-tumblr-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-tumblr-circle"></use>
                     </svg>
                   </span>
                 </div>
@@ -1149,13 +1151,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-twitter-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-twitter-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-twitter-circle"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-twitter-circle"></use>
                     </svg>
                   </span>
                 </div>
@@ -1169,13 +1171,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-twitter"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-twitter"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#social-twitter"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-twitter"></use>
                     </svg>
                   </span>
                 </div>
@@ -1189,13 +1191,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#strib-star"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-strib-star"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#strib-star"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-strib-star"></use>
                     </svg>
                   </span>
                 </div>
@@ -1214,13 +1216,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#text-size"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-text-size"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#text-size"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-text-size"></use>
                     </svg>
                   </span>
                 </div>
