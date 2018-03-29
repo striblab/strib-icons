@@ -1,6 +1,6 @@
 {
   "name": "@striblab/strib-icons",
-  "version": "0.0.3-dev",
+  "version": "0.0.4",
   "description": "Icons used in projects as different formats.",
   "main": "build.js",
   "watch": {
