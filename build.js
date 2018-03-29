@@ -45,7 +45,10 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
   // Sprite options
   let spriteOptions = {
     shape: {
-      meta: path.join(__dirname, 'source/icons.yml')
+      meta: path.join(__dirname, 'source/icons.yml'),
+      id: {
+        generator: 'strib-%s'
+      }
     },
     mode: {
       symbol: true,
@@ -95,6 +98,12 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
       'utf-8'
     )
   );
+  let jsTemplate = handlebars.compile(
+    fs.readFileSync(
+      path.join(__dirname, 'source/templates/template.hbs.js'),
+      'utf-8'
+    )
+  );
 
   // Classes from file names
   let classes = files.map(f => {
@@ -126,6 +135,15 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
     fs.writeFileSync(
       path.join(fontOptions.dest, `${fontOptions.fontName}.scss`),
       scssTemplate({
+        options: fontOptions,
+        classes: classes,
+        scssSrc: scssFontSource(fontOptions)
+      })
+    );
+    fs.writeFileSync(
+      path.join(fontOptions.dest, `${fontOptions.fontName}.js`),
+      jsTemplate({
+        pkg: pkg,
         options: fontOptions,
         classes: classes,
         scssSrc: scssFontSource(fontOptions)

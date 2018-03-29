@@ -129,15 +129,17 @@
 
           <p>Using the Star Tribune icons as SVG icons has many benefits including fuller, though still limited, styling as any styles that apply to SVG can apply, and multi-color icons can be used.  Note that browser support is not as good as a webfont.</p>
 
-          <p>To use, simply include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, for example:</p>
+          <p>To use, include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, which is the name with the <code>strib-</code>, as well as the JS so that the SVG can be loaded across domains easily, for example:</p>
 
-<pre><code>&lt;svg class="strib-icon-svg"&gt;
-  &lt;use xlink:href="//static.startribune.com/assets/libs/strib-icons/{{ pkg.version }}/strib-icons.sprite.svg#home"&gt;&lt;/use&gt;
+<pre><code>&lt;script src="//static.startribune.com/assets/libs/strib-icons/{{ pkg.version }}/strib-icons.js"&gt;&lt;/script&gt;
+
+&lt;svg class="strib-icon-svg"&gt;
+  &lt;use xlink:href="#strib-home"&gt;&lt;/use&gt;
 &lt;/svg&gt;</code></pre>
 
           <p>You can style the icons with CSS with some limitations.  You can only add styles to the root of the icon, not to a specific part.  Treat the icon like an image and an SVG.  To change it's color, use the SVG CSS <code>fill</code> property; you can change it's size with the <code>height</code> or <code>width</code> property.</p>
 
-          <p>For icons that have default colors, you can change the colors with CSS variables.  For instance, adding a different color to the Star Tribune logo, you could do:</p>
+          <p>For icons that have default colors, you can change the colors with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank" rel="noopener">CSS variables</a>.  For instance, adding a different color to the Star Tribune logo, you could do:</p>
 
 <pre><code>.strib-icon-svg:hover {
   --strib-strib-star-top: red;
@@ -154,13 +156,13 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#{{this}}"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-{{this}}"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
                     <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#{{this}}"></use>
+                      <use xlink:href="strib-icons.sprite.svg#strib-{{this}}"></use>
                     </svg>
                   </span>
                 </div>
