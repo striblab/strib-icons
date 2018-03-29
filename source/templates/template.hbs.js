@@ -9,7 +9,7 @@
 
 (function() {
   var version = '{{ pkg.version }}';
-  var location = '//static.startribune.com/assets/libs/strib-icons/' + version + '/strib-icons.sprite.svg';
+  var location = document.location.protocol + '//static.startribune.com/assets/libs/strib-icons/' + version + '/strib-icons.sprite.svg';
 
   // From: https://css-tricks.com/ajaxing-svg-sprite/
   var ajax = new XMLHttpRequest();
