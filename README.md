@@ -4,7 +4,7 @@ Icons used in projects as different formats.
 
 ## Usage
 
-(todo)
+See the [striblab.github.io/strib-icons](https://striblab.github.io/strib-icons/).
 
 ## Adding and managing icons.
 
