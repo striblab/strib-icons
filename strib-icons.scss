@@ -12,11 +12,11 @@ $strib-fonts-class-prefix: "strib-" !default;
 
 @font-face {
 	font-family: "#{$strib-fonts-font-name}";
-	src: url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1522350591646#strib-icons") format("embedded-opentype"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1522350591646") format("truetype"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1522350591646") format("woff"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1522350591646") format("woff2"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522350591646#iefix") format("embedded-opentype");
+	src: url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1522352377366#strib-icons") format("embedded-opentype"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1522352377366") format("truetype"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1522352377366") format("woff"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1522352377366") format("woff2"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522352377366#iefix") format("embedded-opentype");
 }
 
 #{$strib-fonts-base-selector} {
@@ -30,6 +30,114 @@ url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1522350591646#iefix")
 	vertical-align: top;
 }
 
+.#{$strib-fonts-class-prefix}arrow-right:before {
+	content: "\61697";
+}
+.#{$strib-fonts-class-prefix}arrow-value-down:before {
+	content: "\61698";
+}
+.#{$strib-fonts-class-prefix}arrow-value-up:before {
+	content: "\61699";
+}
+.#{$strib-fonts-class-prefix}camera:before {
+	content: "\61700";
+}
+.#{$strib-fonts-class-prefix}close:before {
+	content: "\61701";
+}
+.#{$strib-fonts-class-prefix}comment-bubble-long:before {
+	content: "\61702";
+}
+.#{$strib-fonts-class-prefix}comment-bubble:before {
+	content: "\61703";
+}
+.#{$strib-fonts-class-prefix}data-drop:before {
+	content: "\61704";
+}
+.#{$strib-fonts-class-prefix}email:before {
+	content: "\61705";
+}
+.#{$strib-fonts-class-prefix}hamburger:before {
+	content: "\61706";
+}
+.#{$strib-fonts-class-prefix}home:before {
+	content: "\61707";
+}
+.#{$strib-fonts-class-prefix}like:before {
+	content: "\61708";
+}
+.#{$strib-fonts-class-prefix}map-pin:before {
+	content: "\61709";
+}
+.#{$strib-fonts-class-prefix}media-play:before {
+	content: "\61710";
+}
+.#{$strib-fonts-class-prefix}media-video:before {
+	content: "\61711";
+}
+.#{$strib-fonts-class-prefix}modal:before {
+	content: "\61712";
+}
+.#{$strib-fonts-class-prefix}nav-back:before {
+	content: "\61713";
+}
+.#{$strib-fonts-class-prefix}nav-forward:before {
+	content: "\61714";
+}
+.#{$strib-fonts-class-prefix}person:before {
+	content: "\61715";
+}
+.#{$strib-fonts-class-prefix}phone-app:before {
+	content: "\61716";
+}
+.#{$strib-fonts-class-prefix}phone-landline:before {
+	content: "\61717";
+}
+.#{$strib-fonts-class-prefix}print:before {
+	content: "\61718";
+}
+.#{$strib-fonts-class-prefix}reply:before {
+	content: "\61719";
+}
+.#{$strib-fonts-class-prefix}reprint:before {
+	content: "\61720";
+}
+.#{$strib-fonts-class-prefix}search:before {
+	content: "\61721";
+}
+.#{$strib-fonts-class-prefix}social-facebook-circle:before {
+	content: "\61722";
+}
+.#{$strib-fonts-class-prefix}social-facebook:before {
+	content: "\61723";
+}
+.#{$strib-fonts-class-prefix}social-google-circle:before {
+	content: "\61724";
+}
+.#{$strib-fonts-class-prefix}social-instagram-circle:before {
+	content: "\61725";
+}
+.#{$strib-fonts-class-prefix}social-linkedin-social:before {
+	content: "\61726";
+}
+.#{$strib-fonts-class-prefix}social-pinterest-circle:before {
+	content: "\61727";
+}
+.#{$strib-fonts-class-prefix}social-tumblr-circle:before {
+	content: "\61728";
+}
+.#{$strib-fonts-class-prefix}social-twitter-circle:before {
+	content: "\61729";
+}
+.#{$strib-fonts-class-prefix}social-twitter:before {
+	content: "\61730";
+}
+.#{$strib-fonts-class-prefix}strib-star:before {
+	content: "\61731";
+}
+.#{$strib-fonts-class-prefix}text-size:before {
+	content: "\61732";
+}
 
 // SVG includes
 #{$strib-fonts-base-selector}-svg {
