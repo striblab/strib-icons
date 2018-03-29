@@ -210,7 +210,7 @@ function generateCodePoints(options) {
 
   _.each(options.names, function(name) {
     if (!options.codepoints[name]) {
-      options.codepoints[name] = getNextCodepoint();
+      options.codepoints[name] = getNextCodepoint().toString(16);
     }
   });
 
