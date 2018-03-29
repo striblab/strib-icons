@@ -1,6 +1,6 @@
 /**
  * Star Tribune icons (strib-icons)
- * Version: 0.0.7
+ * Version: 0.0.8
  * Copyright Star Tribune
  *
  * SVG sprites can't come across different domains, protocols or ports,
@@ -8,7 +8,7 @@
  */
 
 (function() {
-  var version = '0.0.7';
+  var version = '0.0.8';
   var location = '//static.startribune.com/assets/libs/strib-icons/' + version + '/strib-icons.sprite.svg';
 
   // From: https://css-tricks.com/ajaxing-svg-sprite/
