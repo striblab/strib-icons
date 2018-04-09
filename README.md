@@ -29,7 +29,7 @@ See the [striblab.github.io/strib-icons](https://striblab.github.io/strib-icons/
 
 * Make sure NodeJS is installed and run: `npm install`
 * To compile the fonts one time, run: `npm run build`
-* To watch for changes and run a local server to see the example page: `run npm develop`
+* To watch for changes and run a local server to see the example page: `npm run develop`
 
 ### Templates
 
