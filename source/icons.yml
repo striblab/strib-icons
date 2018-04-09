@@ -28,9 +28,15 @@ data-drop:
     - strib-data-drop-left
     - strib-data-drop-middle
     - strib-data-drop-bottom
+document-square:
+  title: "Document"
+  description: "Icon for document links"
 email:
   title: "Email"
   description: "Small letter to symbolize email"
+graphic-square:
+  title: "Graphic"
+  description: "Icon for news graphic links"
 hamburger:
   title: "Menu hamburger"
   description: "Three lines to note a menu"
@@ -67,6 +73,12 @@ phone-landline:
 phone-app:
   title: "Phone smart"
   description: "A modern, smart phone"
+podcast-square:
+  title: "Podcast"
+  description: "Icon for podcast links"
+poll-square:
+  title: "Poll"
+  description: "Icon for poll links"
 print:
   title: "Print"
   description: "A simple outline of a home printer"
@@ -112,3 +124,6 @@ strib-star:
 text-size:
   title: "Text size"
   description: "Two capital letters to show difference in text size"
+video-square:
+  title: "Video"
+  description: "Icon for video links"
