@@ -28,13 +28,13 @@ data-drop:
     - strib-data-drop-left
     - strib-data-drop-middle
     - strib-data-drop-bottom
-document-square:
+document:
   title: "Document"
   description: "Icon for document links"
 email:
   title: "Email"
   description: "Small letter to symbolize email"
-graphic-square:
+graphic:
   title: "Graphic"
   description: "Icon for news graphic links"
 hamburger:
@@ -55,6 +55,9 @@ media-play:
 media-video:
   title: "Video"
   description: "A small camera icon"
+media-video-square:
+  title: "Video"
+  description: "Icon for video links"
 modal:
   title: "Modal"
   description: "A two-way arrow in a box to show that a modal or popup will appear"
@@ -73,10 +76,10 @@ phone-landline:
 phone-app:
   title: "Phone smart"
   description: "A modern, smart phone"
-podcast-square:
+podcast:
   title: "Podcast"
   description: "Icon for podcast links"
-poll-square:
+poll:
   title: "Poll"
   description: "Icon for poll links"
 print:
@@ -124,6 +127,4 @@ strib-star:
 text-size:
   title: "Text size"
   description: "Two capital letters to show difference in text size"
-video-square:
-  title: "Video"
-  description: "Icon for video links"
+
