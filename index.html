@@ -98,7 +98,7 @@
 
           <p>To use the Star Tribune icons as a webfont, include the CSS or SASS.</p>
 
-<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.8/strib-icons.css"&gt;</code></pre>
+<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css"&gt;</code></pre>
 
           <p>Then use the base class, <code>strib-icon</code> and then the icon class which is always prefixed with <code>strib-</code>, for instance:</p>
 
@@ -191,12 +191,52 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
+                  <span class="example-large strib-icon strib-document"></span>
+                  <span class="example-small strib-icon strib-document"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  document
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
                   <span class="example-large strib-icon strib-email"></span>
                   <span class="example-small strib-icon strib-email"></span>
                 </div>
 
                 <div class="example-icon-name">
                   email
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-gallery-grid"></span>
+                  <span class="example-small strib-icon strib-gallery-grid"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  gallery-grid
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-gallery-slideshow"></span>
+                  <span class="example-small strib-icon strib-gallery-slideshow"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  gallery-slideshow
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-graphic"></span>
+                  <span class="example-small strib-icon strib-graphic"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  graphic
                 </div>
               </div>
               <div class="col-6 col-md-3 example-icon">
@@ -247,6 +287,16 @@
 
                 <div class="example-icon-name">
                   media-play
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-media-video-square"></span>
+                  <span class="example-small strib-icon strib-media-video-square"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  media-video-square
                 </div>
               </div>
               <div class="col-6 col-md-3 example-icon">
@@ -317,6 +367,26 @@
 
                 <div class="example-icon-name">
                   phone-landline
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-podcast"></span>
+                  <span class="example-small strib-icon strib-podcast"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  podcast
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large strib-icon strib-poll"></span>
+                  <span class="example-small strib-icon strib-poll"></span>
+                </div>
+
+                <div class="example-icon-name">
+                  poll
                 </div>
               </div>
               <div class="col-6 col-md-3 example-icon">
@@ -479,7 +549,7 @@
 
           <p>To use, include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, which is the name with the <code>strib-</code>, as well as the JS so that the SVG can be loaded across domains easily, for example:</p>
 
-<pre><code>&lt;script src="//static.startribune.com/assets/libs/strib-icons/0.0.8/strib-icons.js"&gt;&lt;/script&gt;
+<pre><code>&lt;script src="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.js"&gt;&lt;/script&gt;
 
 &lt;svg class="strib-icon-svg"&gt;
   &lt;use xlink:href="#strib-home"&gt;&lt;/use&gt;
@@ -671,6 +741,26 @@
                 <div>
                   <span class="example-large">
                     <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-document"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-document"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  document
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
                       <use xlink:href="strib-icons.sprite.svg#strib-email"></use>
                     </svg>
                   </span>
@@ -684,6 +774,66 @@
 
                 <div class="example-icon-name">
                   email
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-gallery-grid"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-gallery-grid"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  gallery-grid
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-gallery-slideshow"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-gallery-slideshow"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  gallery-slideshow
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-graphic"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-graphic"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  graphic
                 </div>
 
               </div>
@@ -784,6 +934,26 @@
 
                 <div class="example-icon-name">
                   media-play
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-media-video-square"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-media-video-square"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  media-video-square
                 </div>
 
               </div>
@@ -924,6 +1094,46 @@
 
                 <div class="example-icon-name">
                   phone-landline
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-podcast"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-podcast"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  podcast
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-poll"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg">
+                      <use xlink:href="strib-icons.sprite.svg#strib-poll"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  poll
                 </div>
 
               </div>

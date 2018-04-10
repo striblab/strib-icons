@@ -1,16 +1,16 @@
 /**
  * Star Tribune icons (strib-icons)
- * Version: 0.0.8
+ * Version: 0.0.9
  * Copyright Star Tribune
  */
 
 @font-face {
 	font-family: "strib-icons";
-	src: url("strib-icons.eot?9a73d902ded06b35be897a1ad6f552cc?#iefix") format("embedded-opentype"),
-url("strib-icons.woff2?9a73d902ded06b35be897a1ad6f552cc") format("woff2"),
-url("strib-icons.woff?9a73d902ded06b35be897a1ad6f552cc") format("woff"),
-url("strib-icons.ttf?9a73d902ded06b35be897a1ad6f552cc") format("truetype"),
-url("strib-icons.svg?9a73d902ded06b35be897a1ad6f552cc#strib-icons") format("svg");
+	src: url("strib-icons.eot?03e60f7abe27ef8ee81ce9187417c7ac?#iefix") format("embedded-opentype"),
+url("strib-icons.woff2?03e60f7abe27ef8ee81ce9187417c7ac") format("woff2"),
+url("strib-icons.woff?03e60f7abe27ef8ee81ce9187417c7ac") format("woff"),
+url("strib-icons.ttf?03e60f7abe27ef8ee81ce9187417c7ac") format("truetype"),
+url("strib-icons.svg?03e60f7abe27ef8ee81ce9187417c7ac#strib-icons") format("svg");
 }
 
 .strib-icon {
@@ -48,94 +48,115 @@ url("strib-icons.svg?9a73d902ded06b35be897a1ad6f552cc#strib-icons") format("svg"
 .strib-data-drop:before {
 	content: "\f108";
 }
-.strib-email:before {
+.strib-document:before {
 	content: "\f109";
 }
-.strib-hamburger:before {
+.strib-email:before {
 	content: "\f10a";
 }
-.strib-home:before {
+.strib-gallery-grid:before {
 	content: "\f10b";
 }
-.strib-like:before {
+.strib-gallery-slideshow:before {
 	content: "\f10c";
 }
-.strib-map-pin:before {
+.strib-graphic:before {
 	content: "\f10d";
 }
-.strib-media-play:before {
+.strib-hamburger:before {
 	content: "\f10e";
 }
-.strib-media-video:before {
+.strib-home:before {
 	content: "\f10f";
 }
-.strib-modal:before {
+.strib-like:before {
 	content: "\f110";
 }
-.strib-nav-back:before {
+.strib-map-pin:before {
 	content: "\f111";
 }
-.strib-nav-forward:before {
+.strib-media-play:before {
 	content: "\f112";
 }
-.strib-person:before {
+.strib-media-video-square:before {
 	content: "\f113";
 }
-.strib-phone-app:before {
+.strib-media-video:before {
 	content: "\f114";
 }
-.strib-phone-landline:before {
+.strib-modal:before {
 	content: "\f115";
 }
-.strib-print:before {
+.strib-nav-back:before {
 	content: "\f116";
 }
-.strib-reply:before {
+.strib-nav-forward:before {
 	content: "\f117";
 }
-.strib-reprint:before {
+.strib-person:before {
 	content: "\f118";
 }
-.strib-search:before {
+.strib-phone-app:before {
 	content: "\f119";
 }
-.strib-social-facebook-circle:before {
+.strib-phone-landline:before {
 	content: "\f11a";
 }
-.strib-social-facebook:before {
+.strib-podcast:before {
 	content: "\f11b";
 }
-.strib-social-google-circle:before {
+.strib-poll:before {
 	content: "\f11c";
 }
-.strib-social-instagram-circle:before {
+.strib-print:before {
 	content: "\f11d";
 }
-.strib-social-linkedin-social:before {
+.strib-reply:before {
 	content: "\f11e";
 }
-.strib-social-pinterest-circle:before {
+.strib-reprint:before {
 	content: "\f11f";
 }
-.strib-social-tumblr-circle:before {
+.strib-search:before {
 	content: "\f120";
 }
-.strib-social-twitter-circle:before {
+.strib-social-facebook-circle:before {
 	content: "\f121";
 }
-.strib-social-twitter:before {
+.strib-social-facebook:before {
 	content: "\f122";
 }
-.strib-strib-star:before {
+.strib-social-google-circle:before {
 	content: "\f123";
 }
-.strib-text-size:before {
+.strib-social-instagram-circle:before {
 	content: "\f124";
+}
+.strib-social-linkedin-social:before {
+	content: "\f125";
+}
+.strib-social-pinterest-circle:before {
+	content: "\f126";
+}
+.strib-social-tumblr-circle:before {
+	content: "\f127";
+}
+.strib-social-twitter-circle:before {
+	content: "\f128";
+}
+.strib-social-twitter:before {
+	content: "\f129";
+}
+.strib-strib-star:before {
+	content: "\f12a";
+}
+.strib-text-size:before {
+	content: "\f12b";
 }
 
 /* SVG includes */
 .strib-icon-svg {
 	display: inline-block;
-  width: 1em;
+	width: 1em;
 	height: 1em;
 }
