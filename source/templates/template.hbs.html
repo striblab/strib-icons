@@ -80,6 +80,18 @@
       main > section {
         margin-bottom: 3em;
       }
+
+      .example-icon-fonts .example-large.strib-strib-logo {
+        font-size: 2.25em
+      }
+
+      .example-icon-svg .example-large .example-svg-strib-logo {
+        width: 3.75em;
+      }
+
+      .example-icon-svg .example-small .example-svg-strib-logo {
+        display: none;
+      }
     </style>
   </head>
 
@@ -109,12 +121,12 @@
 
           <p>&nbsp;</p>
 
-          <div class="row">
+          <div class="row example-icon-fonts">
             {{#each names}}
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon {{../classPrefix}}{{this}}"></span>
-                  <span class="example-small strib-icon {{../classPrefix}}{{this}}"></span>
+                  <i class="example-large strib-icon {{../classPrefix}}{{this}}" role="img"></i>
+                  <i class="example-small strib-icon {{../classPrefix}}{{this}}" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -151,18 +163,18 @@
 
           <p>&nbsp;</p>
 
-          <div class="row">
+          <div class="row example-icon-svg">
             {{#each names as |n k|}}
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-{{this}}">
                       <use xlink:href="strib-icons.sprite.svg#strib-{{this}}"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-{{this}}">
                       <use xlink:href="strib-icons.sprite.svg#strib-{{this}}"></use>
                     </svg>
                   </span>

@@ -139,6 +139,12 @@ social-youtube-circle:
 social-youtube:
   title: "YouTube"
   description: "Simple YouTube logo"
+strib-logo:
+  title: "Star Tribune logo"
+  description: "Two-tone Star Tribune star and Star Tribune wordmark"
+  variables:
+    - strib-strib-logo-top
+    - strib-strib-logo-bottom
 strib-star:
   title: "Star Tribune star"
   description: "Two-tone Star Tribune star logo"
