@@ -100,24 +100,45 @@ social-facebook:
 social-google-circle:
   title: "Google Plus circle"
   description: "Google Plus logo in a circle"
+social-google:
+  title: "Google Plus logo"
+  description: "Just the Google Plus logo"
 social-instagram-circle:
   title: "Instagram circle"
   description: "Instagram logo in a circle"
+social-instagram:
+  title: "Instagram logo"
+  description: "Just the Instagram logo"
 social-linkedin-circle:
-  title: "LinkedIn"
+  title: "LinkedIn circle"
+  description: "LinkedIn logo in a circle"
+social-linkedin:
+  title: "LinkedIn logo"
   description: "Simple LinkedIn logo"
 social-pinterest-circle:
   title: "Pinterest circle"
   description: "Pinterest logo in a circle"
+social-pinterest:
+  title: "Pinterest logo"
+  description: "Just the Pinterest logo"
 social-tumblr-circle:
   title: "Tumblr circle"
   description: "Tumblr logo in a circle"
+social-tumblr:
+  title: "Tumblr logo"
+  description: "Just the Tumblr logo"
 social-twitter-circle:
   title: "Twitter circle"
   description: "Twitter logo in a circle"
 social-twitter:
   title: "Twitter"
   description: "Simple Twitter logo"
+social-youtube-circle:
+  title: "YouTube circle"
+  description: "YouTube logo in a circle"
+social-youtube:
+  title: "YouTube"
+  description: "Simple YouTube logo"
 strib-star:
   title: "Star Tribune star"
   description: "Two-tone Star Tribune star logo"
