@@ -23,6 +23,7 @@
 
       .strib-icon-svg {
         transition: fill 0.5s ease-out;
+        vertical-align: bottom;
       }
 
       .strib-icon-svg:hover {
@@ -79,6 +80,18 @@
       main > section {
         margin-bottom: 3em;
       }
+
+      .example-icon-fonts .example-large.strib-strib-logo {
+        font-size: 2.25em
+      }
+
+      .example-icon-svg .example-large .example-svg-strib-logo {
+        width: 3.75em;
+      }
+
+      .example-icon-svg .example-small .example-svg-strib-logo {
+        display: none;
+      }
     </style>
   </head>
 
@@ -98,7 +111,7 @@
 
           <p>To use the Star Tribune icons as a webfont, include the CSS or SASS.</p>
 
-<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css"&gt;</code></pre>
+<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css"&gt;</code></pre>
 
           <p>Then use the base class, <code>strib-icon</code> and then the icon class which is always prefixed with <code>strib-</code>, for instance:</p>
 
@@ -108,11 +121,11 @@
 
           <p>&nbsp;</p>
 
-          <div class="row">
+          <div class="row example-icon-fonts">
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-arrow-right"></span>
-                  <span class="example-small strib-icon strib-arrow-right"></span>
+                  <i class="example-large strib-icon strib-arrow-right" role="img"></i>
+                  <i class="example-small strib-icon strib-arrow-right" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -121,8 +134,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-arrow-value-down"></span>
-                  <span class="example-small strib-icon strib-arrow-value-down"></span>
+                  <i class="example-large strib-icon strib-arrow-value-down" role="img"></i>
+                  <i class="example-small strib-icon strib-arrow-value-down" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -131,8 +144,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-arrow-value-up"></span>
-                  <span class="example-small strib-icon strib-arrow-value-up"></span>
+                  <i class="example-large strib-icon strib-arrow-value-up" role="img"></i>
+                  <i class="example-small strib-icon strib-arrow-value-up" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -141,8 +154,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-camera"></span>
-                  <span class="example-small strib-icon strib-camera"></span>
+                  <i class="example-large strib-icon strib-camera" role="img"></i>
+                  <i class="example-small strib-icon strib-camera" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -151,8 +164,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-close"></span>
-                  <span class="example-small strib-icon strib-close"></span>
+                  <i class="example-large strib-icon strib-close" role="img"></i>
+                  <i class="example-small strib-icon strib-close" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -161,8 +174,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-comment-bubble-long"></span>
-                  <span class="example-small strib-icon strib-comment-bubble-long"></span>
+                  <i class="example-large strib-icon strib-comment-bubble-long" role="img"></i>
+                  <i class="example-small strib-icon strib-comment-bubble-long" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -171,8 +184,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-comment-bubble"></span>
-                  <span class="example-small strib-icon strib-comment-bubble"></span>
+                  <i class="example-large strib-icon strib-comment-bubble" role="img"></i>
+                  <i class="example-small strib-icon strib-comment-bubble" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -181,8 +194,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-data-drop"></span>
-                  <span class="example-small strib-icon strib-data-drop"></span>
+                  <i class="example-large strib-icon strib-data-drop" role="img"></i>
+                  <i class="example-small strib-icon strib-data-drop" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -191,8 +204,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-document"></span>
-                  <span class="example-small strib-icon strib-document"></span>
+                  <i class="example-large strib-icon strib-document" role="img"></i>
+                  <i class="example-small strib-icon strib-document" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -201,8 +214,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-email"></span>
-                  <span class="example-small strib-icon strib-email"></span>
+                  <i class="example-large strib-icon strib-email" role="img"></i>
+                  <i class="example-small strib-icon strib-email" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -211,8 +224,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-gallery-grid"></span>
-                  <span class="example-small strib-icon strib-gallery-grid"></span>
+                  <i class="example-large strib-icon strib-gallery-grid" role="img"></i>
+                  <i class="example-small strib-icon strib-gallery-grid" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -221,8 +234,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-gallery-slideshow"></span>
-                  <span class="example-small strib-icon strib-gallery-slideshow"></span>
+                  <i class="example-large strib-icon strib-gallery-slideshow" role="img"></i>
+                  <i class="example-small strib-icon strib-gallery-slideshow" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -231,8 +244,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-graphic"></span>
-                  <span class="example-small strib-icon strib-graphic"></span>
+                  <i class="example-large strib-icon strib-graphic" role="img"></i>
+                  <i class="example-small strib-icon strib-graphic" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -241,8 +254,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-hamburger"></span>
-                  <span class="example-small strib-icon strib-hamburger"></span>
+                  <i class="example-large strib-icon strib-hamburger" role="img"></i>
+                  <i class="example-small strib-icon strib-hamburger" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -251,8 +264,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-home"></span>
-                  <span class="example-small strib-icon strib-home"></span>
+                  <i class="example-large strib-icon strib-home" role="img"></i>
+                  <i class="example-small strib-icon strib-home" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -261,8 +274,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-like"></span>
-                  <span class="example-small strib-icon strib-like"></span>
+                  <i class="example-large strib-icon strib-like" role="img"></i>
+                  <i class="example-small strib-icon strib-like" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -271,8 +284,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-map-pin"></span>
-                  <span class="example-small strib-icon strib-map-pin"></span>
+                  <i class="example-large strib-icon strib-map-pin" role="img"></i>
+                  <i class="example-small strib-icon strib-map-pin" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -281,8 +294,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-media-play"></span>
-                  <span class="example-small strib-icon strib-media-play"></span>
+                  <i class="example-large strib-icon strib-media-play" role="img"></i>
+                  <i class="example-small strib-icon strib-media-play" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -291,8 +304,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-media-video-square"></span>
-                  <span class="example-small strib-icon strib-media-video-square"></span>
+                  <i class="example-large strib-icon strib-media-video-square" role="img"></i>
+                  <i class="example-small strib-icon strib-media-video-square" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -301,8 +314,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-media-video"></span>
-                  <span class="example-small strib-icon strib-media-video"></span>
+                  <i class="example-large strib-icon strib-media-video" role="img"></i>
+                  <i class="example-small strib-icon strib-media-video" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -311,8 +324,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-modal"></span>
-                  <span class="example-small strib-icon strib-modal"></span>
+                  <i class="example-large strib-icon strib-modal" role="img"></i>
+                  <i class="example-small strib-icon strib-modal" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -321,8 +334,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-nav-back"></span>
-                  <span class="example-small strib-icon strib-nav-back"></span>
+                  <i class="example-large strib-icon strib-nav-back" role="img"></i>
+                  <i class="example-small strib-icon strib-nav-back" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -331,8 +344,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-nav-forward"></span>
-                  <span class="example-small strib-icon strib-nav-forward"></span>
+                  <i class="example-large strib-icon strib-nav-forward" role="img"></i>
+                  <i class="example-small strib-icon strib-nav-forward" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -341,8 +354,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-person"></span>
-                  <span class="example-small strib-icon strib-person"></span>
+                  <i class="example-large strib-icon strib-person" role="img"></i>
+                  <i class="example-small strib-icon strib-person" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -351,8 +364,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-phone-app"></span>
-                  <span class="example-small strib-icon strib-phone-app"></span>
+                  <i class="example-large strib-icon strib-phone-app" role="img"></i>
+                  <i class="example-small strib-icon strib-phone-app" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -361,8 +374,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-phone-landline"></span>
-                  <span class="example-small strib-icon strib-phone-landline"></span>
+                  <i class="example-large strib-icon strib-phone-landline" role="img"></i>
+                  <i class="example-small strib-icon strib-phone-landline" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -371,8 +384,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-podcast"></span>
-                  <span class="example-small strib-icon strib-podcast"></span>
+                  <i class="example-large strib-icon strib-podcast" role="img"></i>
+                  <i class="example-small strib-icon strib-podcast" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -381,8 +394,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-poll"></span>
-                  <span class="example-small strib-icon strib-poll"></span>
+                  <i class="example-large strib-icon strib-poll" role="img"></i>
+                  <i class="example-small strib-icon strib-poll" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -391,8 +404,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-print"></span>
-                  <span class="example-small strib-icon strib-print"></span>
+                  <i class="example-large strib-icon strib-print" role="img"></i>
+                  <i class="example-small strib-icon strib-print" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -401,8 +414,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-reply"></span>
-                  <span class="example-small strib-icon strib-reply"></span>
+                  <i class="example-large strib-icon strib-reply" role="img"></i>
+                  <i class="example-small strib-icon strib-reply" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -411,8 +424,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-reprint"></span>
-                  <span class="example-small strib-icon strib-reprint"></span>
+                  <i class="example-large strib-icon strib-reprint" role="img"></i>
+                  <i class="example-small strib-icon strib-reprint" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -421,8 +434,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-search"></span>
-                  <span class="example-small strib-icon strib-search"></span>
+                  <i class="example-large strib-icon strib-search" role="img"></i>
+                  <i class="example-small strib-icon strib-search" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -431,8 +444,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-social-facebook-circle"></span>
-                  <span class="example-small strib-icon strib-social-facebook-circle"></span>
+                  <i class="example-large strib-icon strib-social-facebook-circle" role="img"></i>
+                  <i class="example-small strib-icon strib-social-facebook-circle" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -441,8 +454,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-social-facebook"></span>
-                  <span class="example-small strib-icon strib-social-facebook"></span>
+                  <i class="example-large strib-icon strib-social-facebook" role="img"></i>
+                  <i class="example-small strib-icon strib-social-facebook" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -451,8 +464,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-social-google-circle"></span>
-                  <span class="example-small strib-icon strib-social-google-circle"></span>
+                  <i class="example-large strib-icon strib-social-google-circle" role="img"></i>
+                  <i class="example-small strib-icon strib-social-google-circle" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -461,8 +474,18 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-social-instagram-circle"></span>
-                  <span class="example-small strib-icon strib-social-instagram-circle"></span>
+                  <i class="example-large strib-icon strib-social-google" role="img"></i>
+                  <i class="example-small strib-icon strib-social-google" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  social-google
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-social-instagram-circle" role="img"></i>
+                  <i class="example-small strib-icon strib-social-instagram-circle" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -471,18 +494,38 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-social-linkedin-social"></span>
-                  <span class="example-small strib-icon strib-social-linkedin-social"></span>
+                  <i class="example-large strib-icon strib-social-instagram" role="img"></i>
+                  <i class="example-small strib-icon strib-social-instagram" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
-                  social-linkedin-social
+                  social-instagram
                 </div>
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-social-pinterest-circle"></span>
-                  <span class="example-small strib-icon strib-social-pinterest-circle"></span>
+                  <i class="example-large strib-icon strib-social-linkedin-circle" role="img"></i>
+                  <i class="example-small strib-icon strib-social-linkedin-circle" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  social-linkedin-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-social-linkedin" role="img"></i>
+                  <i class="example-small strib-icon strib-social-linkedin" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  social-linkedin
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-social-pinterest-circle" role="img"></i>
+                  <i class="example-small strib-icon strib-social-pinterest-circle" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -491,8 +534,18 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-social-tumblr-circle"></span>
-                  <span class="example-small strib-icon strib-social-tumblr-circle"></span>
+                  <i class="example-large strib-icon strib-social-pinterest" role="img"></i>
+                  <i class="example-small strib-icon strib-social-pinterest" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  social-pinterest
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-social-tumblr-circle" role="img"></i>
+                  <i class="example-small strib-icon strib-social-tumblr-circle" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -501,8 +554,18 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-social-twitter-circle"></span>
-                  <span class="example-small strib-icon strib-social-twitter-circle"></span>
+                  <i class="example-large strib-icon strib-social-tumblr" role="img"></i>
+                  <i class="example-small strib-icon strib-social-tumblr" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  social-tumblr
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-social-twitter-circle" role="img"></i>
+                  <i class="example-small strib-icon strib-social-twitter-circle" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -511,8 +574,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-social-twitter"></span>
-                  <span class="example-small strib-icon strib-social-twitter"></span>
+                  <i class="example-large strib-icon strib-social-twitter" role="img"></i>
+                  <i class="example-small strib-icon strib-social-twitter" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -521,8 +584,38 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-strib-star"></span>
-                  <span class="example-small strib-icon strib-strib-star"></span>
+                  <i class="example-large strib-icon strib-social-youtube-circle" role="img"></i>
+                  <i class="example-small strib-icon strib-social-youtube-circle" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  social-youtube-circle
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-social-youtube" role="img"></i>
+                  <i class="example-small strib-icon strib-social-youtube" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  social-youtube
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-strib-logo" role="img"></i>
+                  <i class="example-small strib-icon strib-strib-logo" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  strib-logo
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-strib-star" role="img"></i>
+                  <i class="example-small strib-icon strib-strib-star" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -531,8 +624,8 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
-                  <span class="example-large strib-icon strib-text-size"></span>
-                  <span class="example-small strib-icon strib-text-size"></span>
+                  <i class="example-large strib-icon strib-text-size" role="img"></i>
+                  <i class="example-small strib-icon strib-text-size" role="img"></i>
                 </div>
 
                 <div class="example-icon-name">
@@ -549,7 +642,7 @@
 
           <p>To use, include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, which is the name with the <code>strib-</code>, as well as the JS so that the SVG can be loaded across domains easily, for example:</p>
 
-<pre><code>&lt;script src="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.js"&gt;&lt;/script&gt;
+<pre><code>&lt;script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"&gt;&lt;/script&gt;
 
 &lt;svg class="strib-icon-svg"&gt;
   &lt;use xlink:href="#strib-home"&gt;&lt;/use&gt;
@@ -568,17 +661,17 @@
 
           <p>&nbsp;</p>
 
-          <div class="row">
+          <div class="row example-icon-svg">
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-arrow-right">
                       <use xlink:href="strib-icons.sprite.svg#strib-arrow-right"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-arrow-right">
                       <use xlink:href="strib-icons.sprite.svg#strib-arrow-right"></use>
                     </svg>
                   </span>
@@ -592,13 +685,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-arrow-value-down">
                       <use xlink:href="strib-icons.sprite.svg#strib-arrow-value-down"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-arrow-value-down">
                       <use xlink:href="strib-icons.sprite.svg#strib-arrow-value-down"></use>
                     </svg>
                   </span>
@@ -612,13 +705,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-arrow-value-up">
                       <use xlink:href="strib-icons.sprite.svg#strib-arrow-value-up"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-arrow-value-up">
                       <use xlink:href="strib-icons.sprite.svg#strib-arrow-value-up"></use>
                     </svg>
                   </span>
@@ -632,13 +725,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-camera">
                       <use xlink:href="strib-icons.sprite.svg#strib-camera"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-camera">
                       <use xlink:href="strib-icons.sprite.svg#strib-camera"></use>
                     </svg>
                   </span>
@@ -652,13 +745,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-close">
                       <use xlink:href="strib-icons.sprite.svg#strib-close"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-close">
                       <use xlink:href="strib-icons.sprite.svg#strib-close"></use>
                     </svg>
                   </span>
@@ -672,13 +765,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-comment-bubble-long">
                       <use xlink:href="strib-icons.sprite.svg#strib-comment-bubble-long"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-comment-bubble-long">
                       <use xlink:href="strib-icons.sprite.svg#strib-comment-bubble-long"></use>
                     </svg>
                   </span>
@@ -692,13 +785,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-comment-bubble">
                       <use xlink:href="strib-icons.sprite.svg#strib-comment-bubble"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-comment-bubble">
                       <use xlink:href="strib-icons.sprite.svg#strib-comment-bubble"></use>
                     </svg>
                   </span>
@@ -712,13 +805,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-data-drop">
                       <use xlink:href="strib-icons.sprite.svg#strib-data-drop"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-data-drop">
                       <use xlink:href="strib-icons.sprite.svg#strib-data-drop"></use>
                     </svg>
                   </span>
@@ -740,13 +833,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-document">
                       <use xlink:href="strib-icons.sprite.svg#strib-document"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-document">
                       <use xlink:href="strib-icons.sprite.svg#strib-document"></use>
                     </svg>
                   </span>
@@ -760,13 +853,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-email">
                       <use xlink:href="strib-icons.sprite.svg#strib-email"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-email">
                       <use xlink:href="strib-icons.sprite.svg#strib-email"></use>
                     </svg>
                   </span>
@@ -780,13 +873,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-gallery-grid">
                       <use xlink:href="strib-icons.sprite.svg#strib-gallery-grid"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-gallery-grid">
                       <use xlink:href="strib-icons.sprite.svg#strib-gallery-grid"></use>
                     </svg>
                   </span>
@@ -800,13 +893,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-gallery-slideshow">
                       <use xlink:href="strib-icons.sprite.svg#strib-gallery-slideshow"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-gallery-slideshow">
                       <use xlink:href="strib-icons.sprite.svg#strib-gallery-slideshow"></use>
                     </svg>
                   </span>
@@ -820,13 +913,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-graphic">
                       <use xlink:href="strib-icons.sprite.svg#strib-graphic"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-graphic">
                       <use xlink:href="strib-icons.sprite.svg#strib-graphic"></use>
                     </svg>
                   </span>
@@ -840,13 +933,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-hamburger">
                       <use xlink:href="strib-icons.sprite.svg#strib-hamburger"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-hamburger">
                       <use xlink:href="strib-icons.sprite.svg#strib-hamburger"></use>
                     </svg>
                   </span>
@@ -860,13 +953,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-home">
                       <use xlink:href="strib-icons.sprite.svg#strib-home"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-home">
                       <use xlink:href="strib-icons.sprite.svg#strib-home"></use>
                     </svg>
                   </span>
@@ -880,13 +973,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-like">
                       <use xlink:href="strib-icons.sprite.svg#strib-like"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-like">
                       <use xlink:href="strib-icons.sprite.svg#strib-like"></use>
                     </svg>
                   </span>
@@ -900,13 +993,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-map-pin">
                       <use xlink:href="strib-icons.sprite.svg#strib-map-pin"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-map-pin">
                       <use xlink:href="strib-icons.sprite.svg#strib-map-pin"></use>
                     </svg>
                   </span>
@@ -920,13 +1013,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-media-play">
                       <use xlink:href="strib-icons.sprite.svg#strib-media-play"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-media-play">
                       <use xlink:href="strib-icons.sprite.svg#strib-media-play"></use>
                     </svg>
                   </span>
@@ -940,13 +1033,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-media-video-square">
                       <use xlink:href="strib-icons.sprite.svg#strib-media-video-square"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-media-video-square">
                       <use xlink:href="strib-icons.sprite.svg#strib-media-video-square"></use>
                     </svg>
                   </span>
@@ -960,13 +1053,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-media-video">
                       <use xlink:href="strib-icons.sprite.svg#strib-media-video"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-media-video">
                       <use xlink:href="strib-icons.sprite.svg#strib-media-video"></use>
                     </svg>
                   </span>
@@ -980,13 +1073,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-modal">
                       <use xlink:href="strib-icons.sprite.svg#strib-modal"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-modal">
                       <use xlink:href="strib-icons.sprite.svg#strib-modal"></use>
                     </svg>
                   </span>
@@ -1000,13 +1093,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-nav-back">
                       <use xlink:href="strib-icons.sprite.svg#strib-nav-back"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-nav-back">
                       <use xlink:href="strib-icons.sprite.svg#strib-nav-back"></use>
                     </svg>
                   </span>
@@ -1020,13 +1113,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-nav-forward">
                       <use xlink:href="strib-icons.sprite.svg#strib-nav-forward"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-nav-forward">
                       <use xlink:href="strib-icons.sprite.svg#strib-nav-forward"></use>
                     </svg>
                   </span>
@@ -1040,13 +1133,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-person">
                       <use xlink:href="strib-icons.sprite.svg#strib-person"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-person">
                       <use xlink:href="strib-icons.sprite.svg#strib-person"></use>
                     </svg>
                   </span>
@@ -1060,13 +1153,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-phone-app">
                       <use xlink:href="strib-icons.sprite.svg#strib-phone-app"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-phone-app">
                       <use xlink:href="strib-icons.sprite.svg#strib-phone-app"></use>
                     </svg>
                   </span>
@@ -1080,13 +1173,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-phone-landline">
                       <use xlink:href="strib-icons.sprite.svg#strib-phone-landline"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-phone-landline">
                       <use xlink:href="strib-icons.sprite.svg#strib-phone-landline"></use>
                     </svg>
                   </span>
@@ -1100,13 +1193,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-podcast">
                       <use xlink:href="strib-icons.sprite.svg#strib-podcast"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-podcast">
                       <use xlink:href="strib-icons.sprite.svg#strib-podcast"></use>
                     </svg>
                   </span>
@@ -1120,13 +1213,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-poll">
                       <use xlink:href="strib-icons.sprite.svg#strib-poll"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-poll">
                       <use xlink:href="strib-icons.sprite.svg#strib-poll"></use>
                     </svg>
                   </span>
@@ -1140,13 +1233,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-print">
                       <use xlink:href="strib-icons.sprite.svg#strib-print"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-print">
                       <use xlink:href="strib-icons.sprite.svg#strib-print"></use>
                     </svg>
                   </span>
@@ -1160,13 +1253,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-reply">
                       <use xlink:href="strib-icons.sprite.svg#strib-reply"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-reply">
                       <use xlink:href="strib-icons.sprite.svg#strib-reply"></use>
                     </svg>
                   </span>
@@ -1180,13 +1273,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-reprint">
                       <use xlink:href="strib-icons.sprite.svg#strib-reprint"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-reprint">
                       <use xlink:href="strib-icons.sprite.svg#strib-reprint"></use>
                     </svg>
                   </span>
@@ -1200,13 +1293,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-search">
                       <use xlink:href="strib-icons.sprite.svg#strib-search"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-search">
                       <use xlink:href="strib-icons.sprite.svg#strib-search"></use>
                     </svg>
                   </span>
@@ -1220,13 +1313,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-facebook-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-facebook-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-facebook-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-facebook-circle"></use>
                     </svg>
                   </span>
@@ -1240,13 +1333,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-facebook">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-facebook"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-facebook">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-facebook"></use>
                     </svg>
                   </span>
@@ -1260,13 +1353,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-google-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-google-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-google-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-google-circle"></use>
                     </svg>
                   </span>
@@ -1280,13 +1373,33 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-google">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-google"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-social-google">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-google"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-google
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-social-instagram-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-instagram-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-instagram-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-instagram-circle"></use>
                     </svg>
                   </span>
@@ -1300,33 +1413,73 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#strib-social-linkedin-social"></use>
+                    <svg class="strib-icon-svg example-svg-social-instagram">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-instagram"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
-                      <use xlink:href="strib-icons.sprite.svg#strib-social-linkedin-social"></use>
+                    <svg class="strib-icon-svg example-svg-social-instagram">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-instagram"></use>
                     </svg>
                   </span>
                 </div>
 
                 <div class="example-icon-name">
-                  social-linkedin-social
+                  social-instagram
                 </div>
 
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-linkedin-circle">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-linkedin-circle"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-social-linkedin-circle">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-linkedin-circle"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-linkedin-circle
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-social-linkedin">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-linkedin"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-social-linkedin">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-linkedin"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-linkedin
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-social-pinterest-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-pinterest-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-pinterest-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-pinterest-circle"></use>
                     </svg>
                   </span>
@@ -1340,13 +1493,33 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-pinterest">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-pinterest"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-social-pinterest">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-pinterest"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-pinterest
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-social-tumblr-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-tumblr-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-tumblr-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-tumblr-circle"></use>
                     </svg>
                   </span>
@@ -1360,13 +1533,33 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-tumblr">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-tumblr"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-social-tumblr">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-tumblr"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-tumblr
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-social-twitter-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-twitter-circle"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-twitter-circle">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-twitter-circle"></use>
                     </svg>
                   </span>
@@ -1380,13 +1573,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-twitter">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-twitter"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-twitter">
                       <use xlink:href="strib-icons.sprite.svg#strib-social-twitter"></use>
                     </svg>
                   </span>
@@ -1400,13 +1593,78 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-social-youtube-circle">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-youtube-circle"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-social-youtube-circle">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-youtube-circle"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-youtube-circle
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-social-youtube">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-youtube"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-social-youtube">
+                      <use xlink:href="strib-icons.sprite.svg#strib-social-youtube"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  social-youtube
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-strib-logo">
+                      <use xlink:href="strib-icons.sprite.svg#strib-strib-logo"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-strib-logo">
+                      <use xlink:href="strib-icons.sprite.svg#strib-strib-logo"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  strib-logo
+                </div>
+
+                    <div class="example-variables">
+                      <span>Variables:</span>
+                        <code>--strib-strib-logo-top</code>,
+                        <code>--strib-strib-logo-bottom</code>
+                    </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-strib-star">
                       <use xlink:href="strib-icons.sprite.svg#strib-strib-star"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-strib-star">
                       <use xlink:href="strib-icons.sprite.svg#strib-strib-star"></use>
                     </svg>
                   </span>
@@ -1425,13 +1683,13 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-text-size">
                       <use xlink:href="strib-icons.sprite.svg#strib-text-size"></use>
                     </svg>
                   </span>
 
                   <span class="example-small">
-                    <svg class="strib-icon-svg">
+                    <svg class="strib-icon-svg example-svg-text-size">
                       <use xlink:href="strib-icons.sprite.svg#strib-text-size"></use>
                     </svg>
                   </span>
