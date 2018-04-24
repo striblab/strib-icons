@@ -103,12 +103,12 @@ social-google-circle:
 social-instagram-circle:
   title: "Instagram circle"
   description: "Instagram logo in a circle"
-social-linkedin-social:
+social-linkedin-circle:
   title: "LinkedIn"
   description: "Simple LinkedIn logo"
 social-pinterest-circle:
-  title: "LinkedIn circle"
-  description: "Linked logo in a circle"
+  title: "Pinterest circle"
+  description: "Pinterest logo in a circle"
 social-tumblr-circle:
   title: "Tumblr circle"
   description: "Tumblr logo in a circle"
@@ -127,4 +127,3 @@ strib-star:
 text-size:
   title: "Text size"
   description: "Two capital letters to show difference in text size"
-
