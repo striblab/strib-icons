@@ -154,3 +154,12 @@ strib-star:
 text-size:
   title: "Text size"
   description: "Two capital letters to show difference in text size"
+save-article:
+  title: "Save article"
+  description: "Two-piece SVG for save article function"
+save-article-open:
+  title: "Save article open"
+  description: "single-piece SVG for the inactive state"
+save-article-filled:
+  title: "Save article filled"
+  description: "single-piece SVG for the active state"
