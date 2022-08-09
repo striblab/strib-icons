@@ -111,7 +111,7 @@
 
           <p>To use the Star Tribune icons as a webfont, include the CSS or SASS.</p>
 
-<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css"&gt;</code></pre>
+<pre><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.12/strib-icons.css"&gt;</code></pre>
 
           <p>Then use the base class, <code>strib-icon</code> and then the icon class which is always prefixed with <code>strib-</code>, for instance:</p>
 
@@ -280,6 +280,16 @@
 
                 <div class="example-icon-name">
                   like
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-link-share-icon" role="img"></i>
+                  <i class="example-small strib-icon strib-link-share-icon" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  link-share-icon
                 </div>
               </div>
               <div class="col-6 col-md-3 example-icon">
@@ -474,6 +484,26 @@
               </div>
               <div class="col-6 col-md-3 example-icon">
                 <div>
+                  <i class="example-large strib-icon strib-share-icon" role="img"></i>
+                  <i class="example-small strib-icon strib-share-icon" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  share-icon
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-sms-text-share-icon" role="img"></i>
+                  <i class="example-small strib-icon strib-sms-text-share-icon" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  sms-text-share-icon
+                </div>
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
                   <i class="example-large strib-icon strib-social-facebook-circle" role="img"></i>
                   <i class="example-small strib-icon strib-social-facebook-circle" role="img"></i>
                 </div>
@@ -662,6 +692,16 @@
                   text-size
                 </div>
               </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <i class="example-large strib-icon strib-undo-arrow" role="img"></i>
+                  <i class="example-small strib-icon strib-undo-arrow" role="img"></i>
+                </div>
+
+                <div class="example-icon-name">
+                  undo-arrow
+                </div>
+              </div>
           </div>
         </section>
 
@@ -672,7 +712,7 @@
 
           <p>To use, include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the URL, which is the name with the <code>strib-</code>, as well as the JS so that the SVG can be loaded across domains easily, for example:</p>
 
-<pre><code>&lt;script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"&gt;&lt;/script&gt;
+<pre><code>&lt;script src="//static.startribune.com/assets/libs/strib-icons/0.0.12/strib-icons.js"&gt;&lt;/script&gt;
 
 &lt;svg class="strib-icon-svg"&gt;
   &lt;use xlink:href="#strib-home"&gt;&lt;/use&gt;
@@ -1023,6 +1063,26 @@
               <div class="col-6 col-md-3 example-icon">
                 <div>
                   <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-link-share-icon">
+                      <use xlink:href="strib-icons.sprite.svg#strib-link-share-icon"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-link-share-icon">
+                      <use xlink:href="strib-icons.sprite.svg#strib-link-share-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  link-share-icon
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
                     <svg class="strib-icon-svg example-svg-map-pin">
                       <use xlink:href="strib-icons.sprite.svg#strib-map-pin"></use>
                     </svg>
@@ -1397,6 +1457,46 @@
 
                 <div class="example-icon-name">
                   search
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-share-icon">
+                      <use xlink:href="strib-icons.sprite.svg#strib-share-icon"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-share-icon">
+                      <use xlink:href="strib-icons.sprite.svg#strib-share-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  share-icon
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-sms-text-share-icon">
+                      <use xlink:href="strib-icons.sprite.svg#strib-sms-text-share-icon"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-sms-text-share-icon">
+                      <use xlink:href="strib-icons.sprite.svg#strib-sms-text-share-icon"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  sms-text-share-icon
                 </div>
 
               </div>
@@ -1787,6 +1887,26 @@
 
                 <div class="example-icon-name">
                   text-size
+                </div>
+
+              </div>
+              <div class="col-6 col-md-3 example-icon">
+                <div>
+                  <span class="example-large">
+                    <svg class="strib-icon-svg example-svg-undo-arrow">
+                      <use xlink:href="strib-icons.sprite.svg#strib-undo-arrow"></use>
+                    </svg>
+                  </span>
+
+                  <span class="example-small">
+                    <svg class="strib-icon-svg example-svg-undo-arrow">
+                      <use xlink:href="strib-icons.sprite.svg#strib-undo-arrow"></use>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="example-icon-name">
+                  undo-arrow
                 </div>
 
               </div>

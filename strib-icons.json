@@ -1,6 +1,6 @@
 {
   "name": "strib-icons",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "baseSelector": ".strib-icon",
   "classPrefix": "strib-",
   "classes": [
@@ -20,6 +20,7 @@
     "strib-hamburger",
     "strib-home",
     "strib-like",
+    "strib-link-share-icon",
     "strib-map-pin",
     "strib-media-play",
     "strib-media-video-square",
@@ -39,6 +40,8 @@
     "strib-save-article-open",
     "strib-save-article",
     "strib-search",
+    "strib-share-icon",
+    "strib-sms-text-share-icon",
     "strib-social-facebook-circle",
     "strib-social-facebook",
     "strib-social-google-circle",
@@ -58,5 +61,6 @@
     "strib-strib-logo",
     "strib-strib-star",
     "strib-text-size",
+    "strib-undo-arrow",
   ]
 }

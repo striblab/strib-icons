@@ -1,16 +1,16 @@
 /**
  * Star Tribune icons (strib-icons)
- * Version: 0.0.10
+ * Version: 0.0.12
  * Copyright Star Tribune
  */
 
 @font-face {
 	font-family: "strib-icons";
-	src: url("strib-icons.eot?df3e14084445274b9af3403936ef19bd?#iefix") format("embedded-opentype"),
-url("strib-icons.woff2?df3e14084445274b9af3403936ef19bd") format("woff2"),
-url("strib-icons.woff?df3e14084445274b9af3403936ef19bd") format("woff"),
-url("strib-icons.ttf?df3e14084445274b9af3403936ef19bd") format("truetype"),
-url("strib-icons.svg?df3e14084445274b9af3403936ef19bd#strib-icons") format("svg");
+	src: url("strib-icons.eot?232f0063bf2911d22606559db4cb5434?#iefix") format("embedded-opentype"),
+url("strib-icons.woff2?232f0063bf2911d22606559db4cb5434") format("woff2"),
+url("strib-icons.woff?232f0063bf2911d22606559db4cb5434") format("woff"),
+url("strib-icons.ttf?232f0063bf2911d22606559db4cb5434") format("truetype"),
+url("strib-icons.svg?232f0063bf2911d22606559db4cb5434#strib-icons") format("svg");
 }
 
 .strib-icon {
@@ -72,119 +72,131 @@ url("strib-icons.svg?df3e14084445274b9af3403936ef19bd#strib-icons") format("svg"
 .strib-like:before {
 	content: "\f110";
 }
-.strib-map-pin:before {
+.strib-link-share-icon:before {
 	content: "\f111";
 }
-.strib-media-play:before {
+.strib-map-pin:before {
 	content: "\f112";
 }
-.strib-media-video-square:before {
+.strib-media-play:before {
 	content: "\f113";
 }
-.strib-media-video:before {
+.strib-media-video-square:before {
 	content: "\f114";
 }
-.strib-modal:before {
+.strib-media-video:before {
 	content: "\f115";
 }
-.strib-nav-back:before {
+.strib-modal:before {
 	content: "\f116";
 }
-.strib-nav-forward:before {
+.strib-nav-back:before {
 	content: "\f117";
 }
-.strib-person:before {
+.strib-nav-forward:before {
 	content: "\f118";
 }
-.strib-phone-app:before {
+.strib-person:before {
 	content: "\f119";
 }
-.strib-phone-landline:before {
+.strib-phone-app:before {
 	content: "\f11a";
 }
-.strib-podcast:before {
+.strib-phone-landline:before {
 	content: "\f11b";
 }
-.strib-poll:before {
+.strib-podcast:before {
 	content: "\f11c";
 }
-.strib-print:before {
+.strib-poll:before {
 	content: "\f11d";
 }
-.strib-reply:before {
+.strib-print:before {
 	content: "\f11e";
 }
-.strib-reprint:before {
+.strib-reply:before {
 	content: "\f11f";
 }
-.strib-save-article-filled:before {
+.strib-reprint:before {
 	content: "\f120";
 }
-.strib-save-article-open:before {
+.strib-save-article-filled:before {
 	content: "\f121";
 }
-.strib-save-article:before {
+.strib-save-article-open:before {
 	content: "\f122";
 }
-.strib-search:before {
+.strib-save-article:before {
 	content: "\f123";
 }
-.strib-social-facebook-circle:before {
+.strib-search:before {
 	content: "\f124";
 }
-.strib-social-facebook:before {
+.strib-share-icon:before {
 	content: "\f125";
 }
-.strib-social-google-circle:before {
+.strib-sms-text-share-icon:before {
 	content: "\f126";
 }
-.strib-social-google:before {
+.strib-social-facebook-circle:before {
 	content: "\f127";
 }
-.strib-social-instagram-circle:before {
+.strib-social-facebook:before {
 	content: "\f128";
 }
-.strib-social-instagram:before {
+.strib-social-google-circle:before {
 	content: "\f129";
 }
-.strib-social-linkedin-circle:before {
+.strib-social-google:before {
 	content: "\f12a";
 }
-.strib-social-linkedin:before {
+.strib-social-instagram-circle:before {
 	content: "\f12b";
 }
-.strib-social-pinterest-circle:before {
+.strib-social-instagram:before {
 	content: "\f12c";
 }
-.strib-social-pinterest:before {
+.strib-social-linkedin-circle:before {
 	content: "\f12d";
 }
-.strib-social-tumblr-circle:before {
+.strib-social-linkedin:before {
 	content: "\f12e";
 }
-.strib-social-tumblr:before {
+.strib-social-pinterest-circle:before {
 	content: "\f12f";
 }
-.strib-social-twitter-circle:before {
+.strib-social-pinterest:before {
 	content: "\f130";
 }
-.strib-social-twitter:before {
+.strib-social-tumblr-circle:before {
 	content: "\f131";
 }
-.strib-social-youtube-circle:before {
+.strib-social-tumblr:before {
 	content: "\f132";
 }
-.strib-social-youtube:before {
+.strib-social-twitter-circle:before {
 	content: "\f133";
 }
-.strib-strib-logo:before {
+.strib-social-twitter:before {
 	content: "\f134";
 }
-.strib-strib-star:before {
+.strib-social-youtube-circle:before {
 	content: "\f135";
 }
-.strib-text-size:before {
+.strib-social-youtube:before {
 	content: "\f136";
+}
+.strib-strib-logo:before {
+	content: "\f137";
+}
+.strib-strib-star:before {
+	content: "\f138";
+}
+.strib-text-size:before {
+	content: "\f139";
+}
+.strib-undo-arrow:before {
+	content: "\f13a";
 }
 
 /* SVG includes */
