@@ -12,11 +12,11 @@ $strib-fonts-class-prefix: "strib-" !default;
 
 @font-face {
 	font-family: "#{$strib-fonts-font-name}";
-	src: url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1653507581603#strib-icons") format("embedded-opentype"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1653507581603") format("truetype"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1653507581603") format("woff"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1653507581603") format("woff2"),
-url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1653507581603#iefix") format("embedded-opentype");
+	src: url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1660182562396#strib-icons") format("embedded-opentype"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1660182562396") format("truetype"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1660182562396") format("woff"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1660182562396") format("woff2"),
+url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1660182562396#iefix") format("embedded-opentype");
 }
 
 #{$strib-fonts-base-selector} {
@@ -66,143 +66,146 @@ url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1653507581603#iefix")
 .#{$strib-fonts-class-prefix}gallery-slideshow:before {
 	content: "\f10c";
 }
-.#{$strib-fonts-class-prefix}graphic:before {
+.#{$strib-fonts-class-prefix}gift-article:before {
 	content: "\f10d";
 }
-.#{$strib-fonts-class-prefix}hamburger:before {
+.#{$strib-fonts-class-prefix}graphic:before {
 	content: "\f10e";
 }
-.#{$strib-fonts-class-prefix}home:before {
+.#{$strib-fonts-class-prefix}hamburger:before {
 	content: "\f10f";
 }
-.#{$strib-fonts-class-prefix}like:before {
+.#{$strib-fonts-class-prefix}home:before {
 	content: "\f110";
 }
-.#{$strib-fonts-class-prefix}link-share-icon:before {
+.#{$strib-fonts-class-prefix}like:before {
 	content: "\f111";
 }
-.#{$strib-fonts-class-prefix}map-pin:before {
+.#{$strib-fonts-class-prefix}link-share-icon:before {
 	content: "\f112";
 }
-.#{$strib-fonts-class-prefix}media-play:before {
+.#{$strib-fonts-class-prefix}map-pin:before {
 	content: "\f113";
 }
-.#{$strib-fonts-class-prefix}media-video-square:before {
+.#{$strib-fonts-class-prefix}media-play:before {
 	content: "\f114";
 }
-.#{$strib-fonts-class-prefix}media-video:before {
+.#{$strib-fonts-class-prefix}media-video-square:before {
 	content: "\f115";
 }
-.#{$strib-fonts-class-prefix}modal:before {
+.#{$strib-fonts-class-prefix}media-video:before {
 	content: "\f116";
 }
-.#{$strib-fonts-class-prefix}nav-back:before {
+.#{$strib-fonts-class-prefix}modal:before {
 	content: "\f117";
 }
-.#{$strib-fonts-class-prefix}nav-forward:before {
+.#{$strib-fonts-class-prefix}nav-back:before {
 	content: "\f118";
 }
-.#{$strib-fonts-class-prefix}person:before {
+.#{$strib-fonts-class-prefix}nav-forward:before {
 	content: "\f119";
 }
-.#{$strib-fonts-class-prefix}phone-app:before {
+.#{$strib-fonts-class-prefix}person:before {
 	content: "\f11a";
 }
-.#{$strib-fonts-class-prefix}phone-landline:before {
+.#{$strib-fonts-class-prefix}phone-app:before {
 	content: "\f11b";
 }
-.#{$strib-fonts-class-prefix}podcast:before {
+.#{$strib-fonts-class-prefix}phone-landline:before {
 	content: "\f11c";
 }
-.#{$strib-fonts-class-prefix}poll:before {
+.#{$strib-fonts-class-prefix}podcast:before {
 	content: "\f11d";
 }
-.#{$strib-fonts-class-prefix}print:before {
+.#{$strib-fonts-class-prefix}poll:before {
 	content: "\f11e";
 }
-.#{$strib-fonts-class-prefix}reply:before {
+.#{$strib-fonts-class-prefix}print:before {
 	content: "\f11f";
 }
-.#{$strib-fonts-class-prefix}reprint:before {
+.#{$strib-fonts-class-prefix}reply:before {
 	content: "\f120";
 }
-.#{$strib-fonts-class-prefix}save-article-filled:before {
+.#{$strib-fonts-class-prefix}reprint:before {
 	content: "\f121";
 }
-.#{$strib-fonts-class-prefix}save-article-open:before {
+.#{$strib-fonts-class-prefix}save-article-filled:before {
 	content: "\f122";
 }
-.#{$strib-fonts-class-prefix}save-article:before {
+.#{$strib-fonts-class-prefix}save-article-open:before {
 	content: "\f123";
 }
-.#{$strib-fonts-class-prefix}search:before {
+.#{$strib-fonts-class-prefix}save-article:before {
 	content: "\f124";
 }
-.#{$strib-fonts-class-prefix}share-icon:before {
+.#{$strib-fonts-class-prefix}search:before {
 	content: "\f125";
 }
-.#{$strib-fonts-class-prefix}sms-text-share-icon:before {
+.#{$strib-fonts-class-prefix}share-icon:before {
 	content: "\f126";
 }
-.#{$strib-fonts-class-prefix}social-facebook-circle:before {
+.#{$strib-fonts-class-prefix}sms-text-share-icon:before {
 	content: "\f127";
 }
-.#{$strib-fonts-class-prefix}social-facebook:before {
+.#{$strib-fonts-class-prefix}social-facebook-circle:before {
 	content: "\f128";
 }
-.#{$strib-fonts-class-prefix}social-google-circle:before {
+.#{$strib-fonts-class-prefix}social-facebook:before {
 	content: "\f129";
 }
-.#{$strib-fonts-class-prefix}social-google:before {
+.#{$strib-fonts-class-prefix}social-google-circle:before {
 	content: "\f12a";
 }
-.#{$strib-fonts-class-prefix}social-instagram-circle:before {
+.#{$strib-fonts-class-prefix}social-google:before {
 	content: "\f12b";
 }
-.#{$strib-fonts-class-prefix}social-instagram:before {
+.#{$strib-fonts-class-prefix}social-instagram-circle:before {
 	content: "\f12c";
 }
-.#{$strib-fonts-class-prefix}social-linkedin-circle:before {
+.#{$strib-fonts-class-prefix}social-instagram:before {
 	content: "\f12d";
 }
-.#{$strib-fonts-class-prefix}social-linkedin:before {
+.#{$strib-fonts-class-prefix}social-linkedin-circle:before {
 	content: "\f12e";
 }
-.#{$strib-fonts-class-prefix}social-pinterest-circle:before {
+.#{$strib-fonts-class-prefix}social-linkedin:before {
 	content: "\f12f";
 }
-.#{$strib-fonts-class-prefix}social-pinterest:before {
+.#{$strib-fonts-class-prefix}social-pinterest-circle:before {
 	content: "\f130";
 }
-.#{$strib-fonts-class-prefix}social-tumblr-circle:before {
+.#{$strib-fonts-class-prefix}social-pinterest:before {
 	content: "\f131";
 }
-.#{$strib-fonts-class-prefix}social-tumblr:before {
+.#{$strib-fonts-class-prefix}social-tumblr-circle:before {
 	content: "\f132";
 }
-.#{$strib-fonts-class-prefix}social-twitter-circle:before {
+.#{$strib-fonts-class-prefix}social-tumblr:before {
 	content: "\f133";
 }
-.#{$strib-fonts-class-prefix}social-twitter:before {
+.#{$strib-fonts-class-prefix}social-twitter-circle:before {
 	content: "\f134";
 }
-.#{$strib-fonts-class-prefix}social-youtube-circle:before {
+.#{$strib-fonts-class-prefix}social-twitter:before {
 	content: "\f135";
 }
-.#{$strib-fonts-class-prefix}social-youtube:before {
+.#{$strib-fonts-class-prefix}social-youtube-circle:before {
 	content: "\f136";
 }
-.#{$strib-fonts-class-prefix}strib-logo:before {
+.#{$strib-fonts-class-prefix}social-youtube:before {
 	content: "\f137";
 }
-.#{$strib-fonts-class-prefix}strib-star:before {
+.#{$strib-fonts-class-prefix}strib-logo:before {
 	content: "\f138";
 }
-.#{$strib-fonts-class-prefix}text-size:before {
+.#{$strib-fonts-class-prefix}strib-star:before {
 	content: "\f139";
 }
-.#{$strib-fonts-class-prefix}undo-arrow:before {
+.#{$strib-fonts-class-prefix}text-size:before {
 	content: "\f13a";
+}
+.#{$strib-fonts-class-prefix}undo-arrow:before {
+	content: "\f13b";
 }
 
 // SVG includes
