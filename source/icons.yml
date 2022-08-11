@@ -175,3 +175,6 @@ sms-text-share-icon.svg:
 undo-arrow.svg:
   title: "Undo arrow icon"
   description: "Icon for undoing an action"
+gift-article:
+  title: "Article gift icon"
+  description: "Icon to designate the gifting function for subscribers"
