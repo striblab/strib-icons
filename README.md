@@ -23,13 +23,15 @@ See the [striblab.github.io/strib-icons](https://striblab.github.io/strib-icons/
   * You may need to manually edit the SVG to do these things.
 * Put icons in `source/icons/`
   * The file name of the icon will become the class name of the icon in CSS, so be consistent and reasonable, use only lowercase and dashes, i.e. `category-name-modifier.svg`
+  * You must have a filename that will place the new character at the end of the character set. Preface your filename with "z1-" or somthing similar ensuring the character is inserted as the last character in the font. The reason for this is inserting a new SVG into the font will change the character positions for existing icons, disrupting icon references already being used.
 * Add an entry in `sources/icons.yml`. This is used for the SVG version of the icons for accessibility.
 
-### Developing and building
+### Developing and building and deploying to static.startribune.com
 
 * Make sure NodeJS is installed and run: `npm install`
 * To compile the fonts one time, run: `npm run build`
 * To watch for changes and run a local server to see the example page: `npm run develop`
+* After determining that your new icon looks as expected, copy the files from the strib-icons/build directory to static.startribune.com/assets/libs/strib-icons/0.0.13/. We no longer increment the version numbers. This is the folder where these should always live going forward. This deployment method is an alternate method for folks who have trouble deploying using the steps outlined in the "Publishing" section. 
 
 ### Templates
 
