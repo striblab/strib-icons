@@ -183,4 +183,16 @@ z1-account-widget-light-gray-bg:
   description: "Two-tone account access button"
   variables:
     - strib-strib-account-back
+    - strib-audio-pause-bottom
+z1-pause-audio-icon:
+  title: "Audio pause button"
+  description: "Pause button specifically for the text-to-speech function"
+  variables:
+    - strib-audio-pause-top
     - strib-strib-account-top
+z1-play-audio-icon:
+  title: "Audio play button"
+  description: "Play button specifically for the text-to-speech function"
+  variables:
+    - strib-audio-play-bottom
+    - strib-play_button
