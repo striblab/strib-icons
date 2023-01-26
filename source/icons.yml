@@ -196,3 +196,9 @@ z1-play-audio-icon:
   variables:
     - strib-audio-play-bottom
     - strib-play_button
+z1-social-tiktok-circle:
+  title: "Tiktok circle"
+  description: "Tiktok logo in a circle"
+z1-social-tiktok:
+  title: "Tiktok"
+  description: "Simple Tiktok logo"
