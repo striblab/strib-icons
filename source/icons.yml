@@ -178,18 +178,18 @@ undo-arrow:
 gift-article:
   title: "Article gift icon"
   description: "Icon to designate the gifting function for subscribers"
-z1-account-widget-light-gray-bg:
+z1-account-widget:
   title: "Account widget with gray background"
   description: "Two-tone account access button"
   variables:
+    - strib-strib-account-top
     - strib-strib-account-back
-    - strib-audio-pause-bottom
 z1-pause-audio-icon:
   title: "Audio pause button"
   description: "Pause button specifically for the text-to-speech function"
   variables:
     - strib-audio-pause-top
-    - strib-strib-account-top
+    - strib-audio-pause-bottom
 z1-play-audio-icon:
   title: "Audio play button"
   description: "Play button specifically for the text-to-speech function"
@@ -202,3 +202,6 @@ z1-social-tiktok-circle:
 z1-social-tiktok:
   title: "Tiktok"
   description: "Simple Tiktok logo"
+z2-eedition-filled:
+  title: "eEdition filled"
+  description: "Icon representing eEdition"
