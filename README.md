@@ -29,6 +29,7 @@ See the [striblab.github.io/strib-icons](https://striblab.github.io/strib-icons/
 ### Developing and building and deploying to static.startribune.com
 
 * Make sure NodeJS is installed and run: `npm install`
+    * Note: application requires node 8
 * To compile the fonts one time, run: `npm run build`
 * To watch for changes and run a local server to see the example page: `npm run develop`
 * After determining that your new icon looks as expected, copy the files from the strib-icons/build directory to static.startribune.com/assets/libs/strib-icons/0.0.13/. We no longer increment the version numbers. This is the folder where these should always live going forward. This deployment method is an alternate method for folks who have trouble deploying using the steps outlined in the "Publishing" section. 
