@@ -3,6 +3,7 @@
   "version": "0.0.13",
   "description": "Icons used in projects as different formats.",
   "main": "build/strib-icons.js",
+  "type": "module",
   "watch": {
     "build": {
       "patterns": [
@@ -44,5 +45,8 @@
     "underscore": "^1.8.3",
     "webfont": "^8.0.0",
     "webfonts-generator": "^0.4.0"
+  },
+  "dependencies": {
+    "fantasticon": "^2.0.0"
   }
 }

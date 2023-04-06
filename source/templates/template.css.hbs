@@ -5,29 +5,29 @@
  */
 
 @font-face {
-	font-family: "{{fontName}}";
-	src: {{{src}}};
+	font-family: "{{name}}";
+	src: {{{fontSrc}}};
 }
 
-{{baseSelector}} {
+{{selector}} {
 	line-height: 1;
 }
 
-{{baseSelector}}:before {
-	font-family: {{fontName}} !important;
+{{selector}}:before {
+	font-family: {{name}} !important;
 	font-style: normal;
 	font-weight: normal !important;
 	vertical-align: top;
 }
 
 {{#each codepoints}}
-.{{../classPrefix}}{{@key}}:before {
+.{{../prefix}}{{@key}}:before {
 	content: "\\{{this}}";
 }
 {{/each}}
 
 /* SVG includes */
-{{baseSelector}}-svg {
+{{selector}}-svg {
 	display: inline-block;
 	width: 1em;
 	height: 1em;

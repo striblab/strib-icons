@@ -1,207 +1,281 @@
 arrow-right:
   title: "Right arrow"
   description: "Triangle arrow pointed right"
+  codepoint: "f101"
 arrow-value-down:
   title: "Value arrow up"
   description: "Arrow pointed up for data values"
+  codepoint: "f102"
 arrow-value-up:
   title: "Value arrow down"
   description: "Arrow pointed down for data values"
+  codepoint: "f103"
 camera:
   title: "Camera"
   description: "Simple box and circle camera icon"
+  codepoint: "f104"
 close:
   title: "Close"
   description: "The X symbol used to close popups"
+  codepoint: "f105"
 comment-bubble-long:
   title: "Comment bubble long"
   description: "Comment or talk bubble elongated to allow for small amounts of text"
+  codepoint: "f106"
 comment-bubble:
   title: "Comment bubble"
   description: "Comment or talk symbol"
+  codepoint: "f107"
 data-drop:
   title: "Data Drop series"
-  description: "Star Tribune Data Drop series symbol, a set of waves simlar to a chart"
+  description: "Star Tribune Data Drop series symbol, a set of waves similar to a chart"
   variables:
     - strib-data-drop-bg
     - strib-data-drop-right
     - strib-data-drop-left
     - strib-data-drop-middle
     - strib-data-drop-bottom
+  codepoint: "f108"
 document:
   title: "Document"
   description: "Icon for document links"
+  codepoint: "f109"
 email:
   title: "Email"
   description: "Small letter to symbolize email"
+  codepoint: "f10a"
+gallery-grid:
+  title: "Grid"
+  description: "Icon for indicating the grid view on a photo gallery"
+  codepoint: "f10b"
+gallery-slideshow:
+  title: "Slideshow"
+  description: "Icon for indicating the gallery view on a photo gallery"
+  codepoint: "f10c"
+gift-article:
+  title: "Article gift icon"
+  description: "Icon to designate the gifting function for subscribers"
+  codepoint: "f10d"
 graphic:
   title: "Graphic"
   description: "Icon for news graphic links"
+  codepoint: "f10e"
 hamburger:
   title: "Menu hamburger"
-  description: "Three lines to note a menu"
+  description: "Three lines to denote a menu"
+  codepoint: "f10f"
 home:
   title: "House"
   description: "Simple house outline"
+  codepoint: "f110"
 like:
   title: "Like"
   description: "Thumb-up hand"
+  codepoint: "f111"
+link-share-icon:
+  title: "Link share icon"
+  description: "Link sharing icon"
+  codepoint: "f112"
 map-pin:
   title: "Map pin"
   description: "Simple pointed map pin"
+  codepoint: "f113"
 media-play:
   title: "Play"
   description: "A triangle in a circle used to play media"
+  codepoint: "f114"
 media-video:
   title: "Video"
   description: "A small camera icon"
+  codepoint: "f116"
 media-video-square:
   title: "Video"
   description: "Icon for video links"
+  codepoint: "f115"
 modal:
   title: "Modal"
   description: "A two-way arrow in a box to show that a modal or popup will appear"
+  codepoint: "f117"
 nav-back:
   title: "Back navigation"
   description: "A left chevron arrow used for navigation"
+  codepoint: "f118"
 nav-forward:
   title: "Forward navigation"
   description: "A right chevron arrow used for navigation"
+  codepoint: "f119"
 person:
   title: "Person"
   description: "Outline of head and shoulders of a person"
-phone-landline:
-  title: "Phone landline"
-  description: "A simple land-line phone reciever"
+  codepoint: "f11a"
 phone-app:
   title: "Phone smart"
   description: "A modern, smart phone"
+  codepoint: "f11b"
+phone-landline:
+  title: "Phone landline"
+  description: "A simple land-line phone reciever"
+  codepoint: "f11c"
 podcast:
   title: "Podcast"
   description: "Icon for podcast links"
+  codepoint: "f11d"
 poll:
   title: "Poll"
   description: "Icon for poll links"
+  codepoint: "f11e"
 print:
   title: "Print"
   description: "A simple outline of a home printer"
+  codepoint: "f11f"
+reply:
+  title: "Reply"
+  description: ""
+  codepoint: "f120"
 reprint:
   title: "Reprint"
   description: ""
+  codepoint: "f121"
+save-article-filled:
+  title: "Save article filled"
+  description: "single-piece SVG for the active state"
+  codepoint: "f122"
+save-article-open:
+  title: "Save article open"
+  description: "single-piece SVG for the inactive state"
+  codepoint: "f123"
+save-article:
+  title: "Save article"
+  description: "Two-piece SVG for save article function"
+  codepoint: "f124"
 search:
   title: "Search"
   description: "Magnifying glass outline"
+  codepoint: "f125"
+share-icon:
+  title: "Share icon"
+  description: "Icon for sharing stories"
+  codepoint: "f126"
+sms-text-share-icon:
+  title: "SMS text sharing icon"
+  description: "Icon for sharing SMS versions of stories"
+  codepoint: "f127"
 social-facebook-circle:
   title: "Facebook circle"
   description: "Facebook logo in a circle"
+  codepoint: "f128"
 social-facebook:
   title: "Facebook"
   description: "Simple Facebook logo"
+  codepoint: "f129"
 social-google-circle:
   title: "Google Plus circle"
   description: "Google Plus logo in a circle"
+  codepoint: "f12a"
 social-google:
   title: "Google Plus logo"
   description: "Just the Google Plus logo"
+  codepoint: "f12b"
 social-instagram-circle:
   title: "Instagram circle"
   description: "Instagram logo in a circle"
+  codepoint: "f12c"
 social-instagram:
   title: "Instagram logo"
   description: "Just the Instagram logo"
+  codepoint: "f12d"
 social-linkedin-circle:
   title: "LinkedIn circle"
   description: "LinkedIn logo in a circle"
+  codepoint: "f12e"
 social-linkedin:
   title: "LinkedIn logo"
   description: "Simple LinkedIn logo"
+  codepoint: "f12f"
 social-pinterest-circle:
   title: "Pinterest circle"
   description: "Pinterest logo in a circle"
+  codepoint: "f130"
 social-pinterest:
   title: "Pinterest logo"
   description: "Just the Pinterest logo"
+  codepoint: "f131"
 social-tumblr-circle:
   title: "Tumblr circle"
   description: "Tumblr logo in a circle"
+  codepoint: "f132"
 social-tumblr:
   title: "Tumblr logo"
   description: "Just the Tumblr logo"
+  codepoint: "f133"
 social-twitter-circle:
   title: "Twitter circle"
   description: "Twitter logo in a circle"
+  codepoint: "f134"
 social-twitter:
   title: "Twitter"
   description: "Simple Twitter logo"
+  codepoint: "f135"
 social-youtube-circle:
   title: "YouTube circle"
   description: "YouTube logo in a circle"
+  codepoint: "f136"
 social-youtube:
   title: "YouTube"
   description: "Simple YouTube logo"
+  codepoint: "f137"
 strib-logo:
   title: "Star Tribune logo"
   description: "Two-tone Star Tribune star and Star Tribune wordmark"
   variables:
     - strib-strib-logo-top
     - strib-strib-logo-bottom
+  codepoint: "f138"
 strib-star:
   title: "Star Tribune star"
   description: "Two-tone Star Tribune star logo"
   variables:
     - strib-strib-star-top
     - strib-strib-star-bottom
+  codepoint: "f139"
 text-size:
   title: "Text size"
   description: "Two capital letters to show difference in text size"
-save-article:
-  title: "Save article"
-  description: "Two-piece SVG for save article function"
-save-article-open:
-  title: "Save article open"
-  description: "single-piece SVG for the inactive state"
-save-article-filled:
-  title: "Save article filled"
-  description: "single-piece SVG for the active state"
-link-share-icon.svg:
-  title: "Link share icon"
-  description: "Link sharing icon"
-share-icon.svg:
-  title: "Share icon"
-  description: "Icon for sharing stories"
-sms-text-share-icon:
-  title: "SMS text sharing icon"
-  description: "Icon for sharing SMS versions of stories"
+  codepoint: "f13a"
 undo-arrow:
   title: "Undo arrow icon"
   description: "Icon for undoing an action"
-gift-article:
-  title: "Article gift icon"
-  description: "Icon to designate the gifting function for subscribers"
+  codepoint: "f13b"
 z1-account-widget:
   title: "Account widget with gray background"
   description: "Two-tone account access button"
   variables:
     - strib-strib-account-top
     - strib-strib-account-back
+  codepoint: "f13c"
 z1-pause-audio-icon:
   title: "Audio pause button"
   description: "Pause button specifically for the text-to-speech function"
   variables:
     - strib-audio-pause-top
     - strib-audio-pause-bottom
+  codepoint: "f13d"
 z1-play-audio-icon:
   title: "Audio play button"
   description: "Play button specifically for the text-to-speech function"
   variables:
     - strib-audio-play-bottom
     - strib-play_button
+  codepoint: "f13e"
 z1-social-tiktok-circle:
   title: "Tiktok circle"
   description: "Tiktok logo in a circle"
+  codepoint: "f13f"
 z1-social-tiktok:
   title: "Tiktok"
   description: "Simple Tiktok logo"
+  codepoint: "f140"
 z2-eedition-filled:
   title: "eEdition filled"
   description: "Icon representing eEdition"
+  codepoint: "f141"

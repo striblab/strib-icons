@@ -1,5 +1,6 @@
 # Front-end app
 build/*
+dist/*
 config.custom.json
 .awspublish*
 .cache*
@@ -20,7 +21,6 @@ bower_components/
 npm*
 .env
 .sass-cache
-.tmp
 tmp
 .temp
 temp

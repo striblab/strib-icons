@@ -32,8 +32,8 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
     normalize: true,
     fontHeight: 1010,
     html: true,
-    cssTemplate: 'source/templates/template.hbs.css',
-    htmlTemplate: 'source/templates/template.hbs.html',
+    cssTemplate: 'source/templates/template.css.hbs',
+    htmlTemplate: 'source/templates/template.html.hbs',
     htmlDest: 'build/index.html',
     templateOptions: {
       classPrefix: 'strib-',
@@ -42,6 +42,9 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
       meta: metaData
     }
   };
+
+  console.log(fontOptions.templateOptions.meta['arrow-right'])
+  return;
 
   // Sprite options
   let spriteOptions = {
@@ -89,19 +92,19 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
   // Get some templates
   let jsonTemplate = handlebars.compile(
     fs.readFileSync(
-      path.join(__dirname, 'source/templates/template.hbs.json'),
+      path.join(__dirname, 'source/templates/template.json.hbs'),
       'utf-8'
     )
   );
   let scssTemplate = handlebars.compile(
     fs.readFileSync(
-      path.join(__dirname, 'source/templates/template.hbs.scss'),
+      path.join(__dirname, 'source/templates/template.scss.hbs'),
       'utf-8'
     )
   );
   let jsTemplate = handlebars.compile(
     fs.readFileSync(
-      path.join(__dirname, 'source/templates/template.hbs.js'),
+      path.join(__dirname, 'source/templates/template.js.hbs'),
       'utf-8'
     )
   );
