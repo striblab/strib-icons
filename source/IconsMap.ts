@@ -1,4 +1,5 @@
 import fs from 'fs-extra' //calling fs-extra in place of fs, because there is additional functionality in that package
+import path from 'path'
 import { Icon } from './Icon'
 
 const ICONS_DIR_NAME: string = '/icons'
@@ -75,8 +76,24 @@ class IconsMap {
     }
   }
 
-  public getFileNames(): string[] {
-    return this.fileNames
+  public getFileNames(withPath: boolean = false): string[] {
+    if (!withPath) {
+      return this.fileNames
+    }
+
+    let fileNames: string[] = []
+    for (const fileName of this.fileNames) {
+      fileNames.push(path.resolve('./source/icons/', fileName))
+
+    }
+
+    return fileNames
+  }
+
+  public getIconNames(): string[] {
+    return this.fileNames.map((name: string) => {
+      return name.replace('.svg', '')
+    })
   }
 }
 

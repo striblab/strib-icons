@@ -117,6 +117,20 @@ class CodepointsMap {
   }
 
   /**
+   * Convert codepoints in the map to their string values
+   */
+  public static async getStringMap() {
+    let numberMap = require('./' + MAP_FILE_NAME)
+    let map = {}
+
+    for (const [name, point] of Object.entries(numberMap)) {
+      map[(name as string)] = (point as number).toString(16)
+    }
+
+    return map
+  }
+
+  /**
    * Convert a codepoint map (format { iconName: point, iconName: point}) to a formatted object (we want to make sure
    * the name is a string and the point is a number)
    * @param {object} map

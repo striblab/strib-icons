@@ -43,65 +43,22 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
     }
   };
 
-  // Sprite options
-  let spriteOptions = {
-    shape: {
-      meta: path.join(__dirname, 'source/icons.yml'),
-      id: {
-        generator: 'strib-%s'
-      }
-    },
-    mode: {
-      symbol: true,
-    }
-  };
-
-  // SVG sprite
-  let spriter = new SVGSprite(spriteOptions);
-  files.forEach(f => {
-    spriter.add(f, null, fs.readFileSync(f, 'utf-8'));
-  });
-  spriter.compile((error, result) => {
-    if (error) {
-      console.error(error);
-      console.error('\nThere was an error building SVG sprite.');
-    }
-
-    // Write files.  This doesn't really account for all the different options
-    // of svg-sprite that well.
-    for (let mode in result) {
-      for (let resource in result[mode]) {
-        fs.writeFileSync(
-          path.join(
-            fontOptions.dest,
-            `${fontOptions.fontName}.${
-              mode === 'symbol' ? '' : mode + '-'
-            }sprite.svg`
-          ),
-          result[mode][resource].contents
-        );
-      }
-    }
-
-    console.error('Done building SVG sprites!');
-  });
-
   // Get some templates
   let jsonTemplate = handlebars.compile(
     fs.readFileSync(
-      path.join(__dirname, 'source/templates/template.hbs.json'),
+      path.join(__dirname, 'source/templates/template.json.hbs'),
       'utf-8'
     )
   );
   let scssTemplate = handlebars.compile(
     fs.readFileSync(
-      path.join(__dirname, 'source/templates/template.hbs.scss'),
+      path.join(__dirname, 'source/templates/template.scss.hbs'),
       'utf-8'
     )
   );
   let jsTemplate = handlebars.compile(
     fs.readFileSync(
-      path.join(__dirname, 'source/templates/template.hbs.js'),
+      path.join(__dirname, 'source/templates/template.js.hbs'),
       'utf-8'
     )
   );
@@ -157,7 +114,7 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
 
     console.error('Done building fonts!');
   });
-}).then(r => {});
+})
 
 // To help with some template, specifically SCSS, where
 // we want to make the base URL a variable
