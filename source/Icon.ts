@@ -40,7 +40,7 @@ class Icon {
     await map.initialize()
 
     //Get a codepoint for the icon
-    let point = await map.getPointFromMap(this.name)
+    const point = await map.getPointFromMap(this.name)
     if (point) {
       this.codepoint = point
     } else {
@@ -48,7 +48,7 @@ class Icon {
     }
 
     //Get the metadata for the icon
-    let metadata = await yaml.safeLoad(await fs.readFileSync('./source/icons.yml'))
+    const metadata = await yaml.safeLoad(await fs.readFileSync('./source/icons.yml'))
     if (metadata.hasOwnProperty(this.name)) {
       this.description = metadata[this.name].description ?? ''
       this.variables = metadata[this.name].variables ?? []

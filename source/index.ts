@@ -87,7 +87,7 @@ import handlebars from 'handlebars'
       })
     );
 
-    console.info('Done building fonts!');
+    console.log('Done building fonts!');
   })
 
   /**
@@ -95,7 +95,7 @@ import handlebars from 'handlebars'
    * @param fontOptions
    */
   async function generateSprites(fontOptions) {
-    let spriteOptions = {
+    const spriteOptions = {
       shape: {
         meta: path.join(__dirname, '/icons.yml'),
         id: {
@@ -148,14 +148,14 @@ import handlebars from 'handlebars'
    * @param options
    */
   async function generateScssSourceUrls(options): Promise<string> {
-    let formats = {
+    const formats = {
       eot: { suffix: '#iefix', format: 'embedded-opentype' },
       woff2: { format: 'woff2' },
       woff: { format: 'woff' },
       ttf: { format: 'truetype' },
       svg: { suffix: `#${options.fontName}`, format: 'embedded-opentype' }
     };
-    let timestamp = +new Date();
+    const timestamp = +new Date();
 
     let output = '';
     for (const [ index, type ] of Object.entries(options.types)) {

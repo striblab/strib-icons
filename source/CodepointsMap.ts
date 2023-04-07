@@ -29,7 +29,7 @@ class CodepointsMap {
    */
   public async initialize() {
     //Import the map contents so we can process
-    let map = require('./' + MAP_FILE_NAME)
+    const map = require('./' + MAP_FILE_NAME)
 
     //Add any map data to the object for use
     if (!await this.isMapEmpty(map)) {
@@ -81,7 +81,7 @@ class CodepointsMap {
     const sanitizedName = await this.slugify(name)
 
     //Generate a codepoint number for the new icon and add it to the map objects
-    let point = await this.generateCodepoint()
+    const point = await this.generateCodepoint()
     this.codepoints[sanitizedName] = point
     this.invertedCodepoints[point] = sanitizedName
 
@@ -120,7 +120,7 @@ class CodepointsMap {
    * Convert codepoints in the map to their string values
    */
   public static getStringMap() {
-    let numberMap = require('./' + MAP_FILE_NAME)
+    const numberMap = require('./' + MAP_FILE_NAME)
     let map = {}
 
     for (const [name, point] of Object.entries(numberMap)) {
