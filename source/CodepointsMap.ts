@@ -119,7 +119,7 @@ class CodepointsMap {
   /**
    * Convert codepoints in the map to their string values
    */
-  public static async getStringMap() {
+  public static getStringMap() {
     let numberMap = require('./' + MAP_FILE_NAME)
     let map = {}
 

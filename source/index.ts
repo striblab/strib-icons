@@ -1,30 +1,26 @@
+import { IconsMap } from './IconsMap'
+import { CodepointsMap } from './CodepointsMap'
+
 import fs from 'fs-extra' //calling fs-extra in place of fs, because there is additional functionality in that package
 import path from 'path'
-import { IconsMap } from './IconsMap'
 import SVGSprite from 'svg-sprite'
 import webfont from 'webfonts-generator'
 import handlebars from 'handlebars'
-import { CodepointsMap } from './CodepointsMap'
 
 (async () => {
   const packageData = require('../package.json')
+  const buildDate = new Date()
 
+  //Generate a new icon map so that we have all of the icon names, codepoints, and metadata in one file
   let map = new IconsMap()
   await map.initialize()
   await map.generateMap()
 
   const fileNames = map.getFileNames(true)
 
-  // let map = new CodepointsMap()
-  // await map.initialize()
-
-  // let icon = new Icon('data-drop')
-  // await icon.initialize()
-  // console.log(icon.name, icon.codepoint, icon.description, icon.variables)
-
   let fontOptions = {
     files: fileNames,
-    dest: 'test/',
+    dest: 'build/',
     fontName: 'strib-icons',
     types: [ 'svg', 'ttf', 'woff', 'woff2', 'eot' ],
     normalize: true,
@@ -32,12 +28,13 @@ import { CodepointsMap } from './CodepointsMap'
     html: true,
     cssTemplate: './bin/templates/template.css.hbs',
     htmlTemplate: './bin/templates/template.html.hbs',
-    htmlDest: './test/index.html',
+    htmlDest: './build/index.html',
     templateOptions: {
       classPrefix: 'strib-',
       baseSelector: '.strib-icon',
       pkg: packageData,
-      meta: require('./icons.map.json')
+      meta: require('./icons.map.json'),
+      buildDate: buildDate.toLocaleDateString() + ' ' + buildDate.toLocaleTimeString()
     },
     scssSourceUrls: ''
   }
@@ -138,10 +135,17 @@ import { CodepointsMap } from './CodepointsMap'
   }
 
   /**
-   * Generate the font URLs (with cache busting) that will be included in the generated style files
+   * Generate the font URLs (with cache busting) that will be included in the generated style files. String output
+   * looks like:
+   *
+   * url("#{$strib-fonts-location}#{$strib-fonts-font-name}.svg?1680891038609#strib-icons") format("embedded-opentype"),
+   * url("#{$strib-fonts-location}#{$strib-fonts-font-name}.ttf?1680891038609") format("truetype"),
+   * url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1680891038609") format("woff"),
+   * url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1680891038609") format("woff2"),
+   * url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1680891038609#iefix") format("embedded-opentype")
    * @param options
    */
-  async function generateScssSourceUrls(options) {
+  async function generateScssSourceUrls(options): Promise<string> {
     let formats = {
       eot: { suffix: '#iefix', format: 'embedded-opentype' },
       woff2: { format: 'woff2' },
@@ -156,7 +160,7 @@ import { CodepointsMap } from './CodepointsMap'
       let url = `url("#{$strib-fonts-location}#{$strib-fonts-font-name}.${type}?${timestamp}${
         formats[(type as string)].suffix ? formats[(type as string)].suffix : ''
       }") format("${formats[(type as string)].format}")${
-        +index < (options.types.length - 1) ? ",\n" : ""
+        +index < (options.types.length - 1) ? ",\n    " : ""
       }`;
 
       output += url

@@ -11,30 +11,30 @@ $strib-fonts-base-selector: "{{ options.templateOptions.baseSelector }}" !defaul
 $strib-fonts-class-prefix: "{{ options.templateOptions.classPrefix }}" !default;
 
 @font-face {
-	font-family: "#{$strib-fonts-font-name}";
-	src: {{{ scssSrc }}};
+    font-family: "#{$strib-fonts-font-name}";
+    src: {{{ scssSrc }}};
 }
 
 #{$strib-fonts-base-selector} {
-	line-height: 1;
+    line-height: 1;
 }
 
 #{$strib-fonts-base-selector}:before {
-	font-family: "#{$strib-fonts-font-name}" !important;
-	font-style: normal;
-	font-weight: normal !important;
-	vertical-align: top;
+    font-family: "#{$strib-fonts-font-name}" !important;
+    font-style: normal;
+    font-weight: normal !important;
+    vertical-align: top;
 }
 
 {{#each codepoints}}
 .#{$strib-fonts-class-prefix}{{@key}}:before {
-	content: "\\{{this}}";
+    content: "\\{{this}}";
 }
-{{/each}}
 
+{{/each}}
 // SVG includes
 #{$strib-fonts-base-selector}-svg {
-	display: inline-block;
-  width: 1em;
-	height: 1em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
 }

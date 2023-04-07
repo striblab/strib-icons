@@ -5,30 +5,30 @@
  */
 
 @font-face {
-	font-family: "{{fontName}}";
-	src: {{{src}}};
+  font-family: "{{fontName}}";
+  src: {{{src}}};
 }
 
 {{baseSelector}} {
-	line-height: 1;
+  line-height: 1;
 }
 
 {{baseSelector}}:before {
-	font-family: {{fontName}} !important;
-	font-style: normal;
-	font-weight: normal !important;
-	vertical-align: top;
+  font-family: {{fontName}} !important;
+  font-style: normal;
+  font-weight: normal !important;
+  vertical-align: top;
 }
 
 {{#each codepoints}}
 .{{../classPrefix}}{{@key}}:before {
-	content: "\\{{this}}";
+  content: "\\{{this}}";
 }
-{{/each}}
 
+{{/each}}
 /* SVG includes */
 {{baseSelector}}-svg {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
 }
