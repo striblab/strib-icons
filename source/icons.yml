@@ -21,7 +21,7 @@ comment-bubble:
   description: "Comment or talk symbol"
 data-drop:
   title: "Data Drop series"
-  description: "Star Tribune Data Drop series symbol, a set of waves simlar to a chart"
+  description: "Star Tribune Data Drop series symbol, a set of waves similar to a chart"
   variables:
     - strib-data-drop-bg
     - strib-data-drop-right
@@ -34,18 +34,30 @@ document:
 email:
   title: "Email"
   description: "Small letter to symbolize email"
+gallery-grid:
+  title: "Grid"
+  description: "Icon for indicating the grid view on a photo gallery"
+gallery-slideshow:
+  title: "Slideshow"
+  description: "Icon for indicating the gallery view on a photo gallery"
+gift-article:
+  title: "Article gift icon"
+  description: "Icon to designate the gifting function for subscribers"
 graphic:
   title: "Graphic"
   description: "Icon for news graphic links"
 hamburger:
   title: "Menu hamburger"
-  description: "Three lines to note a menu"
+  description: "Three lines to denote a menu"
 home:
   title: "House"
   description: "Simple house outline"
 like:
   title: "Like"
   description: "Thumb-up hand"
+link-share-icon:
+  title: "Link share icon"
+  description: "Link sharing icon"
 map-pin:
   title: "Map pin"
   description: "Simple pointed map pin"
@@ -70,12 +82,12 @@ nav-forward:
 person:
   title: "Person"
   description: "Outline of head and shoulders of a person"
-phone-landline:
-  title: "Phone landline"
-  description: "A simple land-line phone reciever"
 phone-app:
   title: "Phone smart"
   description: "A modern, smart phone"
+phone-landline:
+  title: "Phone landline"
+  description: "A simple land-line phone reciever"
 podcast:
   title: "Podcast"
   description: "Icon for podcast links"
@@ -85,12 +97,30 @@ poll:
 print:
   title: "Print"
   description: "A simple outline of a home printer"
+reply:
+  title: "Reply"
+  description: ""
 reprint:
   title: "Reprint"
   description: ""
+save-article-filled:
+  title: "Save article filled"
+  description: "single-piece SVG for the active state"
+save-article-open:
+  title: "Save article open"
+  description: "single-piece SVG for the inactive state"
+save-article:
+  title: "Save article"
+  description: "Two-piece SVG for save article function"
 search:
   title: "Search"
   description: "Magnifying glass outline"
+share-icon:
+  title: "Share icon"
+  description: "Icon for sharing stories"
+sms-text-share-icon:
+  title: "SMS text sharing icon"
+  description: "Icon for sharing SMS versions of stories"
 social-facebook-circle:
   title: "Facebook circle"
   description: "Facebook logo in a circle"
@@ -154,30 +184,9 @@ strib-star:
 text-size:
   title: "Text size"
   description: "Two capital letters to show difference in text size"
-save-article:
-  title: "Save article"
-  description: "Two-piece SVG for save article function"
-save-article-open:
-  title: "Save article open"
-  description: "single-piece SVG for the inactive state"
-save-article-filled:
-  title: "Save article filled"
-  description: "single-piece SVG for the active state"
-link-share-icon.svg:
-  title: "Link share icon"
-  description: "Link sharing icon"
-share-icon.svg:
-  title: "Share icon"
-  description: "Icon for sharing stories"
-sms-text-share-icon:
-  title: "SMS text sharing icon"
-  description: "Icon for sharing SMS versions of stories"
 undo-arrow:
   title: "Undo arrow icon"
   description: "Icon for undoing an action"
-gift-article:
-  title: "Article gift icon"
-  description: "Icon to designate the gifting function for subscribers"
 z1-account-widget:
   title: "Account widget with gray background"
   description: "Two-tone account access button"

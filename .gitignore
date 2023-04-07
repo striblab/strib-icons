@@ -3,7 +3,8 @@ build/*
 config.custom.json
 .awspublish*
 .cache*
-
+bin/*
+source/icons.map.json
 
 
 
@@ -20,7 +21,6 @@ bower_components/
 npm*
 .env
 .sass-cache
-.tmp
 tmp
 .temp
 temp
@@ -43,6 +43,7 @@ coverage
 *.perspectivev3
 *.xcuserstate
 *.~*
+dist/*
 
 # Compiled source
 *.com

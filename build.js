@@ -4,7 +4,7 @@
 
 // Depdencies
 const path = require('path');
-const fs = require('fs');
+const fs = require('fs-extra');
 const _ = require('underscore');
 const glob = require('glob');
 const handlebars = require('handlebars');
@@ -157,7 +157,7 @@ glob(path.join(__dirname, 'source/icons/**/*.svg'), {}, (error, files) => {
 
     console.error('Done building fonts!');
   });
-});
+}).then(r => {});
 
 // To help with some template, specifically SCSS, where
 // we want to make the base URL a variable
