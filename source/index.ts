@@ -11,7 +11,7 @@ import handlebars from 'handlebars'
   const packageData = require('../package.json')
   const buildDate = new Date()
 
-  //Generate a new icon map so that we have all of the icon names, codepoints, and metadata in one file
+  //Generate a new icon map so that we have all the icon names, codepoints, and metadata in one file
   let map = new IconsMap()
   await map.initialize()
   await map.generateMap()
@@ -33,14 +33,14 @@ import handlebars from 'handlebars'
       classPrefix: 'strib-',
       baseSelector: '.strib-icon',
       pkg: packageData,
-      meta: require('./icons.map.json'),
+      meta: require('./icons.map.json'), //icon map file generated above
       buildDate: buildDate.toLocaleDateString() + ' ' + buildDate.toLocaleTimeString()
     },
     scssSourceUrls: ''
   }
-
   fontOptions['scssSourceUrls'] = await generateScssSourceUrls(fontOptions)
 
+  //Generate the sprite file used when accessing the svg's directly in the template
   await generateSprites(fontOptions)
 
   let jsonTemplate = handlebars.compile(
@@ -53,6 +53,7 @@ import handlebars from 'handlebars'
     fs.readFileSync(path.join(__dirname, 'templates/template.js.hbs'), 'utf-8')
   );
 
+  //Generate the webfont files in the build folder
   webfont(fontOptions, error => {
     if (error) {
       console.error(error);
@@ -86,7 +87,7 @@ import handlebars from 'handlebars'
       })
     );
 
-    console.error('Done building fonts!');
+    console.info('Done building fonts!');
   })
 
   /**
@@ -143,6 +144,7 @@ import handlebars from 'handlebars'
    * url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff?1680891038609") format("woff"),
    * url("#{$strib-fonts-location}#{$strib-fonts-font-name}.woff2?1680891038609") format("woff2"),
    * url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1680891038609#iefix") format("embedded-opentype")
+   *
    * @param options
    */
   async function generateScssSourceUrls(options): Promise<string> {

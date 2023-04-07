@@ -1,6 +1,6 @@
+import { Icon } from './Icon'
 import fs from 'fs-extra' //calling fs-extra in place of fs, because there is additional functionality in that package
 import path from 'path'
-import { Icon } from './Icon'
 
 const ICONS_DIR_NAME: string = '/icons'
 const METADATA_FILE_NAME: string = '/icons.yml'
@@ -76,6 +76,12 @@ class IconsMap {
     }
   }
 
+  /**
+   * Return the list of icon filenames. If the `withPath` flag has been set to true, include the absolute path to each
+   * file as part of the data.
+   *
+   * @param {boolean} withPath
+   */
   public getFileNames(withPath: boolean = false): string[] {
     if (!withPath) {
       return this.fileNames
@@ -90,6 +96,10 @@ class IconsMap {
     return fileNames
   }
 
+  /**
+   * Get the list of each of the icon names. This is basically the same thing as the file names but without the file
+   * extension.
+   */
   public getIconNames(): string[] {
     return this.fileNames.map((name: string) => {
       return name.replace('.svg', '')

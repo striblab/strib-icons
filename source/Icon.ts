@@ -21,7 +21,7 @@ class Icon {
    */
   protected variables: string[]
   /**
-   * Any deprecated names that use the same icon
+   * Any deprecated names that use the same icon. This is not used yet.
    */
   protected aliases: string[]
 
@@ -55,26 +55,44 @@ class Icon {
     }
   }
 
+  /**
+   * Get the icon's name
+   */
   public getName(): string {
     return this.name
   }
 
+  /**
+   * Get the icon's description
+   */
   public getDescription(): string {
     return this.description
   }
 
+  /**
+   * Get the icon's variables
+   */
   public getVariables(): string[] {
     return this.variables
   }
 
+  /**
+   * Get the icon's aliases. This is not used yet.
+   */
   public getAliases(): string[] {
     return this.aliases
   }
 
+  /**
+   * Get the icon's codepoint value
+   */
   public getCodepoint(): number {
     return this.codepoint
   }
 
+  /**
+   * Get the hex/string version of the icon's codepoint value
+   */
   public getCodepointString(): string {
     return this.codepoint.toString(16)
   }
