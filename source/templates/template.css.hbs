@@ -1,33 +1,33 @@
 /**
  * Star Tribune icons (strib-icons)
- * Version: {{ pkg.version }}
+ * Version: {{ options.templateOptions.pkg.version }}
  * Copyright Star Tribune
  */
 
 @font-face {
-  font-family: "{{fontName}}";
+  font-family: "{{options.fontName}}";
   src: {{{src}}};
 }
 
-{{baseSelector}} {
+{{options.templateOptions.baseSelector}} {
   line-height: 1;
 }
 
-{{baseSelector}}:before {
-  font-family: {{fontName}} !important;
+{{options.templateOptions.baseSelector}}:before {
+  font-family: {{options.fontName}} !important;
   font-style: normal;
   font-weight: normal !important;
   vertical-align: top;
 }
 
 {{#each codepoints}}
-.{{../classPrefix}}{{@key}}:before {
+.{{../options.templateOptions.classPrefix}}{{@key}}:before {
   content: "\\{{this}}";
 }
 
 {{/each}}
 /* SVG includes */
-{{baseSelector}}-svg {
+{{options.templateOptions.baseSelector}}-svg {
   display: inline-block;
   width: 1em;
   height: 1em;

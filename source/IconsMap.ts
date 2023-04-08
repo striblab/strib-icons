@@ -55,7 +55,7 @@ class IconsMap {
    * Generate an updated version of the icon map so we can build the fonts from it
    */
   async generateMap(): Promise<void> {
-    let map = {}
+    let map: object = {}
 
     //Generate an object with all the required values for each icon
     await Object.values(this.icons).forEach((icon: Icon) => {
@@ -63,7 +63,10 @@ class IconsMap {
         name: icon.getName(),
         codepoint: icon.getCodepointString(),
         description: icon.getDescription(),
-        variables: icon.getVariables()
+        variables: icon.getVariables(),
+        aliases: icon.getAliases(),
+        fileName: icon.getFileName(),
+        absoluteFileName: icon.getAbsoluteFileName()
       }
     })
 
@@ -104,6 +107,21 @@ class IconsMap {
     return this.fileNames.map((name: string) => {
       return name.replace('.svg', '')
     })
+  }
+
+  public async getAliasMap() {
+    let map: object = {}
+
+    for (const value of Object.values(this.icons)) {
+      const icon: Icon = (value as Icon)
+      if (icon.getAliases().length > 0) {
+        for (const alias of icon.getAliases()) {
+          map[alias] = icon.getCodepoint()
+        }
+      }
+    }
+
+    return map
   }
 }
 

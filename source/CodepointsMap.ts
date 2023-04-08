@@ -117,13 +117,19 @@ class CodepointsMap {
   }
 
   /**
-   * Convert codepoints in the map to their string values
+   * Return the supplied map (or the main codepoints map) as either a map or as a string
    */
-  public static getStringMap() {
-    const numberMap = require('./' + MAP_FILE_NAME)
-    let map = {}
+  public static getMap(customMap = {}, stringMap: boolean = false) {
+    if (Object.keys(customMap).length < 1) {
+      customMap = require('./' + MAP_FILE_NAME)
+    }
 
-    for (const [name, point] of Object.entries(numberMap)) {
+    if (!stringMap) {
+      return customMap
+    }
+
+    let map: object = {}
+    for (const [ name, point ] of Object.entries(customMap)) {
       map[(name as string)] = (point as number).toString(16)
     }
 
@@ -138,7 +144,7 @@ class CodepointsMap {
    * @protected
    */
   protected async convertMapToObject(map: object, invert: boolean = false): Promise<object> {
-    let codepoints = {}
+    let codepoints: object = {}
     for (const [ name, point ] of Object.entries(map)) {
       if (invert) {
         codepoints[(point as number)] = (name as string)

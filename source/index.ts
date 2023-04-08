@@ -17,87 +17,124 @@ import handlebars from 'handlebars'
   await map.generateMap()
 
   const fileNames = map.getFileNames(true)
+  const aliases: {} = await map.getAliasMap()
+  const metadata: {} = require('./icons.map.json')
 
+  //Generate a list of codepoints that include any known aliases for icons
+  const codepoints = {
+    ...CodepointsMap.getMap({}),
+    ...CodepointsMap.getMap(await map.getAliasMap())
+  }
+
+  //Generate a list of codepoints that include any known aliases for icons
+  const hexCodepoints = {
+    ...CodepointsMap.getMap({}, true),
+    ...CodepointsMap.getMap(await map.getAliasMap(), true)
+  }
+
+  /**
+   * NOTE: We could let the font generator create the css and html itself, but the automated system doesn't follow the
+   * codepoints supplied.
+   * */
   let fontOptions = {
     files: fileNames,
     dest: 'build/',
     fontName: 'strib-icons',
-    types: [ 'svg', 'ttf', 'woff', 'woff2', 'eot' ],
+    types: [ 'eot', 'woff2', 'woff', 'ttf', 'svg' ],
     normalize: true,
     fontHeight: 1010,
-    html: true,
-    cssTemplate: './bin/templates/template.css.hbs',
-    htmlTemplate: './bin/templates/template.html.hbs',
-    htmlDest: './build/index.html',
+    html: false, //We are no longer letting the webfont generator generate the non-font files, but doing it manually to have more control over the output
+    codepoints: codepoints,
     templateOptions: {
       classPrefix: 'strib-',
       baseSelector: '.strib-icon',
       pkg: packageData,
-      meta: require('./icons.map.json'), //icon map file generated above
-      buildDate: buildDate.toLocaleDateString() + ' ' + buildDate.toLocaleTimeString()
+      meta: metadata, //icon map file generated above
+      buildDate: buildDate.toLocaleDateString() + ' ' + buildDate.toLocaleTimeString(),
+      aliases: aliases
     },
-    scssSourceUrls: ''
+    scssSourceUrls: '',
+    cssSourceUrls: ''
   }
-  fontOptions['scssSourceUrls'] = await generateScssSourceUrls(fontOptions)
+  fontOptions['scssSourceUrls'] = await generateSourceUrls(fontOptions, 'scss')
+  fontOptions['cssSourceUrls'] = await generateSourceUrls(fontOptions, 'css')
 
   //Generate the sprite file used when accessing the svg's directly in the template
-  await generateSprites(fontOptions)
-
-  let jsonTemplate = handlebars.compile(
-    fs.readFileSync(path.join(__dirname, 'templates/template.json.hbs'), 'utf-8')
-  );
-  let scssTemplate = handlebars.compile(
-    fs.readFileSync(path.join(__dirname, 'templates/template.scss.hbs'), 'utf-8')
-  );
-  let jsTemplate = handlebars.compile(
-    fs.readFileSync(path.join(__dirname, 'templates/template.js.hbs'), 'utf-8')
-  );
+  await generateSprites(fontOptions, metadata)
 
   //Generate the webfont files in the build folder
   webfont(fontOptions, error => {
     if (error) {
-      console.error(error);
-      console.error('\nThere was an error building fonts.');
+      console.error(error)
+      console.error('\nThere was an error building fonts.')
     }
 
     // Manually create JSON and SASS files
     fs.writeFileSync(
       path.join(fontOptions.dest, `${fontOptions.fontName}.json`),
-      jsonTemplate({
+      handlebarTemplate('templates/template.json.hbs')({
         options: fontOptions,
         classes: map.getIconNames()
       })
-    );
+    )
     fs.writeFileSync(
       path.join(fontOptions.dest, `${fontOptions.fontName}.scss`),
-      scssTemplate({
+      handlebarTemplate('templates/template.scss.hbs')({
         options: fontOptions,
         classes: map.getIconNames(),
         scssSrc: fontOptions.scssSourceUrls,
-        codepoints: CodepointsMap.getStringMap()
+        codepoints: hexCodepoints
       })
-    );
+    )
     fs.writeFileSync(
       path.join(fontOptions.dest, `${fontOptions.fontName}.js`),
-      jsTemplate({
+      handlebarTemplate('templates/template.js.hbs')({
         pkg: packageData,
         options: fontOptions,
         classes: map.getIconNames(),
-        scssSrc: fontOptions.scssSourceUrls
       })
-    );
+    )
+    fs.writeFileSync(
+      path.join(fontOptions.dest, `${fontOptions.fontName}.css`),
+      handlebarTemplate('templates/template.css.hbs')({
+        options: fontOptions,
+        classes: map.getIconNames(),
+        src: fontOptions.cssSourceUrls,
+        codepoints: hexCodepoints,
+      })
+    )
+    fs.writeFileSync(
+      path.join(fontOptions.dest, `index.html`),
+      handlebarTemplate('templates/template.html.hbs')({
+        options: fontOptions,
+        names: map.getIconNames(),
+      })
+    )
 
-    console.log('Done building fonts!');
+    console.log('Done building fonts!')
   })
 
   /**
-   * Generate the sprite file for when we want to use the SVGs directly, rather than the font version of the icon
-   * @param fontOptions
+   * Access the provided template
+   * @param {string} templateName
    */
-  async function generateSprites(fontOptions) {
+  function handlebarTemplate(templateName: string) {
+    return handlebars.compile(
+      fs.readFileSync(path.join(__dirname, templateName), 'utf-8')
+    )
+  }
+
+  /**
+   * Generate the sprite file for when we want to use the SVGs directly, rather than the font version of the icon.
+   * Includes aliased icons when building sprite file
+   *
+   * @param fontOptions
+   * @param metadata
+   */
+  async function generateSprites(fontOptions, metadata): Promise<void> {
     const spriteOptions = {
       shape: {
-        meta: path.join(__dirname, '/icons.yml'),
+        meta: metadata,
         id: {
           generator: 'strib-%s'
         }
@@ -107,14 +144,31 @@ import handlebars from 'handlebars'
       }
     }
 
-    let sprites = new SVGSprite(spriteOptions);
-    fileNames.forEach(name => {
-      sprites.add(name, null, fs.readFileSync(name, 'utf-8'));
-    });
+    let sprites = new SVGSprite(spriteOptions)
+    for (const icon of Object.values(metadata)) {
+      sprites.add(icon['absoluteFileName'], icon['fileName'], fs.readFileSync(icon['absoluteFileName'], 'utf-8'))
+
+      if (icon['aliases'].length > 0) {
+        for (const alias of icon['aliases']) {
+          const absoluteFileName: string = icon['absoluteFileName'].replace(icon['name'], alias)
+          let contents: string = fs.readFileSync(icon['absoluteFileName'], 'utf-8')
+
+          /**
+           * These three icons had malformed variable names putting the word 'strib' in the name twice. To support
+           * backwards compatibility, we are adding the double-strib back into the SVG contents for the alias icons
+           */
+          if (icon['name'] == 'star' || icon['name'] == 'logo' || icon['name'] == 'z1-account-widget') {
+            contents = contents.replace(/--strib/g, '--strib-strib')
+          }
+
+          sprites.add(absoluteFileName, alias + '.svg', contents)
+        }
+      }
+    }
     sprites.compile(async (error, result) => {
       if (error) {
-        console.error(error);
-        console.error('', 'There was an error building SVG sprite.');
+        console.error(error)
+        console.error('', 'There was an error building SVG sprite.')
       }
 
       // Write files.  This doesn't really account for all the different options
@@ -127,11 +181,11 @@ import handlebars from 'handlebars'
               `${fontOptions.fontName}.${mode === 'symbol' ? '' : mode + '-'}sprite.svg`
             ),
             result[mode][resource].contents
-          );
+          )
         }
       }
 
-      console.log('Done building SVG sprites!');
+      console.log('Done building SVG sprites!')
     })
   }
 
@@ -146,28 +200,36 @@ import handlebars from 'handlebars'
    * url("#{$strib-fonts-location}#{$strib-fonts-font-name}.eot?1680891038609#iefix") format("embedded-opentype")
    *
    * @param options
+   * @param {string} type
    */
-  async function generateScssSourceUrls(options): Promise<string> {
+  async function generateSourceUrls(options, type: string = 'css'): Promise<string> {
     const formats = {
       eot: { suffix: '#iefix', format: 'embedded-opentype' },
       woff2: { format: 'woff2' },
       woff: { format: 'woff' },
       ttf: { format: 'truetype' },
-      svg: { suffix: `#${options.fontName}`, format: 'embedded-opentype' }
-    };
-    const timestamp = +new Date();
+      svg: { suffix: `#${options.fontName}`, format: 'svg' }
+    }
+    const timestamp: number = +new Date()
 
-    let output = '';
+    let output: string = ''
     for (const [ index, type ] of Object.entries(options.types)) {
-      let url = `url("#{$strib-fonts-location}#{$strib-fonts-font-name}.${type}?${timestamp}${
-        formats[(type as string)].suffix ? formats[(type as string)].suffix : ''
-      }") format("${formats[(type as string)].format}")${
-        +index < (options.types.length - 1) ? ",\n    " : ""
-      }`;
+      let url = ''
+      if (type === 'scss') {
+        url = `url("#{$strib-fonts-location}#{$strib-fonts-font-name}.${type}?${timestamp}${
+          formats[(type as string)].suffix ? formats[(type as string)].suffix : ''
+        }") format("${formats[(type as string)].format}")${
+          +index < (options.types.length - 1) ? ",\n    " : ""
+        }`
+      } else {
+        url = `url("${options.fontName}.${type}?${timestamp}${
+          formats[(type as string)].suffix ? formats[(type as string)].suffix : ''}") format("${
+          formats[(type as string)].format}")${+index < options.types.length - 1 ? ",\n  " : ""}`
+      }
 
       output += url
     }
 
-    return output;
+    return output
   }
 })()

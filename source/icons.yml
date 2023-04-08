@@ -106,12 +106,11 @@ reprint:
 save-article-filled:
   title: "Save article filled"
   description: "single-piece SVG for the active state"
-save-article-open:
-  title: "Save article open"
-  description: "single-piece SVG for the inactive state"
 save-article:
   title: "Save article"
   description: "Two-piece SVG for save article function"
+  aliases:
+    - save-article-open
 search:
   title: "Search"
   description: "Magnifying glass outline"
@@ -169,48 +168,64 @@ social-youtube-circle:
 social-youtube:
   title: "YouTube"
   description: "Simple YouTube logo"
-strib-logo:
+logo:
   title: "Star Tribune logo"
   description: "Two-tone Star Tribune star and Star Tribune wordmark"
   variables:
-    - strib-strib-logo-top
-    - strib-strib-logo-bottom
-strib-star:
+    - strib-logo-top
+    - strib-logo-bottom
+  aliases:
+    - strib-logo
+star:
   title: "Star Tribune star"
   description: "Two-tone Star Tribune star logo"
   variables:
-    - strib-strib-star-top
-    - strib-strib-star-bottom
+    - strib-star-top
+    - strib-star-bottom
+  aliases:
+    - strib-star
 text-size:
   title: "Text size"
   description: "Two capital letters to show difference in text size"
 undo-arrow:
   title: "Undo arrow icon"
   description: "Icon for undoing an action"
-z1-account-widget:
+account-widget:
   title: "Account widget with gray background"
   description: "Two-tone account access button"
   variables:
     - strib-strib-account-top
     - strib-strib-account-back
-z1-pause-audio-icon:
+  aliases:
+    - z1-account-widget
+pause-audio-icon:
   title: "Audio pause button"
   description: "Pause button specifically for the text-to-speech function"
   variables:
     - strib-audio-pause-top
     - strib-audio-pause-bottom
-z1-play-audio-icon:
+  aliases:
+    - z1-pause-audio-icon
+play-audio-icon:
   title: "Audio play button"
   description: "Play button specifically for the text-to-speech function"
   variables:
     - strib-audio-play-bottom
     - strib-play_button
-z1-social-tiktok-circle:
+  aliases:
+    - z1-play-audio-icon
+social-tiktok-circle:
   title: "Tiktok circle"
   description: "Tiktok logo in a circle"
-z1-social-tiktok:
+  aliases:
+    - z1-social-tiktok-circle
+social-tiktok:
   title: "Tiktok"
   description: "Simple Tiktok logo"
-z2-eedition-filled:
+  aliases:
+    - z1-social-tiktok
+eedition-filled:
   title: "eEdition filled"
   description: "Icon representing eEdition"
+  aliases:
+    - z2-eedition-filled

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>{{fontName}}</title>
+    <title>{{options.fontName}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
@@ -32,8 +32,8 @@
         }
 
         .strib-icon-svg:hover {
-            --strib-strib-star-top: red;
-            --strib-strib-star-bottom: pink;
+            --strib-star-top: red;
+            --strib-star-bottom: pink;
         }
 
         .example-icon {
@@ -81,15 +81,15 @@
             margin-bottom: 3em;
         }
 
-        .example-icon-fonts .example-large.strib-strib-logo {
+        .example-icon-fonts .example-large.strib-logo {
             font-size: 2.25em
         }
 
-        .example-icon-svg .example-large .example-svg-strib-logo {
+        .example-icon-svg .example-large .example-svg-logo {
             width: 3.75em;
         }
 
-        .example-icon-svg .example-small .example-svg-strib-logo {
+        .example-icon-svg .example-small .example-svg-logo {
             display: none;
         }
     </style>
@@ -128,13 +128,23 @@
                 {{#each names}}
                     <div class="col-6 col-md-3 example-icon">
                         <div>
-                            <i class="example-large strib-icon {{../classPrefix}}{{this}}" role="img"></i>
-                            <i class="example-small strib-icon {{../classPrefix}}{{this}}" role="img"></i>
+                            <span class="example-large strib-icon {{../options.templateOptions.classPrefix}}{{this}}" role="img"></span>
+                            <span class="example-small strib-icon {{../options.templateOptions.classPrefix}}{{this}}" role="img"></span>
                         </div>
 
                         <div class="example-icon-name">
                             {{this}}
                         </div>
+                        {{#with (lookup ../options.templateOptions.meta this)}}
+                            {{#if aliases}}
+                                <div class="example-variables">
+                                    <span>Aliases:</span>
+                                    {{#each aliases}}
+                                        <code>.{{ this }}</code>{{#unless @last}},{{/unless}}
+                                    {{/each}}
+                                </div>
+                            {{/if}}
+                        {{/with}}
                     </div>
                 {{/each}}
             </div>
@@ -168,8 +178,8 @@
                 you could do:</p>
 
             <pre><code>.strib-icon-svg:hover {
-  --strib-strib-star-top: red;
-  --strib-strib-star-bottom: pink;
+  --strib-star-top: red;
+  --strib-star-bottom: pink;
 }</code></pre>
 
             <p>There are some icons that require a specific white fill, though these should be drawn. If you need to
@@ -178,7 +188,7 @@
             <p>&nbsp;</p>
 
             <div class="row example-icon-svg">
-                {{#each names as |name k|}}
+                {{#each names}}
                     <div class="col-6 col-md-3 example-icon">
                         <div>
                             <span class="example-large">
@@ -195,10 +205,18 @@
                         </div>
 
                         <div class="example-icon-name">
-                            {{name}}
+                            {{this}}
                         </div>
 
-                        {{#with (lookup ../meta name)}}
+                        {{#with (lookup ../options.templateOptions.meta this)}}
+                            {{#if aliases}}
+                                <div class="example-variables">
+                                    <span>Aliases:</span>
+                                    {{#each aliases}}
+                                        <code>#strib-{{ this }}</code>{{#unless @last}},{{/unless}}
+                                    {{/each}}
+                                </div>
+                            {{/if}}
                             {{#if variables}}
                                 <div class="example-variables">
                                     <span>Variables:</span>

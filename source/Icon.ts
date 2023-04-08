@@ -1,6 +1,7 @@
 import { CodepointsMap } from './CodepointsMap';
 import yaml from 'js-yaml'
 import fs from 'fs'
+import path from 'path'
 
 class Icon {
   /**
@@ -24,6 +25,16 @@ class Icon {
    * Any deprecated names that use the same icon. This is not used yet.
    */
   protected aliases: string[]
+  /**
+   * Icon file name
+   * @protected
+   */
+  protected fileName: string
+  /**
+   * Absolute path of the icon file name
+   * @protected
+   */
+  protected absoluteFileName: string
 
   constructor(name: string = '') {
     this.name = name
@@ -52,7 +63,11 @@ class Icon {
     if (metadata.hasOwnProperty(this.name)) {
       this.description = metadata[this.name].description ?? ''
       this.variables = metadata[this.name].variables ?? []
+      this.aliases = metadata[this.name].aliases ?? []
     }
+
+    this.fileName = this.name + '.svg'
+    this.absoluteFileName = path.resolve('./source/icons', this.fileName)
   }
 
   /**
@@ -95,6 +110,20 @@ class Icon {
    */
   public getCodepointString(): string {
     return this.codepoint.toString(16)
+  }
+
+  /**
+   * Get the file name of the icon
+   */
+  public getFileName(): string {
+    return this.fileName
+  }
+
+  /**
+   * Get the absolute path file name
+   */
+  public getAbsoluteFileName(): string {
+    return this.absoluteFileName
   }
 }
 
