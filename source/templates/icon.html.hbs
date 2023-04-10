@@ -11,27 +11,28 @@
     <link rel="stylesheet" href="../strib-icons.css">
 
     <style>
-        .strib-icon {
-            transition: color 0.1s ease-out;
+        .strib-icon, .strib-icon-svg {
+            font-size: 3em;
         }
-
+        .strib-icon.strib-logo {
+            font-size: 2.25em !important;
+        }
+        .strib-icon-svg.strib-logo {
+            width: 3.75em;
+            font-size: 4em;
+        }
+        .icon-demo {
+            background-color: var(--bs-tertiary-bg);
+            background-image: radial-gradient(circle, var(--bs-border-color) 1px, rgba(0, 0, 0, 0) 1px);
+            background-size: 1rem 1rem;
+            min-height: 6em;
+        }
         .strib-icon:hover {
             color: #8dc63f;
         }
-
-        .strib-icon-svg {
-            transition: fill 0.1s ease-out;
-        }
-
         .strib-icon-svg:hover {
             fill: #8dc63f;
         }
-
-        .strib-icon-svg:hover {
-            --strib-star-top: red;
-            --strib-star-bottom: pink;
-        }
-
         .codepoint {
             text-transform: uppercase;
         }
@@ -62,16 +63,14 @@
                     <div class="row">
                         <div class="col-6">
                             <h3>Webfont</h3>
-                            <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6"
-                                 style="font-size: 10em" role="img" aria-label="{{name}} - font preview">
+                            <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" role="img" aria-label="{{name}} - font preview">
                                 <span class="strib-icon strib-{{name}}"></span>
                             </div>
                         </div>
                         <div class="col-6">
                             <h3>SVG</h3>
-                            <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6"
-                                 style="font-size: 10em" role="img" aria-label="{{name}} - svg preview">
-                                <svg class="strib-icon-svg">
+                            <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" role="img" aria-label="{{name}} - svg preview">
+                                <svg class="strib-icon-svg strib-{{name}}">
                                     <use xlink:href="../strib-icons.sprite.svg#strib-{{name}}"></use>
                                 </svg>
                             </div>
@@ -83,7 +82,8 @@
                     <div class="row">
                         <h3>Example Usages</h3>
                         <p>
-                            All icons and svgs need to be prefixed with <code>strib-</code>, so <code>{{name}}</code> becomes
+                            All icons and svgs need to be prefixed with <code>strib-</code>, so <code>{{name}}</code>
+                            becomes
                             <code>strib-{{name}}</code>.
                         </p>
                     </div>
@@ -120,38 +120,40 @@
                         </section>
 
                         {{#if metadata.variables}}
-                        <section class="pb-3">
-                            <h3>Variables</h3>
-                            The following variables are available for use with this icon:
-                            <ul>
-                                {{#each metadata.variables}}
-                                <li><code>--{{this}}</code></li>
-                                {{/each}}
-                            </ul>
-                            <p>They can be used when styling the SVG icons in a manner <u>similar</u> to this:</p>
-                            <pre class="bg-body-secondary p-3 rounded">
+                            <section class="pb-3">
+                                <h3>Variables</h3>
+                                The following variables are available for use with this icon:
+                                <ul>
+                                    {{#each metadata.variables}}
+                                        <li><code>--{{this}}</code></li>
+                                    {{/each}}
+                                </ul>
+                                <p>They can be used when styling the SVG icons in a manner <u>similar</u> to this:</p>
+                                <pre class="bg-body-secondary p-3 rounded">
 .strib-icon-svg {
     --strib-star-top: red;
     --strib-star-bottom: pink;
 }</pre>
-                        </section>
+                            </section>
                         {{/if}}
 
                         {{#if metadata.aliases}}
-                        <section class="pb-3">
-                            <h3>Aliases</h3>
-                            This icon was previously available under the following name(s):
-                            <ul>
-                                {{#each metadata.aliases}}
-                                <li><code>{{this}}</code></li>
-                                {{/each}}
-                            </ul>
-                            <p>Though this name has been deprecated, code using this name should still continue to work.</p>
-                            <p>
-                                <strong>NOTE:</strong> If there are variables associated with this icon, any deprecated versions of
-                                those variable names will continue to work only when used with the deprecated alias.
-                            </p>
-                        </section>
+                            <section class="pb-3">
+                                <h3>Aliases</h3>
+                                This icon was previously available under the following name(s):
+                                <ul>
+                                    {{#each metadata.aliases}}
+                                        <li><code>{{this}}</code></li>
+                                    {{/each}}
+                                </ul>
+                                <p>Though this name has been deprecated, code using this name should still continue to
+                                    work.</p>
+                                <p>
+                                    <strong>NOTE:</strong> If there are variables associated with this icon, any
+                                    deprecated versions of
+                                    those variable names will continue to work only when used with the deprecated alias.
+                                </p>
+                            </section>
                         {{/if}}
                     </div>
                 </div>
@@ -159,7 +161,7 @@
         </div>
     </main>
 
-    <footer role="contentinfo" class="bg-body-secondary">
+    <footer role="contentinfo" class="bg-body-tertiary">
         &copy; Star Tribune, Last build: {{options.templateOptions.buildDate}}
     </footer>
 </div>
