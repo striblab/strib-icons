@@ -13,19 +13,24 @@
   line-height: 1;
 }
 
-{{options.templateOptions.baseSelector}}:before {
+{{options.templateOptions.baseSelector}}::before,
+[class^="{{options.templateOptions.classPrefix}}"]::before,
+[class*=" {{options.templateOptions.classPrefix}}"]::before {
   font-family: {{options.fontName}} !important;
   font-style: normal;
   font-weight: normal !important;
-  vertical-align: top;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
 }
 
 {{#each codepoints}}
-.{{../options.templateOptions.classPrefix}}{{@key}}:before {
-  content: "\\{{this}}";
-}
-
+.{{../options.templateOptions.classPrefix}}{{@key}}::before { content: "\\{{this}}"; }
 {{/each}}
+
 /* SVG includes */
 {{options.templateOptions.baseSelector}}-svg {
   display: inline-block;

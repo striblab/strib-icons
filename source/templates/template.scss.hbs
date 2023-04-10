@@ -1,39 +1,43 @@
 /**
  * Star Tribune icons (strib-icons)
- * Version: {{ pkg.version }}
+ * Version: {{ options.templateOptions.pkg.version }}
  * Copyright Star Tribune
  */
 
 // Default variables
-$strib-fonts-location: "./" !default;
-$strib-fonts-font-name: "{{ options.fontName }}" !default;
-$strib-fonts-base-selector: "{{ options.templateOptions.baseSelector }}" !default;
-$strib-fonts-class-prefix: "{{ options.templateOptions.classPrefix }}" !default;
+${{ options.fontName }}-font-name: "{{ options.fontName }}" !default;
+${{ options.fontName }}-base-selector: "{{ options.templateOptions.baseSelector }}" !default;
+${{ options.fontName }}-class-prefix: "{{ options.templateOptions.classPrefix }}" !default;
 
 @font-face {
-    font-family: "#{$strib-fonts-font-name}";
+    font-family: ${{ options.fontName }}-font-name;
     src: {{{ scssSrc }}};
 }
 
-#{$strib-fonts-base-selector} {
+{{ options.templateOptions.baseSelector }} {
     line-height: 1;
 }
 
-#{$strib-fonts-base-selector}:before {
-    font-family: "#{$strib-fonts-font-name}" !important;
+{{ options.templateOptions.baseSelector }}::before,
+[class^="{{ options.templateOptions.classPrefix }}"]::before,
+[class*=" {{ options.templateOptions.classPrefix }}"]::before {
+    font-family: ${{ options.fontName }}-font-name !important;
     font-style: normal;
     font-weight: normal !important;
-    vertical-align: top;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    /* -webkit-font-smoothing: antialiased; */
+    /* -moz-osx-font-smoothing: grayscale; */
 }
 
 {{#each codepoints}}
-.#{$strib-fonts-class-prefix}{{@key}}:before {
-    content: "\\{{this}}";
-}
-
+.{{../options.templateOptions.classPrefix}}{{@key}}::before { content: "\\{{this}}"; }
 {{/each}}
+
 // SVG includes
-#{$strib-fonts-base-selector}-svg {
+{{ options.templateOptions.baseSelector }}-svg {
     display: inline-block;
     width: 1em;
     height: 1em;
