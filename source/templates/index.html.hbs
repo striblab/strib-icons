@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{options.fontName}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./strib-icons.css">
+
+    <style>
+        .strib-icon {
+            transition: color 0.1s ease-out;
+        }
+
+        .strib-icon:hover {
+            color: #8dc63f;
+        }
+
+        .strib-icon-svg {
+            font-size: 3em;
+            transition: fill 0.1s ease-out;
+        }
+
+        .strib-icon-svg:hover {
+            fill: #8dc63f;
+        }
+
+        .strib-icon-svg:hover {
+            --strib-star-top: red;
+            --strib-star-bottom: pink;
+        }
+
+        .example-large {
+            font-size: 3em;
+        }
+
+        .example-icon-name {
+            font-size: 0.85em;
+        }
+
+        .example-variables {
+            padding-top: 0.5em;
+            font-size: 0.5em;
+        }
+
+        .example-variables span {
+            font-weight: bold;
+        }
+
+        header {
+            margin-bottom: 3em;
+        }
+
+        footer {
+            font-size: 0.85em;
+            padding: 2em;
+        }
+
+        main > section {
+            margin-bottom: 3em;
+        }
+
+        .example-icon-fonts .example-large.strib-logo {
+            font-size: 2.25em !important;
+        }
+
+        .example-icon-svg .example-svg-logo {
+            width: 3.75em;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <header role="banner">
+        <h1 class="display-1">Star Tribune Icons</h1>
+        <p>The Star Tribune icons is a font-icon and SVG set to manage icons used in Star Tribune projects.</p>
+    </header>
+
+    <main role="main">
+        <section>
+            <h1>Webfont</h1>
+            <p>
+                These icons can be used as a webfont; the main benefits is a bit easier, though limited, to style with
+                CSS, as any styles that apply to text can be applied as well.
+            </p>
+            <p>To use the Star Tribune icons as a webfont, include the CSS or SASS.</p>
+            <pre class="bg-body-secondary p-3 rounded"><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/{{ options.templateOptions.pkg.version }}/strib-icons.css" /&gt;</code></pre>
+            <p>
+                Then use the base class, <code>strib-icon</code> and then the icon class which is always prefixed with
+                <code>strib-</code>, for instance:
+            </p>
+            <pre class="bg-body-secondary p-3 rounded"><code>&lt;span class="strib-icon strib-home"&gt;&lt;/span&gt;</code></pre>
+            <p>
+                Treat the icon like text. To change it's color, simply use the CSS <code>color</code> property; you can
+                change it's size with the <code>font-size</code> property.
+            </p>
+            <p>&nbsp;</p>
+            <ul id="font-list" class="row row-cols-6 row-cols-xl-8 list-unstyled list example-icon-fonts">
+                {{#each names}}
+                <li class="col-3 mb-4" data-name="{{this}}" data-tags="number numeral" data-categories="shapes">
+                    <a class="d-block text-body-emphasis text-decoration-none" href="icons/{{this}}.html">
+                        <div class="px-3 py-4 mb-2 bg-body-tertiary text-center rounded">
+                            <span class="example-large strib-icon {{../options.templateOptions.classPrefix}}{{this}}" role="img"></span>
+                        </div>
+                        <div class="example-icon-name name text-decoration-none text-center pt-1">{{this}}</div>
+                        {{#with (lookup ../options.templateOptions.meta this)}}
+                            {{#if aliases}}
+                            <div class="example-variables text-center">
+                                <span>Aliases</span>
+                                {{#each aliases}}
+                                <code>.strib-{{ this }}</code>{{#unless @last}},{{/unless}}
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                        {{/with}}
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+
+        <hr />
+
+        <section>
+            <h2>SVG icons</h2>
+            <p>
+                Using the Star Tribune icons as SVG icons has many benefits including fuller, though still limited,
+                styling as any styles that apply to SVG can apply, and multi-color icons can be used. Note that browser
+                support is not as good as a webfont.
+            </p>
+            <p>
+                To use, include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the
+                URL, which is the name with the <code>strib-</code>, as well as the JS so that the SVG can be loaded
+                across domains easily, for example:
+            </p>
+            <pre class="bg-body-secondary p-3 rounded"><code>&lt;script src="//static.startribune.com/assets/libs/strib-icons/{{ options.templateOptions.pkg.version }}/strib-icons.js"&gt;&lt;/script&gt;
+
+&lt;svg class="strib-icon-svg"&gt;
+  &lt;use xlink:href="#strib-home"&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+            <p>
+                You can style the icons with CSS with some limitations. You can only add styles to the root of the icon,
+                not to a specific part. Treat the icon like an image and an SVG. To change it's color, use the SVG CSS
+                <code>fill</code> property; you can change it's size with the <code>height</code> or <code>width</code>
+                property.
+            </p>
+            <p>
+                For icons that have default colors, you can change the colors with <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank"
+                    rel="noopener">CSS variables</a>. For instance, adding a different color to the Star Tribune logo,
+                you could do:
+            </p>
+            <pre class="bg-body-secondary p-3 rounded"><code>.strib-icon-svg:hover {
+  --strib-star-top: red;
+  --strib-star-bottom: pink;
+}</code></pre>
+            <p>
+                There are some icons that require a specific white fill, though these should be drawn. If you need to
+                update that fill use the <code>--strib-icon-background</code> variable.
+            </p>
+            <p>&nbsp;</p>
+
+            <ul id="svg-list" class="row row-cols-6 row-cols-xl-8 list-unstyled list example-icon-fonts example-icon-svg">
+                {{#each names}}
+                <li class="col-3 mb-4" data-name="{{this}}" data-tags="number numeral" data-categories="shapes">
+                    <a class="d-block text-body-emphasis text-decoration-none" href="icons/{{this}}.html">
+                        <div class="px-3 py-4 mb-2 bg-body-tertiary text-center rounded">
+                            <svg class="strib-icon-svg example-svg-{{this}}">
+                                <use xlink:href="strib-icons.sprite.svg#strib-{{this}}"></use>
+                            </svg>
+                        </div>
+                        <div class="example-icon-name name text-decoration-none text-center pt-1">{{this}}</div>
+                        {{#with (lookup ../options.templateOptions.meta this)}}
+                            {{#if variables}}
+                            <div class="example-variables text-center">
+                                <span>Variables</span>
+                                {{#each variables}}
+                                <code>--{{ this }}</code>{{#unless @last}},{{/unless}}
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                        {{/with}}
+                        {{#with (lookup ../options.templateOptions.meta this)}}
+                            {{#if aliases}}
+                            <div class="example-variables text-center">
+                                <span>Aliases</span>
+                                {{#each aliases}}
+                                <code>#strib-{{ this }}</code>{{#unless @last}},{{/unless}}
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                        {{/with}}
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+    </main>
+
+    <footer role="contentinfo" class="bg-body-secondary">
+        &copy; Star Tribune, Last build: {{options.templateOptions.buildDate}}
+    </footer>
+</div>
+</body>
+</html>

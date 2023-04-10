@@ -103,7 +103,7 @@ class IconsMap {
    * Get the list of each of the icon names. This is basically the same thing as the file names but without the file
    * extension.
    */
-  public getIconNames(): string[] {
+  public async getIconNames(): Promise<string[]> {
     return this.fileNames.map((name: string) => {
       return name.replace('.svg', '')
     })

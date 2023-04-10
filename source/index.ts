@@ -63,51 +63,78 @@ import handlebars from 'handlebars'
   await generateSprites(fontOptions, metadata)
 
   //Generate the webfont files in the build folder
-  webfont(fontOptions, error => {
+  webfont(fontOptions, async error => {
     if (error) {
       console.error(error)
       console.error('\nThere was an error building fonts.')
     }
 
-    // Manually create JSON and SASS files
+    /**
+     * Manually generate all the additional files for the icon set, since the webfont builder does not do a good enough
+     * job maintaining codepoints for icons between builds
+     */
+    //Generate the index page for the icon set
     fs.writeFileSync(
-      path.join(fontOptions.dest, `${fontOptions.fontName}.json`),
-      handlebarTemplate('templates/template.json.hbs')({
+      path.join(fontOptions.dest, `index.html`),
+      handlebarTemplate('templates/index.html.hbs')({
         options: fontOptions,
-        classes: map.getIconNames()
+        names: await map.getIconNames(),
       })
     )
+
+    //Make sure the directory all the icons go into exists
+    if (!fs.existsSync(fontOptions.dest + '/icons')) {
+      await fs.mkdirSync(fontOptions.dest + '/icons')
+    }
+
+    //Generate info pages for each of the icons
+    for (const name of await map.getIconNames()) {
+      fs.writeFileSync(
+        path.join(fontOptions.dest + '/icons', `${name}.html`),
+        handlebarTemplate('templates/icon.html.hbs')({
+          options: fontOptions,
+          name: name,
+          metadata: fontOptions.templateOptions.meta[name],
+          // svg: handlebars.Utils.escapeExpression(await fs.readFileSync(fontOptions.templateOptions.meta[name].absoluteFileName))
+          svg: await fs.readFileSync(fontOptions.templateOptions.meta[name].absoluteFileName)
+        })
+      )
+    }
+    //Generate the css file for the icon set
     fs.writeFileSync(
-      path.join(fontOptions.dest, `${fontOptions.fontName}.scss`),
-      handlebarTemplate('templates/template.scss.hbs')({
+      path.join(fontOptions.dest, `${fontOptions.fontName}.css`),
+      handlebarTemplate('templates/template.css.hbs')({
         options: fontOptions,
-        classes: map.getIconNames(),
-        scssSrc: fontOptions.scssSourceUrls,
-        codepoints: hexCodepoints
+        classes: await map.getIconNames(),
+        src: fontOptions.cssSourceUrls,
+        codepoints: hexCodepoints,
       })
     )
+    //Generate the JS file needed for using the svg images
     fs.writeFileSync(
       path.join(fontOptions.dest, `${fontOptions.fontName}.js`),
       handlebarTemplate('templates/template.js.hbs')({
         pkg: packageData,
         options: fontOptions,
-        classes: map.getIconNames(),
+        classes: await map.getIconNames(),
       })
     )
+    //Generate the json file for th icon set
     fs.writeFileSync(
-      path.join(fontOptions.dest, `${fontOptions.fontName}.css`),
-      handlebarTemplate('templates/template.css.hbs')({
+      path.join(fontOptions.dest, `${fontOptions.fontName}.json`),
+      handlebarTemplate('templates/template.json.hbs')({
         options: fontOptions,
-        classes: map.getIconNames(),
-        src: fontOptions.cssSourceUrls,
-        codepoints: hexCodepoints,
+        classes: await map.getIconNames()
       })
     )
+    //Generate the scss file for the icon set
     fs.writeFileSync(
-      path.join(fontOptions.dest, `index.html`),
-      handlebarTemplate('templates/template.html.hbs')({
+      path.join(fontOptions.dest, `${fontOptions.fontName}.scss`),
+      handlebarTemplate('templates/template.scss.hbs')({
         options: fontOptions,
-        names: map.getIconNames(),
+        classes: await map.getIconNames(),
+        scssSrc: fontOptions.scssSourceUrls,
+        codepoints: hexCodepoints
       })
     )
 

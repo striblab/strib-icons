@@ -174,6 +174,7 @@ logo:
   variables:
     - strib-logo-top
     - strib-logo-bottom
+    - strib-logo-text
   aliases:
     - strib-logo
 star:
@@ -194,8 +195,8 @@ account-widget:
   title: "Account widget with gray background"
   description: "Two-tone account access button"
   variables:
-    - strib-strib-account-top
-    - strib-strib-account-back
+    - strib-account-top
+    - strib-account-back
   aliases:
     - z1-account-widget
 pause-audio-icon:
