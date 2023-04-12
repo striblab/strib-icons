@@ -11,21 +11,29 @@
     <link rel="stylesheet" href="../strib-icons.css">
 
     <style>
+        {{#if (eq name 'logo')}}
+        .strib-icon-svg {
+            font-size: 4em;
+        }
+        .strib-icon {
+            font-size: 2.25em;
+        }
+        {{else}}
         .strib-icon, .strib-icon-svg {
             font-size: 3em;
         }
-        .strib-icon.strib-logo {
-            font-size: 2.25em !important;
-        }
-        .strib-icon-svg.strib-logo {
+        {{/if}}
+
+        .strib-icon-svg {
             width: 3.75em;
-            font-size: 4em;
         }
-        .icon-demo {
+
+        .webfont-demo, .svg-demo {
             background-color: var(--bs-tertiary-bg);
             background-image: radial-gradient(circle, var(--bs-border-color) 1px, rgba(0, 0, 0, 0) 1px);
             background-size: 1rem 1rem;
             min-height: 6em;
+            flex-wrap: wrap;
         }
         .strib-icon:hover {
             color: #8dc63f;
@@ -63,13 +71,13 @@
                     <div class="row">
                         <div class="col-6">
                             <h3>Webfont</h3>
-                            <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" role="img" aria-label="{{name}} - font preview">
+                            <div class="webfont-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" role="img" aria-label="{{name}} - font preview">
                                 <span class="strib-icon strib-{{name}}"></span>
                             </div>
                         </div>
                         <div class="col-6">
                             <h3>SVG</h3>
-                            <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" role="img" aria-label="{{name}} - svg preview">
+                            <div class="svg-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" role="img" aria-label="{{name}} - svg preview">
                                 <svg class="strib-icon-svg strib-{{name}}">
                                     <use xlink:href="../strib-icons.sprite.svg#strib-{{name}}"></use>
                                 </svg>

@@ -19,7 +19,7 @@ See the [striblab.github.io/strib-icons](https://striblab.github.io/strib-icons/
 * Do not set a fill color unless the color is very important, such as with the Star Tribune star logo.
     * Manage fills with a CSS variable that has the `strib-` prefix; for example:
       ```
-      fill="var(--strib-strib-star-top, #61BF1A)"
+      fill="var(--strib-star-top, #61BF1A)"
       ```
     * You may need to set a "white" color to create a "hole", though this should be avoided if possible. Use the
       following:

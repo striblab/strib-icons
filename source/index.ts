@@ -151,6 +151,10 @@ import handlebars from 'handlebars'
     )
   }
 
+  handlebars.registerHelper('eq', (a, b) => {
+    return (a === b);
+  })
+
   /**
    * Generate the sprite file for when we want to use the SVGs directly, rather than the font version of the icon.
    * Includes aliased icons when building sprite file

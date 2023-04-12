@@ -3,6 +3,9 @@
   "version": "0.0.13",
   "description": "Icons used in projects as different formats.",
   "main": "build/strib-icons.js",
+  "engines" : {
+    "node" : ">=16.0.0"
+  },
   "watch": {
     "build": {
       "patterns": [
