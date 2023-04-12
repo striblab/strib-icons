@@ -11,7 +11,7 @@ class IconsMap {
    * List of icons in the /icons directory. File extensions have been removed from the entries
    * @protected
    */
-  protected fileNames: string[]
+  protected fileNames: string[] = []
   /**
    *
    * @protected
@@ -43,8 +43,13 @@ class IconsMap {
     await fs.copySync(sourceDir + '/templates', outDir + '/templates')
 
     //Get the list of icons from the icons directory and generate data for them
-    this.fileNames = await fs.readdirSync(outDir + ICONS_DIR_NAME)
-    for (let name of this.fileNames) {
+    const fileNames = await fs.readdirSync(outDir + ICONS_DIR_NAME, {})
+    for (let name of fileNames) {
+      if (path.extname(name) !== '.svg') {
+        continue
+      }
+
+      this.fileNames.push(name)
       let icon = new Icon(name.replace('.svg', ''))
       await icon.initialize()
       this.icons[(name as string)] = icon
