@@ -14,11 +14,10 @@ import handlebars from 'handlebars'
   //Generate a new icon map so that we have all the icon names, codepoints, and metadata in one file
   let map = new IconsMap()
   await map.initialize()
-  await map.generateMap()
+  const metadata: {} = await map.generateMap()
 
   const fileNames = map.getFileNames(true)
   const aliases: {} = await map.getAliasMap()
-  const metadata: {} = require('./icons.map.json')
 
   //Generate a list of codepoints that include any known aliases for icons
   const codepoints = {

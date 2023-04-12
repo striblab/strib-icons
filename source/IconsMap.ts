@@ -4,7 +4,6 @@ import path from 'path'
 
 const ICONS_DIR_NAME: string = '/icons'
 const METADATA_FILE_NAME: string = '/icons.yml'
-const MAP_FILE_NAME: string = 'icons.map.json'
 
 class IconsMap {
   /**
@@ -59,7 +58,7 @@ class IconsMap {
   /**
    * Generate an updated version of the icon map so we can build the fonts from it
    */
-  async generateMap(): Promise<void> {
+  async generateMap(): Promise<object> {
     let map: object = {}
 
     //Generate an object with all the required values for each icon
@@ -75,13 +74,8 @@ class IconsMap {
       }
     })
 
-    //Generate a file with the map data in it
-    try {
-      await fs.writeFileSync('./source/' + MAP_FILE_NAME, JSON.stringify(map, null, 2))
-      await fs.writeFileSync('./bin/' + MAP_FILE_NAME, JSON.stringify(map, null, 2))
-    } catch (error) {
-      console.log('Unable to generate icon map', error)
-    }
+    //Return the map data
+    return map
   }
 
   /**
