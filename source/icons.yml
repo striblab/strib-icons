@@ -23,7 +23,7 @@ data-drop:
   title: "Data Drop series"
   description: "Star Tribune Data Drop series symbol, a set of waves similar to a chart"
   variables:
-    - strib-data-drop-bg
+    - strib-data-drop-background
     - strib-data-drop-right
     - strib-data-drop-left
     - strib-data-drop-middle
@@ -64,6 +64,8 @@ map-pin:
 media-play:
   title: "Play"
   description: "A triangle in a circle used to play media"
+  variables:
+    - strib-icon-background
 media-video:
   title: "Video"
   description: "A small camera icon"
@@ -211,7 +213,6 @@ play-audio-icon:
   title: "Audio play button"
   description: "Play button specifically for the text-to-speech function"
   variables:
-    - strib-audio-play-bottom
     - strib-play_button
   aliases:
     - z1-play-audio-icon

@@ -14,40 +14,23 @@
     <style>
         .strib-icon {
             transition: color 0.1s ease-out;
+            font-size: 3em;
         }
 
         .strib-icon:hover {
             color: #8dc63f;
         }
 
-        .strib-icon-svg {
-            font-size: 3em;
-            transition: fill 0.1s ease-out;
-        }
-
-        .strib-icon-svg:hover {
-            fill: #8dc63f;
-        }
-
-        .strib-icon-svg:hover {
-            --strib-star-top: red;
-            --strib-star-bottom: pink;
-        }
-
-        .example-large {
-            font-size: 3em;
-        }
-
-        .example-icon-name {
+        .name {
             font-size: 0.85em;
         }
 
-        .example-variables {
+        .variables, .aliases {
             padding-top: 0.5em;
             font-size: 0.5em;
         }
 
-        .example-variables span {
+        .variables span, .aliases span {
             font-weight: bold;
         }
 
@@ -64,12 +47,8 @@
             margin-bottom: 3em;
         }
 
-        .example-icon-fonts .example-large.strib-logo {
+        #font-list .strib-logo {
             font-size: 2.25em !important;
-        }
-
-        .example-icon-svg .example-svg-logo {
-            width: 3.75em;
         }
     </style>
 </head>
@@ -83,37 +62,30 @@
 
     <main role="main">
         <section>
-            <h1>Webfont</h1>
-            <p>
-                These icons can be used as a webfont; the main benefits is a bit easier, though limited, to style with
-                CSS, as any styles that apply to text can be applied as well.
-            </p>
-            <p>To use the Star Tribune icons as a webfont, include the CSS or SASS.</p>
-            <pre class="bg-body-secondary p-3 rounded"><code>&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/{{ options.templateOptions.pkg.version }}/strib-icons.css" /&gt;</code></pre>
-            <p>
-                Then use the base class, <code>strib-icon</code> and then the icon class which is always prefixed with
-                <code>strib-</code>, for instance:
-            </p>
-            <pre class="bg-body-secondary p-3 rounded"><code>&lt;span class="strib-icon strib-home"&gt;&lt;/span&gt;</code></pre>
-            <p>
-                Treat the icon like text. To change it's color, simply use the CSS <code>color</code> property; you can
-                change it's size with the <code>font-size</code> property.
-            </p>
-            <p>&nbsp;</p>
-            <ul id="font-list" class="row row-cols-6 row-cols-xl-8 list-unstyled list example-icon-fonts">
+            <ul id="font-list" class="row row-cols-6 row-cols-xl-8 list-unstyled list">
                 {{#each names}}
                 <li class="col-3 mb-4" data-name="{{this}}" data-tags="number numeral" data-categories="shapes">
                     <a class="d-block text-body-emphasis text-decoration-none" href="icons/{{this}}.html">
                         <div class="px-3 py-4 mb-2 bg-body-tertiary text-center rounded">
-                            <span class="example-large strib-icon {{../options.templateOptions.classPrefix}}{{this}}" role="img"></span>
+                            <i class="strib-icon {{../options.templateOptions.classPrefix}}{{this}}" role="img"></i>
                         </div>
-                        <div class="example-icon-name name text-decoration-none text-center pt-1">{{this}}</div>
+                        <div class="name text-decoration-none text-center pt-1">{{this}}</div>
+                        {{#with (lookup ../options.templateOptions.meta this)}}
+                            {{#if variables}}
+                            <div class="variables text-center">
+                                <span>Variables</span>
+                                {{#each variables}}
+                                <code>--{{ this }}</code>{{#unless @last}},{{/unless}}
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                        {{/with}}
                         {{#with (lookup ../options.templateOptions.meta this)}}
                             {{#if aliases}}
-                            <div class="example-variables text-center">
+                            <div class="aliases text-center">
                                 <span>Aliases</span>
                                 {{#each aliases}}
-                                <code>.strib-{{ this }}</code>{{#unless @last}},{{/unless}}
+                                <code>{{ this }}</code>{{#unless @last}},{{/unless}}
                                 {{/each}}
                             </div>
                             {{/if}}
@@ -127,78 +99,139 @@
         <hr />
 
         <section>
-            <h2>SVG icons</h2>
+            <h2>Installation</h2>
             <p>
-                Using the Star Tribune icons as SVG icons has many benefits including fuller, though still limited,
-                styling as any styles that apply to SVG can apply, and multi-color icons can be used. Note that browser
-                support is not as good as a webfont.
+                Include the stylesheet (in your website <code>&lt;head&gt;</code> or via <code>@import</code> in CSS) to
+                get started.
             </p>
-            <p>
-                To use, include an SVG with class <code>strib-icon-svg</code>, then reference the ID of the icon in the
-                URL, which is the name with the <code>strib-</code>, as well as the JS so that the SVG can be loaded
-                across domains easily, for example:
-            </p>
-            <pre class="bg-body-secondary p-3 rounded"><code>&lt;script src="//static.startribune.com/assets/libs/strib-icons/{{ options.templateOptions.pkg.version }}/strib-icons.js"&gt;&lt;/script&gt;
+            <pre class="bg-body-secondary p-3 rounded">&lt;link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/{{ options.templateOptions.pkg.version }}/strib-icons.css" /&gt;</pre>
 
-&lt;svg class="strib-icon-svg"&gt;
-  &lt;use xlink:href="#strib-home"&gt;&lt;/use&gt;
-&lt;/svg&gt;</code></pre>
             <p>
-                You can style the icons with CSS with some limitations. You can only add styles to the root of the icon,
-                not to a specific part. Treat the icon like an image and an SVG. To change it's color, use the SVG CSS
-                <code>fill</code> property; you can change it's size with the <code>height</code> or <code>width</code>
-                property.
+                If you are going to be utilizing the SVGs sprites in the page's code, also include the javascript file.
+            </p>
+            <pre class="bg-body-secondary p-3 rounded">&lt;script src="//static.startribune.com/assets/libs/strib-icons/{{ options.templateOptions.pkg.version }}/strib-icons.js"&gt;&lt;/script&gt;</pre>
+        </section>
+
+        <section>
+            <h2>Webfont</h2>
+            <p>
+                Once the CSS file has been added to your code, the easiest and most straightforward way to use these
+                icons into a project is to use the webfont. The code for placing the icon and CSS styling (limited
+                though that may be) is all easier and more straightforward.
+            </p>
+
+            <h3>Standard usage (recommended)</h3>
+            <p>
+                The easiest and recommended usage for the webfont is to use the CSS classes in a tag. Tag usage requires
+                two CSS classes: <code>strib-icon</code> and the name of the icon itself. The icon name will need to be
+                prefixed with <code>strib-</code> for the font to work properly, so an icon called <code>search</code>
+                would need to be used as <code>strib-search</code>.
+            </p>
+            <pre class="bg-body-secondary p-3 rounded">&lt;i class="strib-icon strib-home"&gt;&lt;/i&gt;</pre>
+
+            <p>
+                Once the icon is in place, you can apply css to it the same way you would to any standard font
+            </p>
+
+            <h3>Codepoints</h3>
+            <p>
+                An alternative way of integrating an icon into a project is to use the icon's codepoint. You can do this
+                directly in the CSS or in the HTML of the page. In both scenarios, you will need to make sure that the
+                font family being used for that particular item is the icons font.
+            </p>
+
+            <pre class="bg-body-secondary p-3 rounded">.some-css-class:before {
+    font-family: 'strib-icons';
+    content: '\f125';
+}</pre>
+
+            <pre class="bg-body-secondary p-3 rounded">&lt;style>
+.codepoint {
+    font-family: 'strib-icons';
+}
+&lt;/style>
+&lt;span class="codepoint">&amp;#xF125;&lt;/span></pre>
+
+            <p>
+                The codepoints in this font are hex-based strings that start at F101. So the progression of points
+                might look like: F101, F102, F103, F104, F105, F106, F107, F108, F109, F10a, F10b, F10c, F10d, F10e,
+                F10f, F110...
+            </p>
+
+            <p>
+                <strong>Note</strong>: In the past, using the codepoints directly in a project offered less than ideal
+                results because the codepoint values weren't guaranteed to stay static across font versions. This has
+                been resolved as of version 0.0.14 and the codepoints should remain fixed moving forward. That being
+                said, remember to verify whenever updates come out to ensure no errors occur.
+            </p>
+        </section>
+
+        <section>
+            <h2>SVG Sprite</h2>
+            <p>
+                Once the JS file has been added to the code, the SVGs can used on the page in lieu of the webfont. This
+                allows for slightly broader color options with some icons (specifically multi-color options become
+                available on some icons). Browser support for SVG sprites isn't as good as it is with the webfont.
+                There's an issue with Chrome where <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=470601"><code>&lt;use&gt;</code>
+                doesn't work across domains</a> that has been open since 2015 that may cause some issues.
             </p>
             <p>
-                For icons that have default colors, you can change the colors with <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank"
-                    rel="noopener">CSS variables</a>. For instance, adding a different color to the Star Tribune logo,
-                you could do:
+                To integrate a sprite icon into a project, include the <code>svg</code> tag with the class
+                <code>strib-icon-svg</code>. Inside the tag you will add a second tag called <code>use</code> that will
+                indicate by name which icon to display. Just like with the webfont, all icon names are prefixed with
+                <code>strib-</code>, so <code>search</code> becomes <code>strib-search</code>.
             </p>
-            <pre class="bg-body-secondary p-3 rounded"><code>.strib-icon-svg:hover {
-  --strib-star-top: red;
-  --strib-star-bottom: pink;
-}</code></pre>
+
+            <pre class="bg-body-secondary p-3 rounded">&lt;svg class="strib-icon-svg"&gt;
+    &lt;use xlink:href="#strib-home"&gt;&lt;/use&gt;
+&lt;/svg&gt;</pre>
+
             <p>
-                There are some icons that require a specific white fill, though these should be drawn. If you need to
-                update that fill use the <code>--strib-icon-background</code> variable.
+                <strong>Note</strong>: it is recommended that you add some sort of unique identifying class to the
+                <code>svg</code> tag so that you can apply styles as needed. This is especially important when using
+                icons that have overlapping variable names. The easiest identifying class that you can add is the
+                <code>strib-</code> prefixed variable name. Example:
             </p>
+
+            <pre class="bg-body-secondary p-3 rounded">&lt;svg class="strib-icon-svg strib-home"&gt;
+    &lt;use xlink:href="#strib-home"&gt;&lt;/use&gt;
+&lt;/svg&gt;</pre>
+
             <p>&nbsp;</p>
 
-            <ul id="svg-list" class="row row-cols-6 row-cols-xl-8 list-unstyled list example-icon-fonts example-icon-svg">
-                {{#each names}}
-                <li class="col-3 mb-4" data-name="{{this}}" data-tags="number numeral" data-categories="shapes">
-                    <a class="d-block text-body-emphasis text-decoration-none" href="icons/{{this}}.html">
-                        <div class="px-3 py-4 mb-2 bg-body-tertiary text-center rounded">
-                            <svg class="strib-icon-svg example-svg-{{this}}">
-                                <use xlink:href="strib-icons.sprite.svg#strib-{{this}}"></use>
-                            </svg>
-                        </div>
-                        <div class="example-icon-name name text-decoration-none text-center pt-1">{{this}}</div>
-                        {{#with (lookup ../options.templateOptions.meta this)}}
-                            {{#if variables}}
-                            <div class="example-variables text-center">
-                                <span>Variables</span>
-                                {{#each variables}}
-                                <code>--{{ this }}</code>{{#unless @last}},{{/unless}}
-                                {{/each}}
-                            </div>
-                            {{/if}}
-                        {{/with}}
-                        {{#with (lookup ../options.templateOptions.meta this)}}
-                            {{#if aliases}}
-                            <div class="example-variables text-center">
-                                <span>Aliases</span>
-                                {{#each aliases}}
-                                <code>#strib-{{ this }}</code>{{#unless @last}},{{/unless}}
-                                {{/each}}
-                            </div>
-                            {{/if}}
-                        {{/with}}
-                    </a>
-                </li>
-                {{/each}}
-            </ul>
+            <p>
+                Just like with the webfont, color can only be applied to the icon as a whole rather than individual
+                parts of an icon. The only exception to this are icons where variables have been defined as part of the
+                svg creation. Unlike with the webfont, the <code>fill</code> property is used to apply color to the svg,
+                rather than the <code>color</code> property that the font uses.
+            </p>
+
+            <pre class="bg-body-secondary p-3 rounded">&lt;style>
+    .strib-icon-svg {
+        fill: orange;
+    }
+&lt;/style></pre>
+
+            <p>
+                For icons with variables built into them, you don't need to specify the fill property, since that
+                variable is attached to the fill property of the tag in the SVG. Using the <code>star</code> icon as an
+                example, the <code>strib-star-top</code> variable has a default color of <code>#61bf1a</code>. It is
+                defined in the svg like so:
+            </p>
+            <pre class="bg-body-secondary p-3 rounded">&lt;path fill="var(--strib-star-top, #61bf1a)"</pre>
+
+            <p>
+                To override that default color, you use the variable name in the CSS and specify the desired color
+                directly on the variable, like so:
+            </p>
+            <pre class="bg-body-secondary p-3 rounded">.strib-icon-svg:hover {
+--strib-star-top: red;
+}</pre>
+
+            <p>
+                You can read more about using variables in CSS <a target="_blank" rel="noopener"
+                    href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">here</a>
+            </p>
         </section>
     </main>
 
