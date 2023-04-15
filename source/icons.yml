@@ -1,6 +1,15 @@
-arrow-right:
-  title: "Right arrow"
-  description: "Triangle arrow pointed right"
+caret-down:
+  title: "Down caret"
+  description: "Triangle pointed down"
+caret-left:
+  title: "Left caret"
+  description: "Triangle pointed ;eft"
+caret-right:
+  title: "Right caret"
+  description: "Triangle pointed right"
+caret-up:
+  title: "Up caret"
+  description: "Triangle pointed up"
 arrow-value-down:
   title: "Value arrow up"
   description: "Arrow pointed up for data values"

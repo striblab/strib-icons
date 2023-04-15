@@ -177,9 +177,14 @@ class CodepointsMap {
    * @protected
    */
   protected async generateMap(): Promise<void> {
+    let alphabetized = {}
+    for (const name of Object.keys(this.codepoints).sort()) {
+      alphabetized[(name as string)] = this.codepoints[name]
+    }
+
     //Write the file with the updated json data (write it in both the source directory and the generated directory just to be safe
-    await fs.writeFileSync('./source/' + MAP_FILE_NAME, JSON.stringify(this.codepoints, null, 2))
-    await fs.writeFileSync('./bin/' + MAP_FILE_NAME, JSON.stringify(this.codepoints, null, 2))
+    await fs.writeFileSync('./source/' + MAP_FILE_NAME, JSON.stringify(alphabetized, null, 2))
+    await fs.writeFileSync('./bin/' + MAP_FILE_NAME, JSON.stringify(alphabetized, null, 2))
   }
 
   /**

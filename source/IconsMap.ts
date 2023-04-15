@@ -1,6 +1,7 @@
 import { Icon } from './Icon'
 import fs from 'fs-extra' //calling fs-extra in place of fs, because there is additional functionality in that package
 import path from 'path'
+import { CodepointsMap } from "./CodepointsMap";
 
 const ICONS_DIR_NAME: string = '/icons'
 const METADATA_FILE_NAME: string = '/icons.yml'
@@ -16,11 +17,15 @@ class IconsMap {
    * @protected
    */
   protected icons = {}
+  protected codepoints: CodepointsMap
 
   /**
    * Code that should be called when the object is created. Moved to a separate function so we can use promises
    */
   async initialize() {
+    this.codepoints = new CodepointsMap()
+    await this.codepoints.initialize()
+
     //Move all required source files to the output directory
     const outDir = './bin'
     const sourceDir = './source'
