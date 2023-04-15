@@ -1,7 +1,7 @@
 import { Icon } from './Icon'
+import { CodepointsMap } from './CodepointsMap'
 import fs from 'fs-extra' //calling fs-extra in place of fs, because there is additional functionality in that package
 import path from 'path'
-import { CodepointsMap } from "./CodepointsMap";
 
 const ICONS_DIR_NAME: string = '/icons'
 const METADATA_FILE_NAME: string = '/icons.yml'
@@ -13,10 +13,14 @@ class IconsMap {
    */
   protected fileNames: string[] = []
   /**
-   *
+   * All icons found by the system
    * @protected
    */
   protected icons = {}
+  /**
+   * Codepoint map
+   * @protected
+   */
   protected codepoints: CodepointsMap
 
   /**
@@ -48,16 +52,24 @@ class IconsMap {
 
     //Get the list of icons from the icons directory and generate data for them
     const fileNames = await fs.readdirSync(outDir + ICONS_DIR_NAME, {})
-    for (let name of fileNames) {
-      if (path.extname(name) !== '.svg') {
+    for (let fileName of fileNames) {
+      if (path.extname(fileName) !== '.svg') {
         continue
       }
 
-      this.fileNames.push(name)
-      let icon = new Icon(name.replace('.svg', ''))
+      const name = fileName.replace('.svg', '')
+      let codepoint = await this.codepoints.getPointFromMap(name)
+      if (!codepoint) {
+        codepoint = await this.codepoints.addIcon(name, false)
+      }
+
+      this.fileNames.push(fileName)
+      let icon = new Icon(name, codepoint)
       await icon.initialize()
-      this.icons[(name as string)] = icon
+      this.icons[(fileName as string)] = icon
     }
+
+    await this.codepoints.generateMap()
   }
 
   /**

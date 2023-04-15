@@ -1,4 +1,3 @@
-import { CodepointsMap } from './CodepointsMap';
 import yaml from 'js-yaml'
 import fs from 'fs'
 import path from 'path'
@@ -36,8 +35,9 @@ class Icon {
    */
   protected absoluteFileName: string
 
-  constructor(name: string = '') {
+  constructor(name: string = '', codepoint: number = null) {
     this.name = name
+    this.codepoint = codepoint
     this.description = ''
     this.variables = []
     this.aliases = []
@@ -47,17 +47,6 @@ class Icon {
    * Code that should be called when the object is created. Moved to a separate function so we can use promises
    */
   public async initialize() {
-    let map = new CodepointsMap()
-    await map.initialize()
-
-    //Get a codepoint for the icon
-    const point = await map.getPointFromMap(this.name)
-    if (point) {
-      this.codepoint = point
-    } else {
-      this.codepoint = await map.addIcon(this.name)
-    }
-
     //Get the metadata for the icon
     const metadata = await yaml.safeLoad(await fs.readFileSync('./source/icons.yml'))
     if (metadata.hasOwnProperty(this.name)) {
