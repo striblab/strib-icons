@@ -42,6 +42,8 @@ See the [striblab.github.io/strib-icons](https://striblab.github.io/strib-icons/
 * To compile the fonts one time, run: `npm run build`
     * If the build command has issues relating to the `npx tsc` command that is part of its definition, try installing
       typescript at the global level before running the build command again: `npm add -g typescript`
+    * **NOTE**: If you attempt to add icons, and the index page does not display the icon correctly, try emptying the 
+      'build' directory and running the build process again. Usually this is enough to fix the display issue.
 * To see the most recently build changes, use `npm run server` in a terminal window. This will spin up a webserver that
   allows you to see the `index.html` file at the address `http://localhost:3000`
     * If you've made a change to your files and aren't seeing it reflected in the browser, open a different terminal tab
