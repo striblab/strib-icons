@@ -71,8 +71,9 @@ class CodepointsMap {
   /**
    * Add a new icon to the codepoint map
    * @param {string} name
+   * @param {boolean} generateMap
    */
-  public async addIcon(name: string): Promise<number | null> {
+  public async addIcon(name: string, generateMap: boolean = true): Promise<number | null> {
     //If the icon already exists in the map, just return
     if (this.codepoints.hasOwnProperty(name)) {
       return this.codepoints[name]
@@ -84,6 +85,10 @@ class CodepointsMap {
     const point = await this.generateCodepoint()
     this.codepoints[sanitizedName] = point
     this.invertedCodepoints[point] = sanitizedName
+
+    if (!generateMap) {
+      return point
+    }
 
     // //Write the current map to the map file
     if (await this.isValidMap()) {
@@ -176,10 +181,15 @@ class CodepointsMap {
    *
    * @protected
    */
-  protected async generateMap(): Promise<void> {
+  async generateMap(): Promise<void> {
+    let alphabetized = {}
+    for (const name of Object.keys(this.codepoints).sort()) {
+      alphabetized[(name as string)] = this.codepoints[name]
+    }
+
     //Write the file with the updated json data (write it in both the source directory and the generated directory just to be safe
-    await fs.writeFileSync('./source/' + MAP_FILE_NAME, JSON.stringify(this.codepoints, null, 2))
-    await fs.writeFileSync('./bin/' + MAP_FILE_NAME, JSON.stringify(this.codepoints, null, 2))
+    await fs.writeFileSync('./source/' + MAP_FILE_NAME, JSON.stringify(alphabetized, null, 2))
+    await fs.writeFileSync('./bin/' + MAP_FILE_NAME, JSON.stringify(alphabetized, null, 2))
   }
 
   /**
