@@ -7,18 +7,18 @@
  * so this gets it and inlines it.
  */
 
-(function() {
-  var version = '{{ pkg.version }}';
-  var location = document.location.protocol + '//static.startribune.com/assets/libs/strib-icons/' + version + '/strib-icons.sprite.svg';
+(() => {
+  let version = '{{ pkg.version }}';
+  let location = document.location.protocol + '//static.startribune.com/assets/libs/strib-icons/' + version + '/strib-icons.sprite.svg';
 
   // From: https://css-tricks.com/ajaxing-svg-sprite/
-  var ajax = new XMLHttpRequest();
+  let ajax = new XMLHttpRequest();
   ajax.open('GET', location, true);
   ajax.send();
   ajax.onload = function() {
-    var div = document.createElement('div');
+    let div = document.createElement('div');
     div.style.display = 'none';
     div.innerHTML = ajax.responseText;
     document.body.insertBefore(div, document.body.childNodes[0]);
   };
-}());
+})()

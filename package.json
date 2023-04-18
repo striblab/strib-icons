@@ -1,8 +1,11 @@
 {
   "name": "@striblab/strib-icons",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Icons used in projects as different formats.",
   "main": "build/strib-icons.js",
+  "engines" : {
+    "node" : ">=16.0.0"
+  },
   "watch": {
     "build": {
       "patterns": [
@@ -12,11 +15,9 @@
     }
   },
   "scripts": {
-    "build": "node build.js",
+    "build": "npx tsc -p ./source/tsconfig.json && node ./bin/index.js",
     "optimize": "svgo source/icons/ --pretty --indent=2",
-    "server": "browser-sync start --ss build -f build",
-    "develop": "concurrently \"npm-watch\" \"npm run server\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "browser-sync start --serveStatic build --files build",
     "gh-publish": "gh-pages -d build",
     "npm-publish": "npm publish --access public"
   },
@@ -24,25 +25,25 @@
     "type": "git",
     "url": "git+https://github.com/striblab/strib-icons.git"
   },
-  "author": "Alan Palazzolo",
+  "contributors": [
+    "Alan Palazzolo",
+    "Lisa Riggle"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/striblab/strib-icons/issues"
   },
   "homepage": "https://github.com/striblab/strib-icons#readme",
   "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "concurrently": "^3.5.1",
+    "@types/node": "^18.15.11",
+    "browser-sync": "^2.29.1",
+    "fs-extra": "^11.1.1",
     "gh-pages": "^1.1.0",
-    "glob": "^7.1.2",
-    "handlebars": "^4.0.11",
     "js-yaml": "^3.11.0",
     "lodash": "^4.17.5",
-    "npm-watch": "^0.3.0",
     "svg-sprite": "^1.4.0",
     "svgo": "^1.0.5",
-    "underscore": "^1.8.3",
-    "webfont": "^8.0.0",
+    "typescript": "^5.0.3",
     "webfonts-generator": "^0.4.0"
   }
 }
