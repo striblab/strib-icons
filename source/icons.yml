@@ -10,6 +10,12 @@ arrow-value-up:
 camera:
   title: "Camera"
   description: "Simple box and circle camera icon"
+clock-forward:
+  title: "Clock Forward"
+  description: "A clockwise pointing circular arrow with clock hands inside"
+clock-reverse:
+  title: "Clock Reverse"
+  description: "A counter-clockwise pointing circular arrow with clock hands inside"
 close:
   title: "Close"
   description: "The X symbol used to close popups"
