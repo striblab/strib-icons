@@ -34,7 +34,7 @@ See the [striblab.github.io/strib-icons](https://striblab.github.io/strib-icons/
       with "z1-" or somthing similar ensuring the character is inserted as the last character in the font. The reason
       for this is inserting a new SVG into the font will change the character positions for existing icons, disrupting
       icon references already being used.
-* Add an entry in `sources/icons.yml`. This is used for the SVG version of the icons for accessibility.
+* Add an entry in `source/icons.yml`. This is used for the SVG version of the icons for accessibility.
 
 ### Developing and building and deploying to static.startribune.com
 

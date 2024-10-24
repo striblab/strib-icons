@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-  <circle fill="var(--strib-audio-pause-bottom, #006341)" class="st0" cx="122.5" cy="682.5" r="7.5" transform="translate(-115 -675)"/>
-  <path fill="var(--strib-audio-pause-top, #ffffff)" class="st1" d="M5.548 4.048c.6 0 1 .4 1 1v5c0 .6-.4 1-1 1s-1-.4-1-1v-5c0-.6.4-1 1-1zM9.548 4.048c.6 0 1 .4 1 1v5c0 .6-.4 1-1 1s-1-.4-1-1v-5c0-.6.4-1 1-1z"/>
-</svg>
