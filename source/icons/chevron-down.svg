@@ -1,0 +1,3 @@
+<svg id="chevron-down" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" d="M15.5,4.92L14.16,3.58L8,9.739L1.84,3.58L0.5,4.92L8,12.42L15.5,4.92Z"/>
+</svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54">
+<svg id="branded-logo" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
   <path fill="var(--branded-logo-top, #65cc5c)" d="m26.583 0 6.834 19.928-17.79 12.093L0 26.809l19.928-6.824L26.583 0Z"/>
   <path fill="var(--branded-logo-bottom, #00ac63)" d="M53.4 26.585 33.474 33.41l-6.664 19.983-5.247-15.313 11.855-18.152 19.984 6.657Z"/>
 </svg>

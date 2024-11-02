@@ -1,3 +1,3 @@
-<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" d="M7.77148 0.157104H6.22862V12.942L1.47784 8.19748L0.389648 9.28568L7.00005 15.8961L13.6104 9.28568L12.5223 8.19748L7.77148 12.942V0.157104Z"/>
+<svg id="arrow-down" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" d="M8.735,0.5L7.265,0.5L7.265,12.685L2.737,8.163L1.7,9.2L8,15.5L14.3,9.2L13.263,8.163L8.735,12.685L8.735,0.5Z"/>
 </svg>

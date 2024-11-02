@@ -1,0 +1,3 @@
+<svg id="collapse" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+  <path fill="var(--strib-icon-color, #0d0d0d)" d="M2 12.5V14H6.9395L0.5 20.4365L1.5605 21.5L8 15.0605V20H9.5V12.5H2ZM21.5 1.562L20.444 0.5L14 6.9395V2H12.5V9.5H20V8H15.0605L21.5 1.562Z"/>
+</svg>
