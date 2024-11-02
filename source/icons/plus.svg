@@ -1,3 +1,3 @@
-<svg id="plus" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-  <path fill="var(--strib-icon-color, #0d0d0d)" d="M9.75 8.25V0.75H8.25V8.25H0.75V9.75H8.25V17.25H9.75V9.75H17.25V8.25H9.75Z"/>
+<svg id="plus" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path fill="var(--strib-icon-color, #0d0d0d)" d="M8.692,7.308L8.692,0.5L7.33,0.5L7.33,7.308L0.522,7.308L0.522,8.67L7.33,8.67L7.33,15.478L8.692,15.478L8.692,8.67L15.5,8.67L15.5,7.308L8.692,7.308Z"/>
 </svg>
