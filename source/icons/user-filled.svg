@@ -1,0 +1,4 @@
+<svg id="user-filled" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" d="M2.643,15.5L13.357,15.5L13.357,12.821C13.355,10.765 11.663,9.074 9.607,9.071L6.393,9.071C4.337,9.074 2.645,10.765 2.643,12.821L2.643,15.5Z"/>
+  <path fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" d="M4.25,4.25C4.25,6.307 5.943,8 8,8C10.057,8 11.75,6.307 11.75,4.25C11.75,2.193 10.057,0.5 8,0.5C5.943,0.5 4.25,2.193 4.25,4.25Z"/>
+</svg>
