@@ -1,3 +1,3 @@
 <svg id="minus" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-    <rect fill="var(--strib-icon-color, #0d0d0d)" x="0.5" y="7.318" width="15" height="1.364"/>
+    <rect fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" x="0.5" y="7.318" width="15" height="1.364"/>
 </svg>

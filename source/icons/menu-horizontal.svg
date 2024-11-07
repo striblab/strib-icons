@@ -1,0 +1,5 @@
+<svg id="menu-horizontal" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" d="M2,9.5C2.828,9.5 3.5,8.828 3.5,8C3.5,7.172 2.828,6.5 2,6.5C1.172,6.5 0.5,7.172 0.5,8C0.5,8.828 1.172,9.5 2,9.5Z"/>
+  <path fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" d="M8,9.5C8.828,9.5 9.5,8.828 9.5,8C9.5,7.172 8.828,6.5 8,6.5C7.172,6.5 6.5,7.172 6.5,8C6.5,8.828 7.172,9.5 8,9.5Z"/>
+  <path fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" d="M14,9.5C14.828,9.5 15.5,8.828 15.5,8C15.5,7.172 14.828,6.5 14,6.5C13.172,6.5 12.5,7.172 12.5,8C12.5,8.828 13.172,9.5 14,9.5Z"/>
+</svg>
