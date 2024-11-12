@@ -1,3 +1,3 @@
-<svg id="checkbox" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-  <path fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" d="M14.25,0.5L1.75,0.5C1.418,0.5 1.101,0.632 0.866,0.866C0.632,1.101 0.5,1.418 0.5,1.75L0.5,14.25C0.5,14.582 0.632,14.9 0.866,15.134C1.101,15.368 1.418,15.5 1.75,15.5L14.25,15.5C14.582,15.5 14.9,15.368 15.134,15.134C15.368,14.9 15.5,14.582 15.5,14.25L15.5,1.75C15.5,1.418 15.368,1.101 15.134,0.866C14.9,0.632 14.582,0.5 14.25,0.5ZM1.75,14.25L1.75,1.75L14.25,1.75L14.25,14.25L1.75,14.25Z"/>
+<svg id="strib-checkbox" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="strib-icon strib-checkbox" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+  <path d="M13.833 1H2.167A1.166 1.166 0 0 0 1 2.167v11.666A1.164 1.164 0 0 0 2.167 15h11.666A1.164 1.164 0 0 0 15 13.833V2.167A1.166 1.166 0 0 0 13.833 1M2.167 13.833V2.167h11.666v11.666z"/>
 </svg>

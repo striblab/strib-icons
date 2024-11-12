@@ -1,3 +1,3 @@
-<svg id="chevron-right" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-    <path fill="var(--strib-icon-color, #0d0d0d)" fill-rule="evenodd" clip-rule="evenodd" d="M4.92,0.5L3.58,1.84L9.739,8L3.58,14.16L4.92,15.5L12.42,8L4.92,0.5Z"/>
+<svg id="strib-chevron-right" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="strib-icon strib-chevron-right" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+  <path d="m5.125 1-1.25 1.251L9.623 8l-5.748 5.749L5.125 15l7-7z"/>
 </svg>

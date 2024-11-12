@@ -1,4 +1,4 @@
-<svg id="branded-logo" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-  <path fill="var(--branded-logo-top, #65cc5c)" fill-rule="evenodd" clip-rule="evenodd" d="M7.967,0.503L9.886,6.1L4.889,9.497L0.5,8.033L6.098,6.116L7.967,0.503Z"/>
-  <path fill="var(--branded-logo-bottom, #00ac63)" fill-rule="evenodd" clip-rule="evenodd" d="M15.499,7.97L9.902,9.887L8.031,15.5L6.557,11.199L9.887,6.1L15.5,7.97L15.499,7.97Z"/>
+<svg id="strib-branded-logo" viewBox="0 0 16 16" width="16" height="16" class="strib-icon strib-branded-logo" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+  <path fill="var(--branded-logo-top, #65cc5c)" d="m7.968 1 1.791 5.225-4.665 3.171L.997 8.029 6.223 6.24z"/>
+  <path fill="var(--branded-logo-bottom, #00ac63)" d="M14.999 7.971 9.774 9.76 8.027 15l-1.376-4.015 3.109-4.76z"/>
 </svg>
