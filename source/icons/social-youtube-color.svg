@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <path fill="var(--youtube-red, #ff0302)" d="M14.707,4.608C14.628,4.31 14.472,4.039 14.255,3.82C14.038,3.601 13.767,3.444 13.47,3.362C12.375,3.068 8,3.068 8,3.068C8,3.068 3.625,3.068 2.53,3.362C2.233,3.444 1.962,3.601 1.745,3.82C1.528,4.039 1.372,4.31 1.293,4.608C1,5.707 1,8 1,8C1,8 1,10.293 1.293,11.392C1.372,11.69 1.528,11.962 1.745,12.18C1.962,12.399 2.233,12.556 2.53,12.637C3.625,12.932 8,12.932 8,12.932C8,12.932 12.375,12.932 13.47,12.637C13.767,12.556 14.038,12.399 14.255,12.18C14.472,11.962 14.628,11.69 14.707,11.392C15,10.293 15,8 15,8C15,8 15,5.707 14.707,4.608Z" style="fill:rgb(255,3,2);fill-rule:nonzero;"/>
+    <path fill="var(--youtube-white, #ffffff)" d="M6.568,10.082L6.568,5.918L10.227,8L6.568,10.082Z" style="fill:rgb(254,254,254);fill-rule:nonzero;"/>
+</svg>

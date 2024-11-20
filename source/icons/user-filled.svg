@@ -1,3 +1,3 @@
-<svg id="strib-user-filled" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="strib-icon strib-user-filled" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+<svg id="strib-user-filled" viewBox="0 0 16 16" width="16" height="16" fill="currentcolor" class="strib-icon strib-user-filled" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd">
   <path d="M3 15h10v-2.5A3.52 3.52 0 0 0 9.5 9h-3A3.52 3.52 0 0 0 3 12.5zM4.5 4.5C4.5 6.42 6.08 8 8 8s3.5-1.58 3.5-3.5S9.92 1 8 1 4.5 2.58 4.5 4.5"/>
 </svg>
