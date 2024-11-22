@@ -1,0 +1,45 @@
+// Buttons
+//
+// Custom buttons for the docs.
+
+// scss-docs-start btn-css-vars-example
+.btn-bd-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--strib-forest-green);
+  --bs-btn-border-color: var(--strib-forest-green);
+  --bs-btn-border-radius: .5rem;
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{shade-color($strib-forest-green, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($strib-forest-green, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--strib-forest-green-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($strib-forest-green, 20%)};
+  --bs-btn-active-border-color: #{shade-color($strib-forest-green, 20%)};
+}
+// scss-docs-end btn-css-vars-example
+
+.btn-bd-accent {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bd-accent);
+  --bs-btn-border-color: var(--bd-accent);
+  --bs-btn-hover-color: var(--bd-dark);
+  --bs-btn-hover-bg: var(--bd-accent);
+  --bs-btn-hover-border-color: var(--bd-accent);
+  --bs-btn-focus-shadow-rgb: var(--bd-accent-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: var(--bs-btn-hover-bg);
+  --bs-btn-active-border-color: var(--bs-btn-hover-border-color);
+}
+
+.btn-bd-light {
+  --bs-btn-color: var(--bs-gray-600);
+  --bs-btn-border-color: var(--bs-gray-400);
+  --bs-btn-hover-color: var(--strib-forest-green);
+  --bs-btn-hover-border-color: var(--strib-forest-green);
+  --bs-btn-active-color: var(--strib-forest-green);
+  --bs-btn-active-bg: var(--bs-white);
+  --bs-btn-active-border-color: var(--strib-forest-green);
+  --bs-btn-focus-border-color: var(--strib-forest-green);
+  --bs-btn-focus-shadow-rgb: var(--strib-forest-green-rgb);
+}

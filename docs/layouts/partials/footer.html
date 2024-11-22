@@ -1,0 +1,18 @@
+<footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+  <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+    <div class="row">
+      <div class="col-lg-12 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="{{- .Site.BaseURL -}}index.html" aria-label="Bootstrap">
+          <svg id="strib-company-logo" viewBox="0 0 16 16" width="32" height="32" class="strib-icon strib-company-logo d-block me-2" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+            <path fill="var(--company-logo-top, #65cc5c)" d="m7.968 1 1.791 5.225-4.665 3.171L.997 8.029 6.223 6.24z"/>
+            <path fill="var(--company-logo-bottom, #00ac63)" d="M14.999 7.971 9.774 9.76 8.027 15l-1.376-4.015 3.109-4.76z"/>
+          </svg>
+          <span class="fs-5">Strib Icons</span>
+        </a>
+        <ul class="list-unstyled small">
+          <li class="mb-2">&copy; Star Tribune, Last build: {{ now.Format "01/06/2006, 15:04:05 PM" }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

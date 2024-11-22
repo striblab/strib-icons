@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "head" . }}
+  </head>
+  <body id="icons-body">
+    {{ partialCached "skippy" . }}
+    {{ partialCached "navbar" . }}
+    {{ partialCached "home/hero" . }}
+
+    <main class="container-xxl bd-gutter" id="content">
+      {{ partialCached "icons" . "home" }}
+
+      <h2 id="install">Install</h2>
+        <p>Include the stylesheet (in your website <code>&lt;head&gt;</code> or via <code>@import</code> in CSS) to get started.</p>
+        <div class="row my-4">
+          <div class="col-md-12">
+            <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{- .Site.BaseURL -}}strib-icons.min.css&#34;</span> <span class="p">/&gt;</span></span></span></code></pre></div>
+            <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&#34;{{- .Site.BaseURL -}}strib-icons.min.css&#34;</span><span class="o">)</span><span class="p">;</span></span></span></code></pre></div>
+          </div>
+        </div>
+
+        <p>
+          To use the SVG sprite instead of the font (i.e. when you want to utilize icons with multiple colors), you can try to utilize the
+          sprite file as described in "Usage" by including the full URL of the sprite file. However, it's possible that may not work
+          because of <a target="_blank" href="https://bugs.chromium.org/p/chromium/issues/detail?id=470601">an issue with chrome</a>.
+          If that is the case, copy the sprite file directly into the codebase to proceed. Sprite file is located at:
+        </p>
+        <div class="row my-4">
+          <div class="col-md-12">
+            <div class="highlight">
+              <pre tabindex="0" class="chroma"><code class="language-html" data-lang="text">{{- .Site.BaseURL -}}strib-icons.svg</code></pre>
+            </div>
+          </div>
+        </div>
+      {{ .Content }}
+    </main>
+
+    {{- partialCached "footer" . }}
+    {{- partialCached "scripts" . "home" }}
+  </body>
+</html>

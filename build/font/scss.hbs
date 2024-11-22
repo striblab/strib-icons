@@ -1,0 +1,36 @@
+${{ name }}-font: {{ name }} !default;
+${{ name }}-font-dir: "{{ fontsUrl }}" !default;
+${{ name }}-font-file: "#{${{ name }}-font-dir}/#{${{ name }}-font}" !default;
+${{ name }}-font-hash: "24e3eb84d0bcaf83d77f904c78ac1f47" !default;
+
+@font-face {
+  font-family: ${{ name }}-font;
+  src:
+    url("#{${{ name }}-font-file}.woff2?#{${{ name }}-font-hash}") format("woff2"),
+    url("#{${{ name }}-font-file}.woff?#{${{ name }}-font-hash}") format("woff"),
+    url("#{${{ name }}-font-file}.ttf?#{${{ name }}-font-hash}") format("truetype"),
+    url("#{${{ name }}-font-file}.eot?#{${{ name }}-font-hash}") format("embedded-opentype") !default;
+  font-display: block;
+}
+
+.{{ prefix }}::before,
+[class^="{{ prefix }}-"]::before,
+[class*=" {{ prefix }}-"]::before {
+  display: inline-block;
+  font-family: ${{ name }}-font, sans-serif !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+${{ name }}-map: (
+{{# each codepoints }}
+  "{{ @key }}": "\\{{ codepoint this }}",
+{{/ each }}
+);
+
+@each $icon, $codepoint in ${{ name }}-map {
+  .{{ prefix }}-#{$icon}::before { content: $codepoint; }
+}

@@ -1,0 +1,3 @@
+# DO NOT EDIT
+# Required to support local development with the `serve` script.
+baseURL: ""

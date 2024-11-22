@@ -1,0 +1,41 @@
+<div class="hero py-5 text-center text-lg-start">
+  <div class="container-xxl bd-gutter">
+    <div class="row flex-lg-row-reverse">
+      <div class="col-6 mx-auto col-lg-5 mx-lg-0">
+      </div>
+      <div class="col-lg-7">
+        <h1 class="f0">StarTribune Icons</h1>
+        <p class="mb-4 f3 font-weight-normal">
+          Strib icons is a font-icon and SVG set to manage icons used in Star Tribune projects.
+        </p>
+
+        <div class="d-flex flex-column flex-md-row align-items-stretch justify-content-center justify-content-md-start mb-5 fs-5">
+          <a class="btn btn-lg btn-figma d-flex align-items-center justify-content-center" href="{{ .Site.Params.icons_figma }}" target="_blank" rel="noopener">
+            {{ partial "icons/figma.svg" (dict "class" "me-2" "width" "18" "height" "24") }}
+            Open in Figma
+          </a>
+        </div>
+
+        <hr class="mx-auto mx-lg-0 my-5">
+
+        <p class="text-muted">
+          Currently v{{ .Site.Params.version }}
+          <span class="px-1">&#8226;</span>
+          <a href="#icons">Icons</a>
+          <span class="px-1">&#8226;</span>
+          <a href="{{- .Site.BaseURL -}}sprite/index.html">Icon Sprite</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#install">Install</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#usage">Usage</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#styling">Styling</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#accessibility">Accessibility</a>
+          <span class="px-1">&#8226;</span>
+          <a href="{{ .Site.Params.icons_repo }}" target="_blank">GitHub repo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
