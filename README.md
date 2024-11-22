@@ -7,6 +7,20 @@ Icons used in projects as different formats.
 - Node 18 or higher
 - Yarn 4
 
+## Things to note
+
+- Colors embedded in an icon do not display in the font version of the icon. This is expected behavior. To use the color
+  version of an icon, you will need to use the sprite or embed the SVG info directly on the page.
+- There are many icons in this font that are designated "color" icons and will not work as a normal font icon because
+  the color coverage is near 100%. In these situations, you will need to use the Sprite or embed the SVG directly in
+  your project.
+    - These icons all have the suffix `-color` in the icon name. Examples: `sports-league-nhl-color` and
+      `weather-day-sunny-lg-color`
+- Self-hosted is required to be able to verify certain features on the site:
+    - The "Download SVG" button on icon pages will only trigger a download when viewing the self-hosted site. Otherwise,
+      it will just navigate you to the icon in the browser.
+    - Sprite SVG displays will be blank, both on the icon page and the sprites page.
+
 ## Adding and managing icons
 
 ### Setting up the Application
@@ -21,7 +35,8 @@ Icons used in projects as different formats.
         * Example: `baseURL: "/Users/riggllm/GitHub/strib-icons/_site"`
         * This file is not tracked by GitHub.
 * The old version of the application had a self-hosting option that is replicated in this version of the application.
-  However, self-hosting is not required to be able to work with the repo locally. See "Scrips and Commands" below for more
+  However, self-hosting is not required to be able to work with the repo locally. See "Scrips and Commands" below for
+  more
   info about building and self-hosting.
 
 ### Icons

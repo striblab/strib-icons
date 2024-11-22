@@ -3,10 +3,9 @@
     <div class="row">
       <div class="col-lg-12 mb-3">
         <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="{{- .Site.BaseURL -}}index.html" aria-label="Bootstrap">
-          <svg id="strib-company-logo" viewBox="0 0 16 16" width="32" height="32" class="strib-icon strib-company-logo d-block me-2" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-            <path fill="var(--company-logo-top, #65cc5c)" d="m7.968 1 1.791 5.225-4.665 3.171L.997 8.029 6.223 6.24z"/>
-            <path fill="var(--company-logo-bottom, #00ac63)" d="M14.999 7.971 9.774 9.76 8.027 15l-1.376-4.015 3.109-4.76z"/>
-          </svg>
+          <svg class="strib-icon" width="32" height="32" fill="currentcolor" role="img">
+            <use xlink:href="{{- .Site.BaseURL -}}strib-icons.svg#company-logo" />
+          </svg>&nbsp;
           <span class="fs-5">Strib Icons</span>
         </a>
         <ul class="list-unstyled small">

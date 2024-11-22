@@ -45,7 +45,16 @@
   display: inline-block;
   line-height: 1;
   vertical-align: -.125em;
-  fill: currentcolor;
+}
+
+.theme-icon {
+  fill: var(--color-picker-icon-color);
+  opacity: 0.5;
+
+  .active & {
+    fill: var(--strib-gray) !important;
+    opacity: 1;
+  }
 }
 
 .hero-notice {
@@ -109,6 +118,7 @@
     font-size: 3rem;
   }
 }
+
 .f3 {
   font-size: 1.25rem;
 
@@ -116,6 +126,7 @@
     font-size: 1.5rem;
   }
 }
+
 .f5 {
   font-size: 1rem;
 }
@@ -169,6 +180,7 @@
       color: var(--bs-link-hover-color) !important;
     }
   }
+
   // stylelint-enable  declaration-no-important
 
   &:empty::before {
@@ -216,9 +228,14 @@
   }
 }
 
+.icon-demo .strib-icon {
+    color: var(--icon-color)
+}
+
 // stylelint-disable declaration-no-important
 .py-6 {
   padding-top: 4.5rem !important;
   padding-bottom: 4.5rem !important;
 }
+
 // stylelint-enable declaration-no-important

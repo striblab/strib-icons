@@ -4,9 +4,14 @@ $bd-gutter-x: 3rem;
 $strib-green: #05442e;
 $strib-forest-green: lighten(saturate($strib-green, 5%), 10%);
 
+$strib-black: #0d0d0d;
+$strib-gray: #f5f6f7;
+
 :root {
   --strib-green: #{$strib-green};
   --strib-forest-green: #{$strib-forest-green};
+  --strib-gray: #{$strib-gray};
+  --strib-black: #{$strib-black};
   --bd-accent: #{$bd-accent};
   --strib-forest-green-rgb: #{to-rgb($strib-forest-green)};
   --bd-accent-rgb: #{to-rgb($bd-accent)};
@@ -19,6 +24,8 @@ $strib-forest-green: lighten(saturate($strib-green, 5%), 10%);
   --bs-link-color-rgb: #{to-rgb($strib-forest-green)};
   --bs-link-hover-color: #00ac63;
   --bs-link-hover-color-rgb: #{to-rgb(#00ac63)};
+  --icon-color: #{$strib-black};
+  --color-picker-icon-color: #{$strib-black};
 }
 
 [data-bs-theme="dark"] {
@@ -26,4 +33,6 @@ $strib-forest-green: lighten(saturate($strib-green, 5%), 10%);
   --bs-link-color-rgb: #{to-rgb(#00ac63)};
   --bs-link-hover-color: #65cc5c;
   --bs-link-hover-color-rgb: #{to-rgb(#65cc5c)};
+  --icon-color: #{$strib-gray};
+  --color-picker-icon-color: #{$strib-gray};
 }
