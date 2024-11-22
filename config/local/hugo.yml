@@ -1,2 +1,0 @@
-# Required to fully support local development without the `serve` script
-baseURL: "/_site"
