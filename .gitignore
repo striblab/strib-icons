@@ -5,6 +5,10 @@
 /node_modules/
 /resources/
 
+# Ignore any changes to these files
+/config/local/hugo.yml
+/config/local/development/hugo.yml
+
 # Editor folders
 /.vscode/
 
