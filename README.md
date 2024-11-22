@@ -20,6 +20,7 @@ Icons used in projects as different formats.
     - The "Download SVG" button on icon pages will only trigger a download when viewing the self-hosted site. Otherwise,
       it will just navigate you to the icon in the browser.
     - Sprite SVG displays will be blank, both on the icon page and the sprites page.
+- The `company-name` icon looks super-duper small in the icon list because the text itself is so wide.
 
 ## Adding and managing icons
 
@@ -64,6 +65,10 @@ Icons used in projects as different formats.
       lowercase and dashes, i.e. `category-name-modifier.svg`
     * The codepoint for new icons will automatically be generated at the end of the list.
     * You will also need to generate a documentation page for the
+* Run: `npm run pages` to generate markdown files for new icons. Once the markdown files have been created, go into them
+  and add any additional information as needed.
+    * Things like `categories` and `tags` aid with the search field.
+    * `variables` provides additional information to display on the icon detail page
 
 ### Scripts and Commands
 
