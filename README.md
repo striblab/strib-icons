@@ -15,15 +15,14 @@ Icons used in projects as different formats.
     1. Make sure your computer supports NodeJS and run: `npm install`
     2. Run: `pwd` to output the full computer path of the application's root. Copy this value down
         * Example: `/Users/riggllm/GitHub/strib-icons`
-* In your IDE, open the `config/local/hugo.yml` file.
-    1. You'll see a line that looks like this: `baseURL: "/_site"`
+* In your IDE, open the `config/local/` directory and create a file called `hugo.yml`.
+    1. Add the following line to the file: `baseURL: "/_site"`
     2. Modify that line by pasting the output from `pwd` into the `baseURL` property, before the `/_site` value.
         * Example: `baseURL: "/Users/riggllm/GitHub/strib-icons/_site"`
-        * Changes to this file *should not* be committed. In theory, changes to this file won't be noticed by GitHub,
-          but be mindful just in case.
-* The old version of the application had a local "hosting" option that is replicated in this version of the application.
-  However, hosting locally is not required to be able to develop successfully. See "Scrips and Commands" below for more
-  info.
+        * This file is not tracked by GitHub.
+* The old version of the application had a self-hosting option that is replicated in this version of the application.
+  However, self-hosting is not required to be able to work with the repo locally. See "Scrips and Commands" below for more
+  info about building and self-hosting.
 
 ### Icons
 
@@ -54,7 +53,7 @@ Icons used in projects as different formats.
 ### Scripts and Commands
 
 * Run: `npm run pages` to generate markdown files for any icons that were added.
-* Run: `npm run icons` to update font files and code points
+* Run: `npm run icons` generate new font files and code points for new icons.
 * Run: `npm run docs:build` to build a non-hosted version of the site for local development.
     * Non hosted site found at location you added to `/config/local/hugo.yml`.
     * Example: `/Users/riggllm/GitHub/strib-icons/_site/index.html`
