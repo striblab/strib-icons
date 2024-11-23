@@ -1,5 +1,5 @@
 languageCode:           "en"
-title:                  "Bootstrap Icons"
+title:                  "Strib Icons"
 baseURL:                "https://static.startribune.com/assets/libs/strib-icons/1.0/"
 enableInlineShortcodes: true
 enableRobotsTXT:        true

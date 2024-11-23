@@ -1,6 +1,7 @@
 # Star Tribune Icons
 
-Icons used in projects as different formats.
+Icons used in projects as different formats. Shout out to [Bootstrap Icons](https://icons.getbootstrap.com/) for the
+foundation of this library.
 
 ## Requirements
 
