@@ -63,9 +63,8 @@ foundation of this library.
     * You may need to manually edit the SVG to do these things.
 * Icon originals are stored in `icons/`. To add new icons, add them here.
     * The file name of the icon will become the class name of the icon in CSS, so be consistent and reasonable, use only
-      lowercase and dashes, i.e. `category-name-modifier.svg`
+      lowercase and dashes, i.e. `category-name-modifier.svg`. Example: `sports-league-nba.svg` or `weather-day-sunny-lg.svg`
     * The codepoint for new icons will automatically be generated at the end of the list.
-    * You will also need to generate a documentation page for the
 * Run: `npm run pages` to generate markdown files for new icons. Once the markdown files have been created, go into them
   and add any additional information as needed.
     * Things like `categories` and `tags` aid with the search field.
@@ -77,7 +76,7 @@ foundation of this library.
 * Run: `npm run icons` generate new font files and code points for new icons.
 * Run: `npm run docs:build` to build a non-hosted version of the site for local development.
     * Non hosted site found at location you added to `/config/local/hugo.yml`.
-    * Example: `/Users/riggllm/GitHub/strib-icons/_site/index.html`
+    * URL Example: `file:///Users/riggllm/GitHub/strib-icons/_site/index.html`
 * Run: `npm run start` to build and serve a hosted version of the site for local development
     * Hosted site is, by default, found at: `http://localhost:4000`.
     * Check the terminal output for a line that looks like:
@@ -89,6 +88,7 @@ foundation of this library.
     * The "new" version number will need to match the folder the production application lives in
 * Run: `npm run release:build` to build the production code for deployment.
     * This rebuilds the icon and html files using the production base URL, rather than your local computer.
+    * Note: This should be the last command run when prepping for release.
 
 ### Templates
 
@@ -116,4 +116,4 @@ simultaneously in versioned folders. To deploy a new version of the icon font, d
 ## License
 
 All images, content are copyright material of Star Tribune and require permission for re-use. Other code or similar
-assets fall under the `LICENSE.code` license.
+assets fall under the `LICENSE` license.
