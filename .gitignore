@@ -4,6 +4,7 @@
 /_site/
 /node_modules/
 /resources/
+/.idea/
 
 # Editor folders
 /.vscode/
