@@ -1,3 +1,3 @@
-<svg id="strib-notification-off-filled" viewBox="0 0 16 16" width="16" height="16" fill="currentcolor" class="strib-icon strib-notification-off-filled" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd">
+<svg id="strib-notification-off-filled" viewBox="0 0 16 16" width="16" height="16" fill="currentcolor" class="strib-icon strib-notification-off-filled" xmlns="http://www.w3.org/2000/svg">
   <path d="M12.828 8.524V6.793a4.8 4.8 0 0 0-.525-2.171l2.456-2.457-.683-.682L1.241 14.318l.683.682 2.896-2.896h.766v.482A2.426 2.426 0 0 0 8 15a2.426 2.426 0 0 0 2.414-2.414v-.482h3.379a.486.486 0 0 0 .483-.483v-1.449a.48.48 0 0 0-.142-.341zm-3.379 4.062c0 .795-.655 1.448-1.449 1.448a1.456 1.456 0 0 1-1.449-1.448v-.482h2.898zm1.259-9.781a4.8 4.8 0 0 0-2.225-.815V1h-.966v.99a4.854 4.854 0 0 0-4.345 4.803v1.731L1.866 9.831a.48.48 0 0 0-.142.341v1.449a.5.5 0 0 0 .028.14z"/>
 </svg>

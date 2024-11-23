@@ -1,3 +1,3 @@
-<svg id="strib-ticket-filled" viewBox="0 0 16 16" width="16" height="16" fill="currentcolor" class="strib-icon strib-ticket-filled" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd">
+<svg id="strib-ticket-filled" viewBox="0 0 16 16" width="16" height="16" fill="currentcolor" class="strib-icon strib-ticket-filled" xmlns="http://www.w3.org/2000/svg">
   <path d="M10.012 13H1.999A1.005 1.005 0 0 1 1 12V9.5c0-.274.226-.5.5-.5.549 0 1-.451 1-1s-.451-1-1-1a.503.503 0 0 1-.5-.5V4c0-.548.451-.999.999-1h8.013v1H9.5v1.499h.512V6.5H9.5v3h.512v1H9.5V12h.512zm0-10H14c.549 0 1 .451 1 1v2.5a.496.496 0 0 1-.5.5c-.549 0-1 .451-1 1s.451 1 1 1c.274 0 .5.226.5.5V12c0 .549-.451 1-1 1h-3.988v-1h.488v-1.5h-.488v-1h.488v-3h-.488V5.499h.488V4h-.488z"/>
 </svg>

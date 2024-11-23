@@ -15,6 +15,7 @@ export default {
           removeUnknownsAndDefaults: {
             keepDataAttrs: false, // remove all `data` attributes
             keepRoleAttr: true, // keep the `role` attribute
+            uselessOverrides: false
           },
           removeViewBox: false, // keep the `viewBox` attribute
         }
@@ -26,7 +27,7 @@ export default {
     {
       name: 'removeAttrs',
       params: {
-        attrs: [ 'style' ]
+        attrs: [ 'style', 'clip-rule', 'fill-rule' ]
       }
     },
     // Custom plugin which resets the SVG attributes to explicit values
@@ -35,15 +36,13 @@ export default {
       type: 'visitor',
       params: {
         attributes: {
-          id: '', // We replace the class with the correct one based on filename later
+          id: '', // We replace the id with the correct one based on filename later
           viewBox: '0 0 16 16',
           width: '16',
           height: '16', // We replace the class with the correct one based on filename later
           fill:  'currentcolor',
           class: '', // We replace the class with the correct one based on filename later
           xmlns: 'http://www.w3.org/2000/svg',
-          "clip-rule": "evenodd",
-          "fill-rule": "evenodd",
         }
       },
       fn(_root, params, info) {
@@ -62,9 +61,6 @@ export default {
                 node.attributes = {}
 
                 for (const [key, value] of Object.entries(params.attributes)) {
-                  // if (fillExclusions.includes(basename)) {
-                  //   delete node.attributes['fill']
-                  // }
 
                   node.attributes[key] = value
                   if (key === 'class') {

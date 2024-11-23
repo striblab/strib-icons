@@ -1,3 +1,3 @@
-<svg id="strib-search-filled" viewBox="0 0 16 16" width="16" height="16" fill="currentcolor" class="strib-icon strib-search-filled" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd">
+<svg id="strib-search-filled" viewBox="0 0 16 16" width="16" height="16" fill="currentcolor" class="strib-icon strib-search-filled" xmlns="http://www.w3.org/2000/svg">
   <path d="M1 6.042C1 3.276 3.276 1 6.042 1s5.041 2.276 5.041 5.041v.001c0 2.765-2.276 5.041-5.041 5.041S1 8.808 1 6.042m8.979 4.73 4.229 4.23.792-.792-4.229-4.229"/>
 </svg>

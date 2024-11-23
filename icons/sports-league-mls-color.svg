@@ -1,4 +1,4 @@
-<svg id="strib-sports-league-mls-color" viewBox="0 0 16 16" width="16" height="16" fill="currentcolor" class="strib-icon strib-sports-league-mls-color" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd">
+<svg id="strib-sports-league-mls-color" viewBox="0 0 16 16" width="16" height="16" fill="currentcolor" class="strib-icon strib-sports-league-mls-color" xmlns="http://www.w3.org/2000/svg">
   <path fill="var(--sports-mls-white, #ffffff)" d="M14.624 1.813V1H1.446v.813l-.001 4.59a8.85 8.85 0 0 0 1.571 5.048l-1.641 1.64 1.151 1.15 1.537-1.536a8.9 8.9 0 0 0 3.74 2.226l.232.069.232-.069a8.89 8.89 0 0 0 6.358-8.526z"/>
   <path fill="var(--sports-mls-red, #e32726)" d="M13.81 1.8H2.259v4.596a8.05 8.05 0 0 0 1.835 5.13l9.716-9.717z"/>
   <path fill="var(--sports-mls-white, #ffffff)" d="M8.035 14.148a8.09 8.09 0 0 0 5.776-7.752l-.001-4.587-9.717 9.717a8.1 8.1 0 0 0 3.942 2.622"/>
