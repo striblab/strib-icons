@@ -87,7 +87,7 @@ The `viewBox` attribute is required if you wish to resize icons with `background
   </div>
   <div class="col-md-8">
 {{< highlight css >}}
-.bi::before, .strib-icon::before {
+.strib-icon::before {
   display: inline-block;
   content: "";
   vertical-align: -.125em;

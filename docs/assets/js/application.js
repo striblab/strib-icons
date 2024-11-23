@@ -20,15 +20,15 @@ import ClipboardJS from 'clipboard'
   })
 
   clipboard.on('success', event => {
-    const icon = event.trigger.querySelector('.bi')
+    const icon = event.trigger.querySelector( '.strib-icon')
     const originalTitle = event.trigger.title
 
     event.clearSelection()
-    icon.classList.replace('bi-clipboard', 'bi-check2')
+    icon.classList.replace('strib-copy', 'strib-check')
     event.trigger.title = 'Copied!'
 
     setTimeout(() => {
-      icon.classList.replace('bi-check2', 'bi-clipboard')
+      icon.classList.replace('strib-check', 'strib-copy')
       event.trigger.title = originalTitle
     }, 2000)
   })
