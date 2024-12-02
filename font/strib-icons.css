@@ -1,10 +1,10 @@
 @font-face {
   font-family: strib-icons;
   src:
-    url("./fonts/strib-icons.woff2?59a90d7fbba96da1b03790482585dd66") format("woff2"),
-url("./fonts/strib-icons.woff?59a90d7fbba96da1b03790482585dd66") format("woff"),
-url("./fonts/strib-icons.ttf?59a90d7fbba96da1b03790482585dd66") format("truetype"),
-url("./fonts/strib-icons.eot?59a90d7fbba96da1b03790482585dd66#iefix") format("embedded-opentype");
+    url("./fonts/strib-icons.woff2?b839b0719db35ec28e42cc5c47580711") format("woff2"),
+url("./fonts/strib-icons.woff?b839b0719db35ec28e42cc5c47580711") format("woff"),
+url("./fonts/strib-icons.ttf?b839b0719db35ec28e42cc5c47580711") format("truetype"),
+url("./fonts/strib-icons.eot?b839b0719db35ec28e42cc5c47580711#iefix") format("embedded-opentype");
   font-display: block;
 }
 
