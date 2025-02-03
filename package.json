@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "npm run docs:serve",
-    "docs:serve": "hugo server --port 4000 --disableFastRender",
+    "docs:serve": "hugo server --baseURL localhost --port 4000 --disableFastRender --environment local",
     "docs:build": "hugo --cleanDestinationDir --printUnusedTemplates --environment local",
     "docs:build-prod": "hugo --cleanDestinationDir --printUnusedTemplates",
     "pages": "node build/build-pages.mjs",

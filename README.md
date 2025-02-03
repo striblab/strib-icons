@@ -18,9 +18,10 @@ foundation of this library.
     - These icons all have the suffix `-color` in the icon name. Examples: `sports-league-nhl-color` and
       `weather-day-sunny-lg-color`
 - Self-hosted is required to be able to verify certain features on the site:
-    - The "Download SVG" button on icon pages will only trigger a download when viewing the self-hosted site. Otherwise,
-      it will just navigate you to the icon in the browser.
-    - Sprite SVG displays will be blank, both on the icon page and the sprites page.
+    - Download SVG - The download button on icon pages will only trigger an actual download when viewing the self-hosted
+      site. Otherwise, it will just navigate you to the svg file.
+    - Sprite displays - Sprite displays might only display (both on the icon page and the sprites page) when viewing the
+      self-hosted site. This is related to [an issue with chrome-based browsers](https://bugs.chromium.org/p/chromium/issues/detail?id=470601).
 - The `company-name` icon looks super-duper small in the icon list because the text itself is so wide.
 
 ## Adding and managing icons
@@ -28,18 +29,26 @@ foundation of this library.
 ### Setting up the Application
 
 * Open a terminal window and navigate to the application's root directory
-    1. Make sure your computer supports NodeJS and run: `npm install`
-    2. Run: `pwd` to output the full computer path of the application's root. Copy this value down
+    1. Make sure your computer supports the appropriate version of NodeJS and run: `npm install`
+    2. Run: `pwd` to output the full path of the application's root directory (aka: your "application root path"). Copy
+       this value so you can use it below
         * Example: `/Users/riggllm/GitHub/strib-icons`
-* In your IDE, open the `config/local/` directory and create a file called `hugo.yml`.
-    1. Add the following line to the file: `baseURL: "/_site"`
-    2. Modify that line by pasting the output from `pwd` into the `baseURL` property, before the `/_site` value.
+* Add your application root path to the "local development" configuration file
+    1. In your IDE, open the `config/local/hugo.yml` file
+    2. Add your application root path value to the `baseUrl` property in the config file
+        * Example: `baseURL: "/Users/riggllm/GitHub/strib-icons"`
+    3. Add `/_site` to the end of the `baseUrl` value.
         * Example: `baseURL: "/Users/riggllm/GitHub/strib-icons/_site"`
-        * This file is not tracked by GitHub.
+* Instruct your local GitHub to ignore any changes to the local development configuration.
+    1. Run the following command: `git update-index --assume-unchanged config/local/hugo.yml`
+        * This will allow you to work locally on your computer without having to worry about accidentally committing
+          your local file path to the GitHub repo.
+        * **Note:** Doing this will update your computer's GitHub configuration, but will not affect any other computer
+          or user, nor will it change the repo itself. If work in this repo on multiple computers, you will need to run
+          this on every computer you work on.
 * The old version of the application had a self-hosting option that is replicated in this version of the application.
-  However, self-hosting is not required to be able to work with the repo locally. See "Scrips and Commands" below for
-  more
-  info about building and self-hosting.
+  However, self-hosting is only required to verify specific features. See "Scrips and Commands" below for more info
+  about building and self-hosting.
 
 ### Icons
 
@@ -47,14 +56,14 @@ foundation of this library.
     * Canvas/artboard dimensions are 16px x 16px.
     * SVG should be centered in the canvas, with a 1px gap on each of the widest sides
     * <img src="readme-images/artboard-gap-example.png" width="400" height="400" /> 
-* Do not set a fill color on SVG paths unless the color is very important, such as with the Star Tribune logo.
+* Do not set a fill color on SVG paths unless the color is very important, such as with company logos.
     * When Icons are processed into the font, most properties are stripped off of the SVG to condense the information as
       much as possible. "fill" is **not** one of the properties that is stripped.
     * If you need to maintain a fill color on an icon, use a CSS variable with a default hex color. Example:
       ```
       fill="var(--company-logo-top, #65cc5c)"
       ```
-      Doing this allows control over the icon colors while also providing an initial color.
+      Doing this allows control over the icon colors while also providing a working color to already be present.
     * Do NOT use "white" to create a hole in the icon. This should be avoided by eliminating overlaps between layers in
       your image editor.
         * Note: There are technically two icons that do this at this time: `social-youtube` and `social-spotify`. This
@@ -77,10 +86,13 @@ foundation of this library.
 * Run: `npm run docs:build` to build a non-hosted version of the site for local development.
     * Non hosted site found at location you added to `/config/local/hugo.yml`.
     * URL Example: `file:///Users/riggllm/GitHub/strib-icons/_site/index.html`
-* Run: `npm run start` to build and serve a hosted version of the site for local development
+    * **Note:** Sometimes changed icons do not display properly when running this command on its own. Running the icons
+      command prior to this (either independently, or as part of the same command line) typically fixes this.
+        * Example: `npm run icons && npm run docs:build`
+* Run: `npm run start` to build and serve a hosted version of the site for local development.
     * Hosted site is, by default, found at: `http://localhost:4000`.
-    * Check the terminal output for a line that looks like:
-      `Web Server is available at //localhost:4000/ (bind address 127.0.0.1)` if the `4000` port is not working
+    * If the port or default address is not working in your browser, check the terminal output for a line that looks like:
+      `Web Server is available at //localhost:4000/ (bind address 127.0.0.1)`
 * Run: `npm run version:increment` to modify the version number of the production application.
     * You need to supply the "current" version number (example: `1.0`) and the "new" version number (example: `1.1`) to
       the command.
