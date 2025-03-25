@@ -1,0 +1,17 @@
+<footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+  <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+    <div class="row">
+      <div class="col-lg-12 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="{{- .Site.BaseURL -}}index.html" aria-label="Bootstrap">
+          <svg class="strib-icon" width="32" height="32" fill="currentcolor" role="img">
+            <use xlink:href="{{- .Site.BaseURL -}}strib-icons.svg#company-logo" />
+          </svg>&nbsp;
+          <span class="fs-5">Strib Icons</span>
+        </a>
+        <ul class="list-unstyled small">
+          <li class="mb-2">&copy; Star Tribune, Last build: {{ now.Format "01/06/2006, 15:04:05 PM" }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

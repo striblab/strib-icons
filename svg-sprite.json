@@ -1,0 +1,44 @@
+{
+  "mode": {
+    "symbol": {
+      "dest": ".",
+      "sprite": "strib-icons.svg"
+    }
+  },
+  "svg": {
+    "namespaceClassnames": false,
+    "xmlDeclaration": false
+  },
+  "shape": {
+    "transform": [
+      {
+        "svgo": {
+          "multipass": true,
+          "plugins": [
+            {
+              "name": "preset-default",
+              "params": {
+                "overrides": {
+                  "removeUnknownsAndDefaults": {
+                    "keepDataAttrs": false,
+                    "keepRoleAttr": true,
+                    "uselessOverrides": false
+                  },
+                  "removeViewBox": false
+                }
+              }
+            },
+            "cleanupListOfValues",
+            "removeXMLNS",
+            {
+              "name": "removeAttrs",
+              "params": {
+                "attrs": []
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

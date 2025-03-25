@@ -1,0 +1,69 @@
+languageCode:           "en"
+title:                  "Strib Icons"
+baseURL:                "https://static.startribune.com/assets/libs/strib-icons/1.0/"
+enableInlineShortcodes: true
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+disableKinds:           ["404", "taxonomy", "term", "RSS", "sitemap"]
+
+publishDir:             "_site"
+
+security:
+  enableInlineShortcodes: true
+  funcs:
+    getenv:
+      - ^HUGO_
+      - NETLIFY
+
+markup:
+  goldmark:
+    renderer:
+      unsafe:           true
+  highlight:
+    noClasses:          false
+
+module:
+  mounts:
+    - source:           docs/assets
+      target:           assets
+    - source:           docs/content
+      target:           content
+    - source:           docs/layouts
+      target:           layouts
+    - source:           docs/static
+      target:           static
+    - source:           docs/static/assets/img/favicons/company-logo.svg
+      target:           static/company-logo.svg
+    - source:           strib-icons.svg
+      target:           static/strib-icons.svg
+    - source:           icons
+      target:           static/assets/icons
+    - source:           font
+      target:           static/assets/font
+    - source:           node_modules/bootstrap/scss
+      target:           assets/scss/bootstrap
+    - source:           node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+      target:           static/assets/js/vendor/bootstrap.bundle.min.js
+
+    # For use in projects
+    - source:           font/strib-icons.json
+      target:           static/strib-icons.json
+    - source:           font/strib-icons.scss
+      target:           static/strib-icons.scss
+    - source:           font/strib-icons.css
+      target:           static/strib-icons.css
+    - source:           font/strib-icons.min.css
+      target:           static/strib-icons.min.css
+    - source:           font/fonts
+      target:           static
+
+params:
+  description:          "Minnesota Star Tribune icon set"
+  version:              "1.0"
+
+  main:                 "https://www.startribune.com"
+  github_org:           "https://github.com/striblab"
+  icons_repo:           "https://github.com/striblab/strib-icons"
+  repo:                 "https://github.com/striblab/strib-icons"
+  icons:                "https://github.com/striblab/strib-icons"
+  icons_figma:          "https://www.figma.com/design/tHfSnV8KWIglBFtHtCb2PL/Star-Tribune-Design-System?node-id=79-43948&node-type=frame&t=vEjlpC3PDLBZ25h3-0"
