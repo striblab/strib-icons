@@ -266,5 +266,14 @@
   "world-filled": 61961,
   "world": 61962,
   "zoom-in": 61963,
-  "zoom-out": 61964
+  "zoom-out": 61964,
+  "arrow-clockwise": 61965,
+  "arrow-counterclockwise": 61966,
+  "headphones-filled": 61967,
+  "social-bluesky-circle": 61968,
+  "social-bluesky": 61969,
+  "sports-league-wnba-color": 61970,
+  "sports-running": 61971,
+  "sports-swimming": 61972,
+  "sports-tennis": 61973
 }
