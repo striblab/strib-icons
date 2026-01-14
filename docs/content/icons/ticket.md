@@ -6,4 +6,5 @@ categories:
 tags:
   - tickets
   - admission
+  - event
 ---

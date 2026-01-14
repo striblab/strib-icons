@@ -4,6 +4,8 @@ variables:
 categories:
   - Media
 tags:
+  - arrow
+  - left
   - audio
   - video
   - av

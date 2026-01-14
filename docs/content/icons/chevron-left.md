@@ -5,4 +5,5 @@ categories:
   - Chevrons
 tags:
   - chevron
+  - left
 ---

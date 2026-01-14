@@ -9,4 +9,5 @@ tags:
   - ellipsis
   - overflow
   - menu
+  - dots
 ---

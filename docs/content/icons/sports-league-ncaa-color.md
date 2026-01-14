@@ -8,4 +8,7 @@ categories:
 tags:
   - sports
   - college
+  - men
+  - women
+  - coed
 ---

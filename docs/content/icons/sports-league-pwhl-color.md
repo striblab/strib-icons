@@ -7,5 +7,5 @@ categories:
 tags:
   - sports
   - hockey
-  - womens hockey
+  - women
 ---

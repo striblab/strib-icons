@@ -6,4 +6,5 @@ categories:
 tags:
   - arrow
   - resize
+  - diagonal
 ---

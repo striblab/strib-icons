@@ -7,5 +7,7 @@ tags:
   - time
   - history
   - arrow
+  - left
   - previous
+  - clock
 ---

@@ -5,4 +5,5 @@ categories:
   - Real Life
 tags:
   - car
+  - automobile
 ---
