@@ -6,4 +6,6 @@ categories:
 tags:
   - arrow
   - right-angle
+  - up
+  - left
 ---
