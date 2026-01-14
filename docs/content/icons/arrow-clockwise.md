@@ -11,6 +11,5 @@ tags:
   - around
   - round
   - rotate
-  - redo
-  - reload
+  - load
 ---
