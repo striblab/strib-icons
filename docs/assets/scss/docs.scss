@@ -231,7 +231,7 @@
   color: var(--icon-color);
 }
 
-.icons-list {
+#icons-list { // stylelint-disable-line selector-max-id
   font-size: 60px;
 }
 
