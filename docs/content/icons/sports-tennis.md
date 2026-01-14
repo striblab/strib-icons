@@ -1,5 +1,5 @@
 ---
-title: "Sports: Swimming"
+title: "Sports: Tennis"
 variables:
 categories:
   - Sports
