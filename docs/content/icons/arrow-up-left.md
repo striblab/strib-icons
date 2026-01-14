@@ -5,4 +5,7 @@ categories:
   - Arrows
 tags:
   - arrow
+  - diagonal
+  - up
+  - left
 ---

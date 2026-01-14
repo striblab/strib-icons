@@ -6,4 +6,5 @@ categories:
 tags:
   - news
   - paper
+  - classifieds
 ---

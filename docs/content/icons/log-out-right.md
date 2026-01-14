@@ -8,4 +8,5 @@ tags:
   - logout
   - signout
   - exit
+  - right
 ---

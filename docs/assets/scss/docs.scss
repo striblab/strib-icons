@@ -47,12 +47,12 @@
 }
 
 .theme-icon {
+  opacity: .5;
   fill: var(--color-picker-icon-color);
-  opacity: 0.5;
 
   .active & {
-    fill: var(--strib-gray) !important;
     opacity: 1;
+    fill: var(--strib-gray) !important; // stylelint-disable-line declaration-no-important
   }
 }
 
@@ -228,11 +228,11 @@
 }
 
 .icon-demo .strib-icon {
-    color: var(--icon-color)
+  color: var(--icon-color);
 }
 
-#icons-list {
-  font-size: 60px
+#icons-list { // stylelint-disable-line selector-max-id
+  font-size: 60px;
 }
 
 .icon-link {
@@ -244,6 +244,7 @@
     @include transition($icon-link-icon-transition);
   }
 }
+
 .icon-link-hover {
   &:hover,
   &:focus-visible {

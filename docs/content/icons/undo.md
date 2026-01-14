@@ -6,10 +6,7 @@ categories:
 tags:
   - arrow
   - left
-  - spin
   - turn
   - around
-  - round
-  - rotate
   - undo
 ---

@@ -5,4 +5,5 @@ categories:
   - Arrows
 tags:
   - arrow
+  - right
 ---

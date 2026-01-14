@@ -3,7 +3,9 @@ title: Trending
 variables:
 categories:
   - Data
-  - Arrow
 tags:
+  - arrow
   - trend
+  - up
+  - right
 ---

@@ -294,6 +294,15 @@ $strib-icons-map: (
   "world": "\f20a",
   "zoom-in": "\f20b",
   "zoom-out": "\f20c",
+  "arrow-clockwise": "\f20d",
+  "arrow-counterclockwise": "\f20e",
+  "headphones-filled": "\f20f",
+  "social-bluesky-circle": "\f210",
+  "social-bluesky": "\f211",
+  "sports-league-wnba-color": "\f212",
+  "sports-running": "\f213",
+  "sports-swimming": "\f214",
+  "sports-tennis": "\f215",
 );
 
 @each $icon, $codepoint in $strib-icons-map {
