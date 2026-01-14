@@ -5,7 +5,7 @@ aliases:
 
 ## Usage
 
-Bootstrap Icons are SVGs, so you can include them into your HTML in a few ways depending on how your project is setup. We recommend using a `width: 1em` (and optionally `height: 1em`) for easy resizing via `font-size`.
+Strib Icons are SVGs, so you can include them into your HTML in a few ways depending on how your project is setup. We recommend using a `width: 1em` (and optionally `height: 1em`) for easy resizing via `font-size`.
 
 <div class="row my-4">
   <div class="col-md-4">
@@ -53,11 +53,11 @@ Use the SVG sprite to insert any icon through the `<use>` element. Use the icon'
   <div class="col-md-4">
 {{< md >}}
 ### External image
-Copy the Bootstrap Icons SVGs to your directory of choice and reference them like normal images with the `<img>` element.
+Copy the Strib Icons SVGs to your directory of choice and reference them like normal images with the `<img>` element.
 {{< /md >}}
   </div>
   <div class="col-md-8">
-    {{< example >}}<img src="./assets/icons/company-logo.svg" alt="Bootstrap" width="32" height="32">{{< /example >}}
+    {{< example >}}<img src="./assets/icons/company-logo.svg" alt="Company Logo" width="32" height="32">{{< /example >}}
   </div>
 </div>
 
@@ -65,7 +65,7 @@ Copy the Bootstrap Icons SVGs to your directory of choice and reference them lik
   <div class="col-md-4">
 {{< md >}}
 ### Icon font
-Icon fonts with classes for every icon are also included for Bootstrap Icons. Include the icon web fonts in your page via CSS, then reference the class names as needed in your HTML (e.g., `<i class="strib-icon strib-alarm-clock"></i>`).
+Icon fonts with classes for every icon are also included for Strib Icons. Include the icon web fonts in your page via CSS, then reference the class names as needed in your HTML (e.g., `<i class="strib-icon strib-alarm-clock"></i>`).
 
 Use `font-size` and `color` to change the icon appearance.
 {{< /md >}}
@@ -131,11 +131,11 @@ For purely decorative icons, add `aria-hidden="true"`. Otherwise, provide an app
   </div>
   <div class="col-md-8">
     <div class="bd-example">
-      <img src="./assets/icons/company-logo.svg" alt="Bootstrap" width="32" height="32">
+      <img src="./assets/icons/company-logo.svg" alt="Company Logo" width="32" height="32">
     </div>
 {{< highlight html >}}
 <!-- alt="..." on <img> element -->
-<img src="/assets/icons/bootstrap.svg" alt="Bootstrap" ...>
+<img src="/assets/icons/company-logo.svg" alt="Company Logo" ...>
 {{< /highlight >}}
     <div class="bd-example">
       <i class="bi-avatar strib-icon strib-avatar" role="img" style="font-size: 2em" aria-label="Tools"></i>
