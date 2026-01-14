@@ -81,15 +81,16 @@ foundation of this library.
 
 ### Scripts and Commands
 
-* Run: `npm run pages` to generate markdown files for any icons that were added.
-* Run: `npm run icons` generate new font files and code points for new icons.
-* Run: `npm run docs:build` to build a non-hosted version of the site for local development.
+* Run: `npm run pages` to generate Markdown files for any icons that were added.
+* Run: `npm run icons` generate new font files and codepoints for new icons.
+    * The command `icons:font-main` runs [fantasticon](https://github.com/tancredi/fantasticon), generating the actual codepoints and font files.
+* Run: `npm run docs:build` to build a non-hosted version of the site for local development using [Hugo](https://github.com/gohugoio/hugo).
     * Non hosted site found at location you added to `/config/local/hugo.yml`.
     * URL Example: `file:///Users/riggllm/GitHub/strib-icons/_site/index.html`
     * **Note:** Sometimes changed icons do not display properly when running this command on its own. Running the icons
       command prior to this (either independently, or as part of the same command line) typically fixes this.
         * Example: `npm run icons && npm run docs:build`
-* Run: `npm run start` to build and serve a hosted version of the site for local development.
+* Run: `npm run start` to build and serve a hosted version of the site for local development using [Hugo](https://github.com/gohugoio/hugo).
     * Hosted site is, by default, found at: `http://localhost:4000`.
     * If the port or default address is not working in your browser, check the terminal output for a line that looks like:
       `Web Server is available at //localhost:4000/ (bind address 127.0.0.1)`

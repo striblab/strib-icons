@@ -1,5 +1,9 @@
 'use strict'
 
+/**
+ * @note the strib-icons.json file is required to exist prior to running this script. If no codepoints have been
+ * generated yet, the file should contain an empty JavaScript object.
+ */
 const codepoints = require('./font/strib-icons.json')
 
 module.exports = {
