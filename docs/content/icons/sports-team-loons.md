@@ -3,7 +3,7 @@ title: "Sports Team: Loons"
 variables:
 categories:
   - Sports
-  - Real Life
+  - Real world
 tags:
   - soccer
   - european football

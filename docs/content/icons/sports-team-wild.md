@@ -3,7 +3,7 @@ title: "Sports Team: Wild"
 variables:
 categories:
   - Sports
-  - Real Life
+  - Real world
 tags:
   - hockey
   - minnesota wild

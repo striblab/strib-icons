@@ -2,7 +2,7 @@
 title: Ticket
 variables:
 categories:
-  - Real World
+  - Real world
 tags:
   - tickets
   - admission

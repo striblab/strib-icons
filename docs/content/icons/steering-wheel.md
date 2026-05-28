@@ -2,7 +2,7 @@
 title: Steering wheel
 variables:
 categories:
-  - Real Life
+  - Real world
 tags:
   - car
   - automobile
