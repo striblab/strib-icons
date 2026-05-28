@@ -3,7 +3,7 @@ title: "Sports Team: Twins"
 variables:
 categories:
   - Sports
-  - Real Life
+  - Real world
 tags:
   - baseball
   - minnesota twins

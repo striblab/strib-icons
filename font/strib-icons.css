@@ -1,10 +1,10 @@
 @font-face {
   font-family: strib-icons;
   src:
-    url("./fonts/strib-icons.woff2?7583e3879d559b28a9a40f942c0214c9") format("woff2"),
-url("./fonts/strib-icons.woff?7583e3879d559b28a9a40f942c0214c9") format("woff"),
-url("./fonts/strib-icons.ttf?7583e3879d559b28a9a40f942c0214c9") format("truetype"),
-url("./fonts/strib-icons.eot?7583e3879d559b28a9a40f942c0214c9#iefix") format("embedded-opentype");
+    url("./fonts/strib-icons.woff2?b3f16e426e5f2bae97db3c6942c5298e") format("woff2"),
+url("./fonts/strib-icons.woff?b3f16e426e5f2bae97db3c6942c5298e") format("woff"),
+url("./fonts/strib-icons.ttf?b3f16e426e5f2bae97db3c6942c5298e") format("truetype"),
+url("./fonts/strib-icons.eot?b3f16e426e5f2bae97db3c6942c5298e#iefix") format("embedded-opentype");
   font-display: block;
 }
 
@@ -297,3 +297,4 @@ url("./fonts/strib-icons.eot?7583e3879d559b28a9a40f942c0214c9#iefix") format("em
 .strib-sports-running::before { content: "\f213"; }
 .strib-sports-swimming::before { content: "\f214"; }
 .strib-sports-tennis::before { content: "\f215"; }
+.strib-election-mn::before { content: "\f216"; }

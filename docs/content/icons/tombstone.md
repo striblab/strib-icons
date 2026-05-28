@@ -2,7 +2,7 @@
 title: Tombstone
 variables:
 categories:
-  - Real Life
+  - Real world
 tags:
   - graveyard
   - death

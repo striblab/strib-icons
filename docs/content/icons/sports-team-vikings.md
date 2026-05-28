@@ -3,7 +3,7 @@ title: "Sports Team: Vikings"
 variables:
 categories:
   - Sports
-  - Real Life
+  - Real world
 tags:
   - football
   - american football
